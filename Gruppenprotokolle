@@ -14,6 +14,16 @@ TO DO:
 - Einschätzen der bisherigen SuMa nach Kriterien der Vorlesung
 - Dinge von Maik Fröbe durchgehen
 
----- nächsten Dienstag: in den Raum gehen, vorstellen wie weit wir sind. 09:45 Felix-Klein-Hörsaal, dann um 10:00 in die Bib gehen :)
+26.04.:
+Ergebnisse der Fragen an Dozentin nach VL:
+- pyterrier benutzen, daten da einspeisen und versuchen die ersten queries zu stellen
+- überblick bekommen: welche retrieval modelle gibt es? welche sind für uns geeignet? Wie machen wir Indizierung unserer Daten?
+- GUI nicht nötig, textausgabe reicht
+- Einpflegen in IR-Datenbank optional, geht evt. über das Ziel des Projekts hinaus
+- Literature Research sollten wir anfangen, aber kann im laufe des Projekts vervollst. werden.
+  Dazu nur Überblick über bestehende literatur verschaffen, evt. ähnliche bestehende Tasks finden
+- Query Expansion / Suchvervollständigung können wir auch schon bald am Anfang machen
+
+---- nächsten Dienstag (3.4.) : in den Raum gehen, vorstellen wie weit wir sind. 09:45 Felix-Klein-Hörsaal, dann um 10:00 in die Bib gehen :)
 
 
