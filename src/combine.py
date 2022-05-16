@@ -12,11 +12,12 @@ import sys
 
 
 def main():
+    data_dir = "data/"
     filepaths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml"]         # files to be combined into one
-    destination = "combined_data.xml"                                                               # destination
+    destination = data_dir + "combined_data.xml"                                                               # destination
 
     for item in filepaths:                                          # go through each file
-        with open(item, "r") as f:
+        with open(data_dir + item, "r") as f:
             data = f.read()                                         # get complete content of each file
 
         filesize = round(len(data)/2**20, 3)                        # filesize in MiB
