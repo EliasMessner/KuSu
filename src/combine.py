@@ -12,7 +12,7 @@ import sys
 
 
 def main():
-    data_dir = "data/"
+    data_dir = "../data/"
     filepaths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml"]         # files to be combined into one
     destination = data_dir + "combined_data.xml"                                                               # destination
 

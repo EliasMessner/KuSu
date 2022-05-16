@@ -1,8 +1,8 @@
 import sys
 
 def main():
-    logs_dir = "logs/"
-    sourcepath = "data/combined_data.xml"                    # where the entire XML data is now combined in one file
+    logs_dir = "../logs/"
+    sourcepath = "../data/combined_data.xml"                    # where the entire XML data is now combined in one file
 
     with open(sourcepath, "r") as f:                    # read the whole source
         sourcedata = f.read()
@@ -20,7 +20,7 @@ def main():
         posB = sourcedata.find("</lido:lido>", posA)+12                         # end of closing tag
 
         entrydata = sourcedata[posA:posB]                                       # the part to be put in its own file
-        destinationPath = "docs/atomized_{}.xml".format(counter)               # the file path to write it into
+        destinationPath = "../docs/atomized_{}.xml".format(counter)               # the file path to write it into
 
         with open(destinationPath, "w") as g:                                   # write this entry
             g.write(entrydata)
