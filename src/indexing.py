@@ -1,5 +1,7 @@
-from elasticsearch import Elasticsearch
 import os
+import xmltodict
+from elasticsearch import Elasticsearch
+from pprint import pprint
 
 
 def xml_to_dict(filepath):
@@ -8,16 +10,14 @@ def xml_to_dict(filepath):
     :param filepath: the filepath of the xml file
     :return: a dictionary representing the Lido entry
     """
-    # TODO: extract all text relevant for retrieval from the XML document. Create dict and store extracted text in
-    #  attributes. e.g.: result = {"title": ..., "description": ..., "artist": ..., etc.}. Also we need to keep the
-    #  reference to the original XML document, either by a globally unique ID from the Lido entry or by a reference
-    #  to the original filename
-    pass
+    with open(filepath, 'r') as file:
+        xml_data = file.read()
+    return xmltodict.parse(xml_data)
 
 
-def index_documents(client: Elasticsearch, index_name: str, overwrite: bool) -> list[str]:
+def index_documents(client: Elasticsearch, index_name: str, overwrite=True) -> list[str]:
     """
-    Indexes all xml documents in ../docs. If overwrite is set to True, it deletes the index first (if the index
+    Indexes all xml documents in ../docs. If overwrite is set to True (default), it deletes the index first (if the index
     exists) and creates a new one. Otherwise, it adds seen data to the existing index.
     :param client: Elasticsearch client with active connection
     :param index_name: the name of the index
@@ -36,5 +36,12 @@ def index_documents(client: Elasticsearch, index_name: str, overwrite: bool) -> 
             filepath = os.path.join(dir_path, filename)
             data_dict = xml_to_dict(filepath)
             res = client.index(index=index_name, body=data_dict)
+            print(res)
             responses.append(res)
     return responses
+
+
+if __name__ == "__main__":
+    client = Elasticsearch([{"host": "localhost", "port": 9200}])
+    responses = index_documents(client, "test-index")
+    pprint(responses)
