@@ -1,3 +1,4 @@
+from IPython.lib.pretty import pprint
 from elasticsearch import Elasticsearch
 
 from src.indexing import index_documents
@@ -113,7 +114,10 @@ def search(client, input_tokens):
     if not client.indices.exists(index):
         print(f"Index '{index}' does not exist.")
         return
-    print(q.search(client, index, query_string))
+    res = q.search(client, index, query_string)
+    print(f"Hits: {len(res['hits']['hits'])}\n")
+    for hit in res["hits"]["hits"]:
+        pprint(hit["_source"], "\n")
 
 
 def index_all(client, input_tokens):
