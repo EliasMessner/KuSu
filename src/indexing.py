@@ -43,8 +43,6 @@ def index_documents(client: Elasticsearch, index_name: str, dir_path="../docs", 
     :return: a list of strings, containing a response string for each indexed document
     """
     start = timeit.default_timer()
-    assert client.ping()  # assert that the client is connected
-    print("Client connected, starting indexing...")
     if overwrite:
         client.indices.delete(index=index_name, ignore=[400, 404])  # "ignore" is in case index does not exist
     xml_filepaths = get_all_xml_filepaths(dir_path)
@@ -58,9 +56,3 @@ def index_documents(client: Elasticsearch, index_name: str, dir_path="../docs", 
     stop = timeit.default_timer()
     print(f"Done indexing {len(xml_filepaths)} documents. Took {str(datetime.timedelta(seconds=stop-start)).split('.')[0]}.")
     return responses
-
-
-if __name__ == "__main__":
-    client = Elasticsearch([{"host": "localhost", "port": 9200}])
-    indexing_responses = index_documents(client, "test-index")
-    # pprint(indexing_responses)
