@@ -11,11 +11,23 @@ def xml_to_dict(filepath):
     """
     Takes an XML file and converts it to a ready-to-index dictionary.
     :param filepath: the filepath of the xml file
-    :return: a dictionary representing the Lido entry
+    :return: a dictionary representing the xml file
     """
     with open(filepath, 'r') as file:
         xml_data = file.read()
     return xmltodict.parse(xml_data)
+
+
+def get_all_xml_filepaths(dir_path):
+    """
+    returns a list of filepaths of all xml files in a given directory path
+    :param dir_path: path to the directory
+    :return: list of filepaths
+    """
+    directory = os.fsencode(dir_path)
+    return [os.path.join(dir_path, os.fsdecode(file))
+            for file in os.listdir(directory)
+            if os.fsdecode(file).endswith(".xml")]
 
 
 def index_documents(client: Elasticsearch, index_name: str, dir_path="../docs", overwrite=True, console_output=False) -> list[str]:
@@ -35,18 +47,16 @@ def index_documents(client: Elasticsearch, index_name: str, dir_path="../docs", 
     print("Client connected, starting indexing...")
     if overwrite:
         client.indices.delete(index=index_name, ignore=[400, 404])  # "ignore" is in case index does not exist
-    directory = os.fsencode(dir_path)
-    all_xml_files = [os.fsdecode(file) for file in os.listdir(directory) if os.fsdecode(file).endswith(".xml")]
+    xml_filepaths = get_all_xml_filepaths(dir_path)
     responses = []
-    for filename in tqdm(all_xml_files):  # tqdm is for progress bar in console
-        filepath = os.path.join(dir_path, filename)
+    for filepath in tqdm(xml_filepaths):  # tqdm is for progress bar in console
         data_dict = xml_to_dict(filepath)
         res = client.index(index=index_name, body=data_dict)
         if console_output:
             print(res)
         responses.append(res)
     stop = timeit.default_timer()
-    print(f"Done indexing {len(all_xml_files)} documents. Took {str(datetime.timedelta(seconds=stop-start)).split('.')[0]}.")
+    print(f"Done indexing {len(xml_filepaths)} documents. Took {str(datetime.timedelta(seconds=stop-start)).split('.')[0]}.")
     return responses
 
 
