@@ -1,19 +1,40 @@
-""" Please call this program from another python program as follows:
-
-        import cleanResults
-        cleanedData = cleanResults(results)
-
-    results is the uncleaned output of the search engine as a string.
-    cleanedData is returned as a string containing the JSON data.
-
-    Alternatively you could comment out the return statement and instead write:
-
-        with open("cleanedData.json", "w") as cdf:
-            cdf.write(output)
+"""
+Please use get_clean_results, as it handles multiple actors and titles
 """
 
 
-def main(data):
+def get_clean_results(response):
+    """
+    Returns a simplified, cleaned dict with user-readable info.
+    :param response: the raw response from elasticsearch query
+    :return: a user readable dict with important descriptive data for each hit
+    """
+    pretty_responses = []
+    for hit in response["hits"]["hits"]:
+        source = hit["_source"]
+        pretty_response = {}
+
+        title_set = source['lido:lido']['lido:descriptiveMetadata']['lido:objectIdentificationWrap']['lido:titleWrap']['lido:titleSet']
+        title_set = title_set if isinstance(title_set, list) else [title_set]
+        titles = [entry['lido:appellationValue']['#text'] for entry in title_set]
+
+        events = source['lido:lido']['lido:descriptiveMetadata']['lido:eventWrap']['lido:eventSet']
+        events = events if isinstance(events, list) else [events]
+        actors = [event['lido:event']['lido:eventActor']['lido:displayActorInRole'] for event in events if event['lido:event'].get('lido:eventActor') is not None]
+
+        url = source['lido:lido']['lido:administrativeMetadata']['lido:recordWrap']['lido:recordInfoSet']['lido:recordInfoLink']
+
+        pretty_response["title(s)"] = titles[0] if len(titles) == 1 else titles
+        pretty_response["actor(s)"] = actors[0] if len(actors) == 1 else actors
+        pretty_response["url"] = url
+        pretty_responses.append(pretty_response)
+    return pretty_responses
+
+
+def getCleanResults(data):
+    """
+    deprecated, use get_clean_results
+    """
     cleanResults = []
     currentPos = 0
     while data.find("lido:lido", currentPos) != -1:         # as long as there are any more results
@@ -60,5 +81,3 @@ def main(data):
     return output
 
 
-if __name__ == "__main__":
-        main()

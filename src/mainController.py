@@ -1,38 +1,53 @@
-from IPython.lib.pretty import pprint
+from pprint import pprint
+
 from elasticsearch import Elasticsearch
 
-from src.indexing import index_documents
 import src.querying as q
+from src.cleanResults import getCleanResults, get_clean_results
+from src.indexing import index_documents
 
 
-def mainloop():
+def mainloop(function_mapping):
     """
-    the main loop takes some string and splits it into input tokens. The first token is the command to call a function.
-    The mapping of the commands to the functions must be specified in a function_mapping.
-    :return:
+    Prompts the user for new input every loop to execute commands. The input is tokenized. The first token is the
+    command name, the following tokens (optional) are arguments for that command.
+    The possible commands must be specified in the function_mapping parameter.
+    :param function_mapping: a dict like
+    {
+        command_name: {
+            "fun": the function to be called as object,
+            "alts": aliases (shorthand notations) als list of strings,
+            "help": explanatory help string,
+            "args": list of argument names
+            }
+        }
     """
     print("Connecting to default client at localhost:9200...")
     client = Elasticsearch([{"host": "localhost", "port": 9200}])
     assert client.ping()  # assert that the client is connected
     print("Client connected.")
-    function_mappings = get_function_mappings()
     while True:
         input_tokens = input().lower().split()
         cmd = input_tokens[0]
         if cmd in ["quit", "q"]:
             break
         if cmd == "help":
-            print_help(function_mappings)
+            print_help(function_mapping)
             continue
-        fun = get_fun(function_mappings, cmd)
-        if fun is None:
-            print(f"Unrecognized command '{cmd}'. Enter 'help' for help.")
-            continue
-        try:
-            check_arg_count(fun, input_tokens)
-            fun["fun"](client, input_tokens)
-        except ValueError as ve:
-            print(str(ve))
+        try_execute_function(function_mapping, input_tokens, client)
+
+
+def try_execute_function(function_mapping, input_tokens, client):
+    cmd = input_tokens[0]
+    fun = get_fun(function_mapping, cmd)
+    if fun is None:
+        print(f"Unrecognized command '{cmd}'. Enter 'help' for help.")
+        return
+    try:
+        check_arg_count(fun, input_tokens)
+        fun["fun"](client, input_tokens)
+    except ValueError as ve:
+        print(str(ve))
 
 
 def get_fun(function_mappings, cmd):
@@ -58,7 +73,7 @@ def print_help(function_mappings):
     help_string = ""
     for key in function_mappings:
         help_string += '[ ' + ' | '.join([key] + function_mappings[key]["alts"]) + ' ] '\
-                       + " ".join(function_mappings[key]["args"]) \
+                       + " ".join([f"<{arg_name}>" for arg_name in function_mappings[key]["args"]]) \
                        + ": "
         help_string += function_mappings[key]["help"] + "\n"
     help_string += "quit: quit\n"
@@ -110,14 +125,13 @@ def get_function_mappings():
 
 def search(client, input_tokens):
     index = input_tokens[1]
-    query_string = ' '.join(input_tokens[2:])
+    query_string = ' '.join(input_tokens[2:])  # the second and following tokens are parsed as query_string
     if not client.indices.exists(index):
         print(f"Index '{index}' does not exist.")
         return
     res = q.search(client, index, query_string)
     print(f"Hits: {len(res['hits']['hits'])}\n")
-    for hit in res["hits"]["hits"]:
-        pprint(hit["_source"], "\n")
+    pprint(get_clean_results(res))
 
 
 def index_all(client, input_tokens):
@@ -152,4 +166,4 @@ def check_arg_count(fun, input_tokens):
 
 
 if __name__ == "__main__":
-    mainloop()
+    mainloop(get_function_mappings())
