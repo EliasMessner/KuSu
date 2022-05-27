@@ -1,5 +1,7 @@
+from src.constants import data_dir
+
+
 def main():
-    data_dir = "../data/"
     filepaths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml"]     # the 3 files with the data
     count = 0                                                                                   # count the '\n' newline symbol
 

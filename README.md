@@ -3,6 +3,11 @@
 This search engine was built for a lab project in the Information Retrieval course lectured by Prof Martin Potthast at 
 the University of Leipzig.
 
+The data is a lido data set provided by the Museum für Kunst und Gewerbe Hamburg (MKG), and can be found here:
+https://github.com/MKGHamburg/MKGCollectionOnlineLIDO_XML. 
+
+We use the files <i>mkg_lido-dC.web_0.xml</i>, <i>mkg_lido-dC.web_1.xml</i>, and <i>mkg_lido-dC.web_2.xml</i>., totaling to about 12k documents.
+
 Dependencies:
 * Elasticsearch 7.17.3
 
@@ -12,7 +17,7 @@ Python Packages:
 
 ## Preparing the data
 
-To download the data set, run the getData.py script.
+To download the data set, run the get_data.py script.
 3 Files will be downloaded into the "../data" folder.
 
 Next, run the combine.py script, to combine the three xml files you just downloaded to one large xml file.
@@ -28,7 +33,7 @@ The data is now ready to be indexed.
 Before you start the search engine, make sure that elasticsearch is up and running on your computer by opening 
 localhost:9200 in your browser.
 
-In order to start up the search engine, run the main method in the mainController.py file.
+In order to start up the search engine, run the main method in the main_controller.py file.
 The search engine will now try to establish a connection to the standard elasticsearch client at localhost:9200.
 When you see "Client connected." on the console, you can start indexing and searching.
 
