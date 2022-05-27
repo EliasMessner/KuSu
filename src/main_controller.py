@@ -2,9 +2,8 @@ from pprint import pprint
 
 from elasticsearch import Elasticsearch
 
-import src.constants
+from src.constants import data_dir, docs_dir
 import src.querying as querying
-from src.clean_results import get_clean_results
 from src.indexing import index_documents
 
 
@@ -97,11 +96,11 @@ def search(client, input_tokens):
         return
     res = querying.search(client, index, query_string)
     print(f"Hits: {len(res['hits']['hits'])}\n")
-    pprint(get_clean_results(res))
+    pprint(res['hits']['hits'])
 
 
 def index_all(client, input_tokens):
-    index_documents(client, index_name=input_tokens[1])
+    index_documents(client, index_name=input_tokens[1], docs_dir=docs_dir)
 
 
 def create_index(client, input_tokens):
@@ -131,5 +130,51 @@ def check_arg_count(fun, input_tokens):
         raise ValueError(f"Command '{fun['fun'].__name__}' takes {expected} argument(s){' or more' if allow_more else ''}, got {got} instead.")
 
 
+def get_command_function_mapping():
+    """
+    command_function_mapping: a dict like
+    {
+        command_name: {
+            "fun": the function to be called as object,
+            "alts": aliases (shorthand notations) als list of strings,
+            "help": explanatory help string,
+            "args": list of argument names
+            }
+    }
+    """
+    return {
+        "create_index": {
+            "fun": create_index,
+            "alts": ["c"],
+            "help": "Creates a new index.",
+            "args": ["index_name"]
+        },
+        "delete_index": {
+            "fun": delete_index,
+            "alts": ["d"],
+            "help": "Deletes an index.",
+            "args": ["index_name"]
+        },
+        "index_all": {
+            "fun": index_all,
+            "alts": ["ia"],
+            "help": "Indexes all xml documents in '../docs' to the specified index.",
+            "args": ["index_name"]
+        },
+        "search": {
+            "fun": search,
+            "alts": ["s"],
+            "help": "searches in given index",
+            "args": ["index_name", "query_string*"]
+        },
+        "list_indices": {
+            "fun": list_indices,
+            "alts": ["l"],
+            "help": "Lists all indices",
+            "args": []
+        }
+    }
+
+
 if __name__ == "__main__":
-    mainloop(src.constants.command_function_mapping)
+    mainloop(get_command_function_mapping())
