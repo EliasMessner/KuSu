@@ -1,5 +1,10 @@
 
 def parse_lido_entry(lido_entry):
+    """
+    Parses a lido entry to a dictionary only containing information relevant for retrieval.
+    :param lido_entry: the lido entry as dict
+    :return: a dict ready for retrieval process
+    """
     result = {}
 
     _id = lido_entry['lido:lido']['lido:lidoRecID']['#text']
