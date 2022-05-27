@@ -9,34 +9,35 @@
 
 
 import sys
+from constants import data_dir
 
 
 def main():
-    data_dir = "../data/"
-    filepaths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml"]         # files to be combined into one
+    file_paths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml"]         # files to be combined into one
     destination = data_dir + "combined_data.xml"                                                               # destination
 
-    for item in filepaths:                                          # go through each file
+    for item in file_paths:                                          # go through each file
         with open(data_dir + item, "r") as f:
             data = f.read()                                         # get complete content of each file
 
-        filesize = round(len(data)/2**20, 3)                        # filesize in MiB
-        print("Read {}\nSize: {} MB".format(item, filesize))
+        file_size = round(len(data)/2**20, 3)                        # filesize in MiB
+        print("Read {}\nSize: {} MB".format(item, file_size))
 
         processed = 0                                               # processed data in MiB
-        posA = 0
-        posB = 0
+        pos_a = 0
+        pos_b = 0
         with open(destination, "a") as g:
-            while data.find("<lido:lido>", posB) != -1:             # keep appending as long as there's another opening tag
-                posA = data.find("<lido:lido>", posB)               # find the opening tag, after the last closing tag
-                posB = data.find("</lido:lido>", posA)+12           # find the end of the closing tag, search after the last opening tag
+            while data.find("<lido:lido>", pos_b) != -1:             # keep appending as long as there's another opening tag
+                pos_a = data.find("<lido:lido>", pos_b)               # find the opening tag, after the last closing tag
+                pos_b = data.find("</lido:lido>", pos_a)+12           # find the end of the closing tag, search after the last opening tag
 
-                entrydata = data[posA:posB]                         # the entry itself
-                g.write(entrydata + "\n\n")                         # add that entry to the destination file
+                entry_data = data[pos_a:pos_b]                         # the entry itself
+                g.write(entry_data + "\n\n")                         # add that entry to the destination file
 
-                processed += len(entrydata) / 2**20                                 # how much data is left in this file in MiB
+                processed += len(entry_data) / 2**20                                 # how much data is left in this file in MiB
                 sys.stdout.write("\r\t{} MB done.".format(round(processed,3)))      # overwrite in the same line to avoid flooding the terminal
             print("\nFile done.\n")
+
 
 if __name__ == "__main__":
     main()

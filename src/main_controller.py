@@ -2,25 +2,17 @@ from pprint import pprint
 
 from elasticsearch import Elasticsearch
 
-import src.querying as q
-from src.cleanResults import getCleanResults, get_clean_results
+import src.constants
+import src.querying as querying
+from src.clean_results import get_clean_results
 from src.indexing import index_documents
 
 
-def mainloop(function_mapping):
+def mainloop(command_function_mapping):
     """
     Prompts the user for new input every loop to execute commands. The input is tokenized. The first token is the
     command name, the following tokens (optional) are arguments for that command.
     The possible commands must be specified in the function_mapping parameter.
-    :param function_mapping: a dict like
-    {
-        command_name: {
-            "fun": the function to be called as object,
-            "alts": aliases (shorthand notations) als list of strings,
-            "help": explanatory help string,
-            "args": list of argument names
-            }
-        }
     """
     print("Connecting to default client at localhost:9200...")
     client = Elasticsearch([{"host": "localhost", "port": 9200}])
@@ -32,14 +24,23 @@ def mainloop(function_mapping):
         if cmd in ["quit", "q"]:
             break
         if cmd == "help":
-            print_help(function_mapping)
+            print_help(command_function_mapping)
             continue
-        try_execute_function(function_mapping, input_tokens, client)
+        try_execute_function(command_function_mapping, input_tokens, client)
 
 
-def try_execute_function(function_mapping, input_tokens, client):
+def try_execute_function(command_function_mapping, input_tokens, client):
+    """
+    Tries to invoke a function call given the input tokens, where the first token is read as the command name to
+    be invoked. If such a command name does not exist, it gives a respective console output and returns normally.
+    :param command_function_mapping: The mapping from command names to method calls and further info
+      See constants.command_function_mapping
+    :param input_tokens: the input tokens as list. The first one is the command name, the following ones (optional) are
+      arguments for that command
+    :param client: Elasticsearch client with active connection
+    """
     cmd = input_tokens[0]
-    fun = get_fun(function_mapping, cmd)
+    fun = get_fun(command_function_mapping, cmd)
     if fun is None:
         print(f"Unrecognized command '{cmd}'. Enter 'help' for help.")
         return
@@ -50,15 +51,16 @@ def try_execute_function(function_mapping, input_tokens, client):
         print(str(ve))
 
 
-def get_fun(function_mappings, cmd):
+def get_fun(command_function_mapping, cmd):
     """
-    Returns the mapping for a specific command. The mapping contains the function, arguments, etc., as specified in
-    get_function_mapping
+    Returns the entry mapped to a specified command. The entry contains the function, arguments, etc., as specified in
+    constants.command_function_mapping.
+    If the command does not exist, returns None.
     """
-    fun = function_mappings.get(cmd)
+    fun = command_function_mapping.get(cmd)
     if fun is None:
         # check if a shorthand notation for the command was used
-        for item in function_mappings.items():
+        for item in command_function_mapping.items():
             if cmd in item[1]["alts"]:
                 return item[1]
         return None
@@ -66,70 +68,34 @@ def get_fun(function_mappings, cmd):
         return fun
 
 
-def print_help(function_mappings):
+def print_help(command_function_mapping):
     """
-    generates and prints a help string from the function_mappings
+    Generates and prints a help string from the function_mappings.
     """
     help_string = ""
-    for key in function_mappings:
-        help_string += '[ ' + ' | '.join([key] + function_mappings[key]["alts"]) + ' ] '\
-                       + " ".join([f"<{arg_name}>" for arg_name in function_mappings[key]["args"]]) \
+    for key in command_function_mapping:
+        help_string += '[ ' + ' | '.join([key] + command_function_mapping[key]["alts"]) + ' ] '\
+                       + " ".join([f"<{arg_name}>" for arg_name in command_function_mapping[key]["args"]]) \
                        + ": "
-        help_string += function_mappings[key]["help"] + "\n"
+        help_string += command_function_mapping[key]["help"] + "\n"
     help_string += "quit: quit\n"
     print(help_string)
 
 
-def get_function_mappings():
-    """
-    get the mapping from commands to functions.
-    fun = the function to be called
-    alts = alternative commands (shorthands)
-    help = explanatory help string
-    args = argument specifications in correct order (will be used to generate help string and check argument count)
-           if many tokens are possible add an * as suffix to an argument
-    """
-    return {
-        "create_index": {
-            "fun": create_index,
-            "alts": ["c"],
-            "help": "Creates a new index.",
-            "args": ["index_name"]
-        },
-        "delete_index": {
-            "fun": delete_index,
-            "alts": ["d"],
-            "help": "Deletes an index.",
-            "args": ["index_name"]
-        },
-        "index_all": {
-            "fun": index_all,
-            "alts": ["ia"],
-            "help": "Indexes all xml documents in '../docs' to the specified index.",
-            "args": ["index_name"]
-        },
-        "search": {
-            "fun": search,
-            "alts": ["s"],
-            "help": "searches in given index",
-            "args": ["index_name", "query_string*"]
-        },
-        "list_indices": {
-            "fun": list_indices,
-            "alts": ["l"],
-            "help": "Lists all indices",
-            "args": []
-        }
-    }
-
-
 def search(client, input_tokens):
+    """
+    Search the index using the second and following input tokens as query string.
+    The results are printed to the console.
+    :param client:
+    :param input_tokens:
+    :return:
+    """
     index = input_tokens[1]
     query_string = ' '.join(input_tokens[2:])  # the second and following tokens are parsed as query_string
     if not client.indices.exists(index):
         print(f"Index '{index}' does not exist.")
         return
-    res = q.search(client, index, query_string)
+    res = querying.search(client, index, query_string)
     print(f"Hits: {len(res['hits']['hits'])}\n")
     pprint(get_clean_results(res))
 
@@ -166,4 +132,4 @@ def check_arg_count(fun, input_tokens):
 
 
 if __name__ == "__main__":
-    mainloop(get_function_mappings())
+    mainloop(src.constants.command_function_mapping)
