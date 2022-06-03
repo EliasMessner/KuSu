@@ -6,16 +6,20 @@ import xmltodict
 from elasticsearch import Elasticsearch
 from tqdm import tqdm
 
+from src.lido_handler import parse_lido_entry
+
 
 def xml_to_dict(filepath):
     """
-    Takes an XML file and converts it to a ready-to-index dictionary.
+    Takes an XML file containing a single lido entry and converts it to a ready-to-index dictionary.
     :param filepath: the filepath of the xml file
     :return: a dictionary representing the xml file
     """
     with open(filepath, 'r') as file:
         xml_data = file.read()
-    return xmltodict.parse(xml_data)
+    lido_dict = xmltodict.parse(xml_data)
+    parsed_dict = parse_lido_entry(lido_dict)
+    return parsed_dict
 
 
 def get_all_xml_filepaths(dir_path):
@@ -30,11 +34,11 @@ def get_all_xml_filepaths(dir_path):
             if os.fsdecode(file).endswith(".xml")]
 
 
-def index_documents(client: Elasticsearch, index_name: str, dir_path="../docs", overwrite=True, console_output=False) -> list[str]:
+def index_documents(client: Elasticsearch, index_name: str, docs_dir: str, overwrite=True, console_output=False) -> list[str]:
     """
     Indexes all xml documents in dir_path. If overwrite is set to True (default), it deletes the index first (if the index
     exists) and creates a new one. Otherwise, it adds seen data to the existing index.
-    :param dir_path: relative path containing the xml files. Default is "../docs"
+    :param docs_dir: relative path containing the xml files.
     :param client: Elasticsearch client with active connection
     :param index_name: the name of the index
     :param overwrite: boolean value to specify if the index should be overwritten or added to
@@ -45,7 +49,7 @@ def index_documents(client: Elasticsearch, index_name: str, dir_path="../docs", 
     start = timeit.default_timer()
     if overwrite:
         client.indices.delete(index=index_name, ignore=[400, 404])  # "ignore" is in case index does not exist
-    xml_filepaths = get_all_xml_filepaths(dir_path)
+    xml_filepaths = get_all_xml_filepaths(docs_dir)
     responses = []
     for filepath in tqdm(xml_filepaths):  # tqdm is for progress bar in console
         data_dict = xml_to_dict(filepath)

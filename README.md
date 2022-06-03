@@ -18,13 +18,13 @@ Python Packages:
 ## Preparing the data
 
 To download the data set, run the get_data.py script.
-3 Files will be downloaded into the "../data" folder.
+3 Files will be downloaded into the "../data/" folder.
 
 Next, run the combine.py script, to combine the three xml files you just downloaded to one large xml file.
 The output file will be written to "../data/combined_data.xml"
 
 Finally, run the atomize.py script, so that the combined_data.xml file gets broken up into ~12k atomic xml files, each 
-representing a document for retrieval.
+representing a document for retrieval. They are stored in the "../docs/" folder
 
 The data is now ready to be indexed.
 
