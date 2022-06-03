@@ -1,8 +1,13 @@
 import sys
+from pathlib import Path
+
 from constants import logs_dir, docs_dir, data_dir
 
 
 def main():
+    Path(data_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
+    Path(docs_dir).mkdir(parents=True, exist_ok=True)
+    Path(logs_dir).mkdir(parents=True, exist_ok=True)
     source_path = data_dir + "combined_data.xml"                    # where the entire XML data is now combined in one file
 
     with open(source_path, "r") as f:                    # read the whole source

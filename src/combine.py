@@ -9,12 +9,15 @@
 
 
 import sys
+from pathlib import Path
+
 from constants import data_dir
 
 
 def main():
     file_paths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml"]         # files to be combined into one
     destination = data_dir + "combined_data.xml"                                                               # destination
+    Path(data_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
 
     for item in file_paths:                                          # go through each file
         with open(data_dir + item, "r") as f:
