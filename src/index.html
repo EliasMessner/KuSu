@@ -1,0 +1,56 @@
+<!-- must be saved as "./templates/index.html" relative to "server.py"
+     requirement of flask that it has to be this way -->
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Suchmaschine</title>
+
+    <style>
+      td, th, table {
+        border: 1px solid;
+      }
+
+      td {
+        padding: 5px;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Suchmaschine</h1>
+
+    <p>{{greeting}}</p>
+
+    <form method="POST">
+      <label for="query">Anfrage: </label>
+      <input type="text" id="query" name="query">
+      <input type="submit" value="Suchen">
+    </form>
+
+    <p>Ergebnisse für: <i>{{querycopy}}</i></p>
+
+    <table>
+      <tr>
+        <th>Titel</th>
+        <th>Künstler*in</th>
+        <th>URL</th>
+      </tr>
+
+      {% for item in results %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td><a href={{item[2]}}>{{item[2]}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+
+
+  </body>
+</html>
