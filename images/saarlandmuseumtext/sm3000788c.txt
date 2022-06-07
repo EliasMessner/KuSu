@@ -1,0 +1,1 @@
+['navajowhite', 'dimgray', 'peru', 'darkgray', 'black', 'slategray', 'maroon', 'gray']

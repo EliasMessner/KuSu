@@ -1,0 +1,1 @@
+['papayawhip', 'peru', 'darkslategray', 'darkgray', 'saddlebrown', 'goldenrod']

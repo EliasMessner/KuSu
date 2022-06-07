@@ -1,0 +1,1 @@
+['whitesmoke', 'black', 'darkslategray', 'lightsteelblue', 'darkseagreen', 'slategray']

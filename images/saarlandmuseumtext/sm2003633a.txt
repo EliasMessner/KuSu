@@ -1,0 +1,1 @@
+['gray', 'black', 'indianred', 'deepskyblue', 'mediumvioletred', 'firebrick', 'seagreen', 'goldenrod', 'olivedrab', 'lightgray', 'darkslateblue', 'darkslategray']

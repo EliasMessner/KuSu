@@ -1,0 +1,1 @@
+['darkgray', 'snow', 'black', 'indianred', 'brown', 'lightseagreen', 'navajowhite', 'darkgreen', 'darkseagreen', 'burlywood', 'slategray', 'sandybrown', 'chocolate', 'maroon', 'midnightblue', 'olivedrab', 'plum']

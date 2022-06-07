@@ -1,0 +1,1 @@
+['peru', 'darkslategray', 'linen', 'khaki', 'saddlebrown', 'darkseagreen', 'deepskyblue', 'indianred', 'lightseagreen', 'deeppink', 'slateblue', 'lightsalmon', 'lightslategray', 'darkolivegreen', 'lightgreen', 'sandybrown']

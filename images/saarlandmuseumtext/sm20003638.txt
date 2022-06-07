@@ -1,0 +1,1 @@
+['white', 'tan', 'rosybrown', 'darkseagreen', 'dimgray', 'peru', 'saddlebrown', 'darkslategray']

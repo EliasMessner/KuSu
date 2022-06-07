@@ -1,0 +1,1 @@
+['whitesmoke', 'rosybrown', 'saddlebrown', 'gray', 'black', 'indianred', 'navajowhite']

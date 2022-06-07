@@ -1,0 +1,1 @@
+['antiquewhite', 'darkslategray', 'gray', 'darkkhaki', 'dimgray', 'skyblue', 'indianred', 'palegreen', 'thistle', 'sienna', 'darkslateblue', 'darkolivegreen', 'burlywood', 'mediumvioletred']

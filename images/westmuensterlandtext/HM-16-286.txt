@@ -1,0 +1,1 @@
+['snow', 'darkslategray', 'gray', 'midnightblue', 'burlywood', 'lightslategray', 'sienna']

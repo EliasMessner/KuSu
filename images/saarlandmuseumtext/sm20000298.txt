@@ -1,0 +1,1 @@
+['linen', 'lightslategray', 'darkslategray']

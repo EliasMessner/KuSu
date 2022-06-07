@@ -1,0 +1,1 @@
+['rosybrown', 'darkslategray', 'sienna', 'cornsilk', 'peru']

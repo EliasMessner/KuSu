@@ -1,0 +1,1 @@
+['tan', 'maroon', 'sienna', 'darkslategray', 'black', 'darkgoldenrod', 'dimgray', 'steelblue', 'lightsteelblue', 'rosybrown']

@@ -1,0 +1,1 @@
+['sandybrown', 'darkslategray', 'antiquewhite', 'seagreen', 'darkkhaki', 'darkolivegreen', 'peru', 'lightslategray']

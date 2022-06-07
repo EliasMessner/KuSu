@@ -1,0 +1,1 @@
+['whitesmoke', 'dimgray', 'skyblue', 'brown', 'mediumvioletred', 'sandybrown', 'seagreen', 'darkslateblue', 'darkslategray', 'darkolivegreen', 'burlywood', 'plum', 'maroon']

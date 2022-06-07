@@ -1,0 +1,1 @@
+['linen', 'darkslategray', 'gray', 'slategray', 'tan', 'sienna', 'mediumaquamarine', 'darkslateblue', 'lightblue', 'rosybrown', 'mediumslateblue', 'darkkhaki', 'lightcoral', 'goldenrod', 'indianred', 'darkorchid', 'aquamarine']

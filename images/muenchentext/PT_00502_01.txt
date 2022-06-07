@@ -1,0 +1,1 @@
+['bisque', 'black', 'darkslategray', 'peru', 'darkgray', 'darkolivegreen', 'darkslateblue']

@@ -1,0 +1,1 @@
+['silver', 'dimgray', 'black', 'goldenrod', 'mediumvioletred', 'cornflowerblue', 'olivedrab', 'rosybrown', 'burlywood']

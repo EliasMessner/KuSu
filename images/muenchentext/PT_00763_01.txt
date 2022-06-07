@@ -1,0 +1,1 @@
+['darkslategray', 'lightgray', 'gray', 'darkgray', 'darkkhaki', 'sienna', 'peru', 'cadetblue']

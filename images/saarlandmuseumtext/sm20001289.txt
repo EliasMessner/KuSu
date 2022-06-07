@@ -1,0 +1,1 @@
+['darkgray', 'darkslategray', 'white', 'burlywood', 'indianred', 'sienna', 'darkcyan', 'khaki', 'olivedrab', 'midnightblue', 'chocolate', 'darkseagreen', 'orange', 'slategray', 'maroon', 'firebrick', 'thistle']

@@ -1,0 +1,1 @@
+['darkslategray', 'darkgray', 'sienna', 'khaki', 'indianred', 'snow']

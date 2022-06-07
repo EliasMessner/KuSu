@@ -1,0 +1,1 @@
+['white', 'lightgreen', 'darkgray', 'burlywood', 'darkcyan', 'olivedrab', 'chocolate', 'darkslategray', 'lightseagreen', 'teal', 'saddlebrown']

@@ -1,0 +1,1 @@
+['lightgray', 'darkolivegreen', 'black', 'darkkhaki', 'lightslategray', 'midnightblue', 'slategray']

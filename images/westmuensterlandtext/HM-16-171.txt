@@ -1,0 +1,1 @@
+['white', 'tan', 'black', 'dimgray', 'darkolivegreen', 'mediumaquamarine']

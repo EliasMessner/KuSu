@@ -1,0 +1,1 @@
+['darkslategray', 'darkgray', 'saddlebrown', 'darkkhaki', 'goldenrod', 'sienna', 'black']

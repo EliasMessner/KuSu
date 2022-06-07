@@ -1,0 +1,1 @@
+['dimgray', 'gainsboro', 'black', 'gray', 'olivedrab', 'slateblue', 'rosybrown', 'sandybrown', 'yellowgreen', 'darkorchid', 'darkolivegreen', 'midnightblue', 'royalblue', 'palegoldenrod', 'saddlebrown', 'mediumaquamarine', 'firebrick', 'plum', 'palevioletred', 'mediumorchid', 'darkslategray']
