@@ -1,0 +1,1 @@
+['linen', 'sienna', 'black', 'dimgray', 'lightskyblue', 'slateblue', 'hotpink', 'tomato', 'khaki', 'lightsalmon', 'mediumaquamarine', 'burlywood', 'silver', 'cornflowerblue', 'darkolivegreen']

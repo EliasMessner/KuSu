@@ -1,0 +1,1 @@
+['silver', 'darkslategray', 'gray', 'sienna', 'dimgray', 'slategray', 'lightsteelblue', 'darkkhaki', 'darkolivegreen', 'midnightblue', 'indianred', 'plum']

@@ -1,0 +1,1 @@
+['gainsboro', 'dimgray', 'black', 'sienna', 'lightpink']

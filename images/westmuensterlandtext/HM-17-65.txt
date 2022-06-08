@@ -1,0 +1,1 @@
+['lavender', 'darkslategray', 'gray', 'indianred', 'lightslategray', 'darkslateblue', 'sienna', 'tan']

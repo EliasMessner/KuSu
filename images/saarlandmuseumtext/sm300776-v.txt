@@ -1,0 +1,1 @@
+['darkslategray', 'lightgray', 'sienna', 'royalblue', 'firebrick', 'darkkhaki', 'midnightblue', 'seagreen', 'darkmagenta', 'plum', 'black', 'darkslateblue']

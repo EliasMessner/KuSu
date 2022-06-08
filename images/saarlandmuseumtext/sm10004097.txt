@@ -1,0 +1,1 @@
+['black', 'gray', 'maroon', 'white', 'wheat', 'yellow', 'mediumvioletred', 'dodgerblue', 'dimgray', 'midnightblue', 'olivedrab', 'indianred', 'firebrick', 'darkolivegreen', 'rosybrown', 'goldenrod', 'purple', 'crimson', 'khaki']

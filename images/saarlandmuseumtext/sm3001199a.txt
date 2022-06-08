@@ -1,0 +1,1 @@
+['tan', 'saddlebrown', 'black', 'dimgray', 'peru', 'steelblue', 'firebrick', 'goldenrod', 'midnightblue', 'seagreen', 'crimson', 'lavender', 'indianred', 'palevioletred', 'palegoldenrod', 'darkgreen', 'darkslategray']

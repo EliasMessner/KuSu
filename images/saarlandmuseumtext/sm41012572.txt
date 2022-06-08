@@ -1,0 +1,1 @@
+['black', 'whitesmoke', 'dimgray', 'sienna', 'khaki']

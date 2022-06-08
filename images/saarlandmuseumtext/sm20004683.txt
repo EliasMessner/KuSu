@@ -1,0 +1,1 @@
+['darkgray', 'bisque', 'black', 'maroon', 'lightseagreen', 'midnightblue', 'mediumvioletred', 'brown', 'darkgoldenrod', 'darkgreen', 'pink', 'darksalmon', 'dimgray', 'darkseagreen', 'indigo', 'chocolate', 'khaki', 'olivedrab', 'darkolivegreen', 'lightslategray']

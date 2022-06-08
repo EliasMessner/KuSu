@@ -1,0 +1,1 @@
+['darkgray', 'darkslategray', 'white', 'indianred', 'cadetblue', 'darkslateblue', 'turquoise', 'deeppink', 'springgreen', 'mediumpurple', 'crimson', 'yellow', 'olivedrab', 'palegoldenrod', 'teal', 'deepskyblue', 'peru', 'yellowgreen', 'darkred', 'lightpink', 'saddlebrown']

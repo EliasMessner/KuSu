@@ -1,0 +1,1 @@
+['white', 'black', 'lightslategray', 'peru', 'khaki', 'palevioletred', 'skyblue', 'darkolivegreen', 'hotpink', 'mistyrose']

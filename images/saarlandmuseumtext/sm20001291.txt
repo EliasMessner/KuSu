@@ -1,0 +1,1 @@
+['darkgray', 'whitesmoke', 'black', 'indianred', 'khaki', 'darkslategray', 'palevioletred', 'sienna', 'goldenrod', 'lightseagreen', 'chocolate', 'darkseagreen', 'indigo', 'olivedrab', 'darksalmon']

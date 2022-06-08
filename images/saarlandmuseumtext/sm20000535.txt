@@ -1,0 +1,1 @@
+['burlywood', 'darkslategray', 'dimgray', 'sienna', 'black', 'palevioletred', 'brown', 'silver']

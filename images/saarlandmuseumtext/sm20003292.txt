@@ -1,0 +1,1 @@
+['darkred', 'black', 'wheat', 'gray', 'orange', 'saddlebrown', 'midnightblue', 'tomato', 'darkgoldenrod', 'steelblue', 'lightsalmon', 'brown', 'maroon', 'dimgray', 'lightsteelblue', 'chocolate']

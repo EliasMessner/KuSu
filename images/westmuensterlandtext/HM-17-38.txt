@@ -1,0 +1,1 @@
+['ghostwhite', 'dimgray', 'rosybrown', 'black', 'darkslateblue', 'indianred', 'darkgray', 'darkolivegreen']

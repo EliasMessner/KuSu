@@ -1,0 +1,1 @@
+['darkgray', 'cornsilk', 'darkolivegreen', 'palevioletred', 'peru', 'sienna', 'khaki', 'forestgreen', 'darkslategray', 'skyblue', 'firebrick', 'lightsalmon', 'maroon', 'lightgreen', 'olivedrab', 'darkslateblue', 'mediumvioletred', 'orange', 'lightseagreen']

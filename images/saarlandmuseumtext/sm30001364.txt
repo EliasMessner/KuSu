@@ -1,0 +1,1 @@
+['black', 'azure', 'rosybrown', 'darkolivegreen', 'darkgreen', 'indianred', 'mediumturquoise', 'crimson', 'dimgray', 'maroon', 'khaki', 'darkslateblue', 'pink', 'lightseagreen', 'purple', 'gray', 'olive']

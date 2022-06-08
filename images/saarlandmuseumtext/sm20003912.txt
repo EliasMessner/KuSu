@@ -1,0 +1,1 @@
+['darkolivegreen', 'white', 'brown', 'mediumturquoise', 'peru', 'darkslategray', 'lightpink', 'palevioletred', 'palegoldenrod', 'gray', 'rosybrown', 'saddlebrown', 'black']

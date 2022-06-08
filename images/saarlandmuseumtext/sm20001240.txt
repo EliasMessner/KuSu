@@ -1,0 +1,1 @@
+['darkgray', 'beige', 'black', 'brown', 'palevioletred', 'olivedrab', 'mediumturquoise', 'khaki', 'darkslategray', 'peru', 'lightsalmon', 'orange', 'darkseagreen', 'slategray']

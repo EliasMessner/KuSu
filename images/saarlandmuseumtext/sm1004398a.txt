@@ -1,0 +1,1 @@
+['dimgray', 'black', 'lavender', 'burlywood', 'saddlebrown', 'dodgerblue', 'red', 'greenyellow', 'olivedrab', 'teal', 'midnightblue', 'crimson', 'chocolate', 'brown', 'palevioletred', 'cadetblue', 'plum', 'darkgoldenrod']

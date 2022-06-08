@@ -1,0 +1,1 @@
+['darkgray', 'sienna', 'black', 'crimson', 'deepskyblue', 'darkcyan', 'gold', 'deeppink', 'darkslateblue', 'bisque', 'dimgray', 'brown', 'olivedrab', 'seagreen']

@@ -1,0 +1,1 @@
+['whitesmoke', 'black', 'darkkhaki', 'darkolivegreen', 'moccasin', 'gray', 'goldenrod', 'sienna']

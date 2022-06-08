@@ -1,0 +1,1 @@
+['wheat', 'black', 'darkslategray', 'indigo', 'gray', 'dimgray', 'darkgray', 'plum', 'darkolivegreen']

@@ -1,0 +1,1 @@
+['gray', 'black', 'whitesmoke', 'cornflowerblue', 'aquamarine', 'salmon', 'khaki', 'violet', 'mediumaquamarine', 'midnightblue', 'darkolivegreen', 'slategray', 'skyblue', 'burlywood', 'plum']

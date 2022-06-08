@@ -1,0 +1,1 @@
+['white', 'palegoldenrod', 'seagreen', 'darkslategray', 'yellowgreen', 'olivedrab', 'steelblue', 'lightseagreen', 'gray', 'darkolivegreen', 'mediumaquamarine']

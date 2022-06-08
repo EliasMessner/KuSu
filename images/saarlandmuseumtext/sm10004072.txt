@@ -1,0 +1,1 @@
+['black', 'darkgray', 'darkolivegreen', 'lemonchiffon', 'hotpink', 'plum', 'sienna']

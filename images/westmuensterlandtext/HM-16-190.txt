@@ -1,0 +1,1 @@
+['ghostwhite', 'black', 'dimgray', 'sienna', 'rosybrown', 'saddlebrown']

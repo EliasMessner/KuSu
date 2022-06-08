@@ -1,0 +1,1 @@
+['white', 'darkslategray', 'tan', 'darkgray', 'indianred', 'dimgray', 'darkslateblue', 'lightslategray', 'black', 'crimson', 'plum']

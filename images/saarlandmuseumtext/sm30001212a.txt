@@ -1,0 +1,1 @@
+['sienna', 'darkgray', 'black', 'darkslateblue', 'darkcyan', 'deeppink', 'deepskyblue', 'gold', 'crimson', 'palegoldenrod', 'indianred', 'seagreen', 'maroon', 'slategray', 'darkkhaki', 'pink', 'teal']

@@ -1,0 +1,1 @@
+['dimgray', 'gainsboro', 'black', 'brown', 'darkolivegreen', 'darkkhaki', 'rosybrown', 'steelblue', 'midnightblue', 'seagreen', 'firebrick', 'tan']

@@ -1,0 +1,1 @@
+['wheat', 'gray', 'darkslategray', 'darkkhaki', 'palegoldenrod', 'indianred']

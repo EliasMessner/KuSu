@@ -1,0 +1,1 @@
+['wheat', 'saddlebrown', 'dimgray', 'peru', 'black', 'mediumpurple', 'burlywood', 'lightsteelblue', 'rosybrown', 'gray', 'midnightblue', 'darkslategray', 'indianred']
