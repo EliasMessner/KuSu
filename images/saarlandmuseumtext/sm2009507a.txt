@@ -1,1 +1,7 @@
-['darkgray', 'darkslategray', 'tan', 'darkgoldenrod', 'firebrick', 'saddlebrown', 'black', 'darkslateblue', 'dimgray', 'indianred', 'linen']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+MetallicMetallicMetallicMetallicMetallicMetallicMetallic
+GrünGrünGrünGrün
+Schwarz
+Pink-Rosa
+

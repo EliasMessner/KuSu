@@ -1,1 +1,13 @@
-['darkgray', 'burlywood', 'darkslategray', 'white', 'crimson', 'brown', 'seagreen', 'deeppink', 'midnightblue', 'gold', 'coral', 'deepskyblue', 'teal', 'darkgoldenrod', 'darkolivegreen', 'pink', 'palegoldenrod', 'mediumpurple', 'maroon']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+
+
+
+
+
+
+
+
+
+
+

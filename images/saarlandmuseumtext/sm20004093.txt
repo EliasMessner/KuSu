@@ -1,1 +1,9 @@
-['gray', 'lightgray', 'black', 'dodgerblue', 'mediumseagreen', 'deeppink', 'gold', 'crimson', 'indianred', 'olivedrab', 'dimgray', 'mediumturquoise']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+
+
+
+
+
+
+
+

@@ -1,1 +1,9 @@
-['gray', 'black', 'firebrick', 'silver', 'maroon', 'midnightblue', 'mediumvioletred', 'seagreen', 'goldenrod', 'deepskyblue', 'darkslateblue', 'rosybrown', 'olive', 'darkslategray', 'darkolivegreen']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraun
+BlauBlau
+Metallic
+
+
+
+
+

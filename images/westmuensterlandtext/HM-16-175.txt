@@ -1,1 +1,9 @@
-['white', 'burlywood', 'dimgray', 'darkgray', 'saddlebrown', 'peru']
+WeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeiß
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+Metallic
+
+
+
+
+

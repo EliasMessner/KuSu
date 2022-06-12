@@ -1,1 +1,9 @@
-['darkslategray', 'darkgray', 'darkolivegreen', 'burlywood', 'white', 'palevioletred', 'pink', 'khaki']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+GrünGrünGrün
+BraunBraun
+
+
+
+
+

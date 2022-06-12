@@ -1,1 +1,11 @@
-['darkslategray', 'lightgray', 'sienna', 'darkkhaki', 'goldenrod', 'lightslategray', 'mediumvioletred', 'crimson', 'midnightblue', 'darkgreen', 'dodgerblue', 'brown', 'chocolate', 'lightpink', 'lightskyblue']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+
+
+
+
+
+
+
+
+

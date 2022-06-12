@@ -1,1 +1,7 @@
-['white', 'black', 'dimgray', 'tan', 'sienna']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+WeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeiß
+Metallic
+
+
+
+

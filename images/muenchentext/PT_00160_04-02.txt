@@ -1,1 +1,9 @@
-['gainsboro', 'black', 'dimgray', 'indigo', 'darkgray', 'slateblue', 'darkslategray', 'thistle', 'peru', 'darkgreen']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+MetallicMetallicMetallic
+
+
+
+
+
+

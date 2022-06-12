@@ -1,1 +1,11 @@
-['white', 'plum', 'gray', 'dimgray', 'indianred', 'lemonchiffon', 'black']
+WeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeiß
+ViolettViolettViolettViolettViolettViolett
+GrauGrauGrauGrau
+MetallicMetallicMetallic
+Pink-RosaPink-RosaPink-Rosa
+Braun
+
+
+
+
+

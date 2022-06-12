@@ -1,1 +1,12 @@
-['ivory', 'darkgray', 'black', 'darkslateblue', 'deeppink', 'seagreen', 'crimson', 'gold', 'deepskyblue', 'darkolivegreen', 'maroon', 'darkkhaki', 'palevioletred', 'teal', 'lavender', 'darkgreen', 'lightpink']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallic
+Schwarz
+
+
+
+
+
+
+
+

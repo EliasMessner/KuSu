@@ -1,1 +1,9 @@
-['burlywood', 'darkslategray', 'dimgray', 'sienna', 'black', 'palevioletred', 'brown', 'silver']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+
+
+
+
+

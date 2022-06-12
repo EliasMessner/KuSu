@@ -1,1 +1,10 @@
-['lightgray', 'black', 'gray', 'saddlebrown', 'peru', 'khaki', 'lemonchiffon', 'mediumvioletred', 'skyblue', 'pink']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallic
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+
+
+
+
+
+
+

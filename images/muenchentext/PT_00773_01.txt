@@ -1,1 +1,6 @@
-['gainsboro', 'darkslategray', 'gray', 'slategray', 'cadetblue', 'midnightblue', 'saddlebrown', 'burlywood', 'darkolivegreen']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+Pink-RosaPink-Rosa
+
+

@@ -1,1 +1,7 @@
-['silver', 'darkolivegreen', 'black', 'darkslateblue', 'lightslategray', 'peru']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+MetallicMetallicMetallicMetallicMetallicMetallicMetallic
+SchwarzSchwarzSchwarz
+BraunBraun
+
+

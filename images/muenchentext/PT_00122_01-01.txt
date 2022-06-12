@@ -1,1 +1,8 @@
-['lightgray', 'black', 'dimgray', 'palegoldenrod', 'slategray', 'darkkhaki', 'midnightblue', 'thistle', 'greenyellow']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+BraunBraunBraunBraunBraunBraunBraunBraunBraun
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+GrünGrün
+
+
+

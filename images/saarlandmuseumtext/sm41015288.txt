@@ -1,1 +1,5 @@
-['lightgray', 'dimgray', 'black', 'darkkhaki', 'darkolivegreen']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+Braun
+

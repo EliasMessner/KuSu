@@ -1,1 +1,9 @@
-['lightgray', 'darksalmon', 'black', 'dimgray', 'saddlebrown', 'chocolate', 'goldenrod', 'maroon', 'midnightblue']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+OrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrange
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+SchwarzSchwarz
+
+
+
+

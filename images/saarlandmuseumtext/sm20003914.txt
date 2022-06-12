@@ -1,1 +1,8 @@
-['white', 'tan', 'cadetblue', 'indianred', 'dimgray', 'palegoldenrod']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+WeißWeißWeißWeißWeißWeißWeißWeißWeiß
+GrünGrün
+Pink-RosaPink-Rosa
+
+
+

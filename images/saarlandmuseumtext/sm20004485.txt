@@ -1,1 +1,11 @@
-['darkgray', 'darkslategray', 'burlywood', 'sienna', 'midnightblue', 'black', 'darkgoldenrod', 'darkolivegreen', 'darkcyan', 'mediumvioletred', 'maroon', 'plum', 'steelblue', 'saddlebrown', 'seagreen', 'navy', 'paleturquoise']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+MetallicMetallicMetallicMetallicMetallicMetallicMetallic
+
+
+
+
+
+
+
+

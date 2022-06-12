@@ -1,1 +1,10 @@
-['gainsboro', 'darkslategray', 'gray', 'brown', 'goldenrod', 'seagreen', 'mediumvioletred', 'cornflowerblue', 'darkslateblue', 'darkolivegreen', 'burlywood', 'maroon', 'rosybrown']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+
+
+
+
+
+
+
+
+

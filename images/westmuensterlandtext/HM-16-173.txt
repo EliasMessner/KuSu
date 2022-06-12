@@ -1,1 +1,10 @@
-['white', 'darkolivegreen', 'tan', 'black', 'indianred']
+WeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeiß
+ViolettViolettViolettViolettViolettViolett
+GrauGrauGrauGrauGrau
+MetallicMetallic
+
+
+
+
+
+

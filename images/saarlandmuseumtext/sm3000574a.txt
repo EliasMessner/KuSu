@@ -1,1 +1,11 @@
-['black', 'midnightblue', 'rosybrown', 'firebrick', 'lawngreen', 'forestgreen', 'silver', 'maroon', 'palevioletred', 'saddlebrown', 'gray', 'peru', 'indianred', 'steelblue', 'palegreen', 'navajowhite', 'paleturquoise', 'dodgerblue', 'yellowgreen']
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraun
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+BlauBlauBlauBlauBlauBlau
+MetallicMetallicMetallicMetallicMetallic
+Türkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-Blaugrün
+RotRotRotRot
+
+

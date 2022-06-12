@@ -1,1 +1,13 @@
-['darkgray', 'white', 'khaki', 'darkslategray', 'maroon', 'slategray', 'tomato', 'palevioletred', 'lightseagreen', 'darkgoldenrod', 'palegreen', 'indianred', 'peru', 'seagreen', 'midnightblue', 'lightpink', 'darkorange', 'darkolivegreen']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+MetallicMetallicMetallicMetallicMetallic
+Weiß
+
+
+
+
+
+
+
+
+

@@ -1,1 +1,11 @@
-['silver', 'gray', 'darkslategray', 'saddlebrown', 'dodgerblue', 'goldenrod', 'mediumvioletred', 'firebrick', 'seagreen', 'midnightblue', 'brown', 'teal', 'slategray', 'pink', 'palegoldenrod', 'olivedrab', 'lightskyblue']
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraun
+SchwarzSchwarzSchwarz
+Grün
+
+
+
+
+
+

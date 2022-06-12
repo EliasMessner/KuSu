@@ -1,1 +1,7 @@
-['white', 'darkgray', 'palevioletred', 'darkslategray', 'saddlebrown', 'pink']
+WeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeiß
+GrauGrauGrauGrauGrauGrauGrauGrau
+ViolettViolettViolett
+Pink-Rosa
+
+
+

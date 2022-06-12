@@ -1,1 +1,10 @@
-['burlywood', 'sienna', 'black', 'deeppink', 'crimson', 'forestgreen', 'gold', 'white', 'dodgerblue', 'maroon', 'lightslategray', 'salmon', 'darkgoldenrod']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrünGrünGrünGrün
+MetallicMetallic
+
+
+
+
+
+
+

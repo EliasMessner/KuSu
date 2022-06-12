@@ -1,1 +1,10 @@
-['whitesmoke', 'peru', 'lightslategray', 'darkslategray', 'skyblue', 'midnightblue', 'gold', 'seagreen', 'mediumvioletred', 'firebrick', 'steelblue', 'darkolivegreen', 'maroon', 'purple', 'indianred', 'darkseagreen']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrünGrünGrünGrün
+MetallicMetallicMetallic
+Blau
+
+
+
+
+

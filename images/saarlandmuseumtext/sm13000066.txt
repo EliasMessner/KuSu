@@ -1,1 +1,10 @@
-['darkgray', 'black', 'maroon', 'darkolivegreen', 'midnightblue', 'mediumvioletred', 'darkgreen', 'burlywood', 'olive', 'darkcyan', 'darkgoldenrod', 'dimgray', 'goldenrod', 'indigo']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+MetallicMetallicMetallicMetallicMetallicMetallic
+BraunBraunBraun
+
+
+
+
+
+

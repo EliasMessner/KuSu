@@ -1,1 +1,10 @@
-['white', 'tan', 'black', 'dimgray', 'darkolivegreen', 'mediumaquamarine']
+WeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeiß
+ViolettViolettViolettViolettViolettViolettViolettViolettViolett
+GrauGrauGrauGrauGrauGrau
+BraunBraunBraun
+Metallic
+
+
+
+
+

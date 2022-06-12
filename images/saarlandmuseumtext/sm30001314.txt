@@ -1,1 +1,11 @@
-['silver', 'darkolivegreen', 'darkkhaki', 'khaki', 'indianred', 'darkslateblue', 'palevioletred', 'mediumseagreen', 'mediumturquoise', 'lightyellow', 'slategray', 'darkslategray', 'sienna', 'rosybrown', 'brown']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+Pink-RosaPink-Rosa
+
+
+
+
+
+

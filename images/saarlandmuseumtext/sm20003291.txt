@@ -1,1 +1,8 @@
-['gray', 'darkslategray', 'lightgray', 'mediumvioletred', 'seagreen', 'crimson', 'goldenrod', 'deepskyblue', 'midnightblue', 'darkkhaki', 'sienna', 'darkgreen', 'saddlebrown', 'peru']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+
+
+
+
+
+
+

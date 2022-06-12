@@ -1,1 +1,10 @@
-['white', 'darkslategray', 'darkgray', 'lemonchiffon', 'olivedrab', 'skyblue']
+WeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeißWeiß
+GrauGrauGrauGrauGrauGrauGrauGrauGrau
+ViolettViolettViolettViolettViolettViolett
+
+
+
+
+
+
+

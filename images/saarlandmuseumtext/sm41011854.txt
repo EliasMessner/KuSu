@@ -1,1 +1,5 @@
-['gainsboro', 'dimgray', 'black', 'darkkhaki']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+Schwarz
+

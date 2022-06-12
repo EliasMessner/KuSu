@@ -1,1 +1,10 @@
-['darkgreen', 'darkkhaki', 'snow', 'lightslategray', 'gray', 'olive', 'darkslategray', 'sienna', 'goldenrod', 'palegoldenrod', 'lavender']
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+
+
+
+
+
+
+

@@ -1,1 +1,13 @@
-['black', 'darkgray', 'darkolivegreen', 'peru', 'maroon', 'white', 'orangered', 'darkslateblue', 'yellow', 'deeppink', 'turquoise', 'mediumseagreen', 'lemonchiffon', 'olivedrab', 'goldenrod', 'chocolate', 'darkcyan', 'steelblue', 'pink', 'crimson', 'indianred']
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+GrünGrün
+
+
+
+
+
+
+
+
+

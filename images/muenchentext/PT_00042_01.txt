@@ -1,1 +1,8 @@
-['linen', 'darkslategray', 'gray', 'cadetblue', 'tan', 'darkslateblue', 'lightcoral', 'palegreen', 'dimgray', 'saddlebrown', 'plum', 'pink', 'darkolivegreen', 'darkgoldenrod', 'khaki']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+BraunBraunBraun
+
+
+
+
+

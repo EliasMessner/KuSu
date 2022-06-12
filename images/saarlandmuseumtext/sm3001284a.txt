@@ -1,1 +1,11 @@
-['darkslategray', 'gainsboro', 'gray', 'crimson', 'gold', 'seagreen', 'darkblue', 'mediumvioletred', 'skyblue', 'sienna', 'darkkhaki', 'palevioletred', 'slateblue', 'midnightblue', 'darksalmon', 'maroon', 'darkolivegreen', 'lavender']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+ViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolettViolett
+MetallicMetallicMetallicMetallic
+
+
+
+
+
+
+
+

@@ -1,1 +1,6 @@
-['wheat', 'darkslategray', 'gray', 'darkslateblue', 'saddlebrown', 'cadetblue', 'darkkhaki', 'brown', 'khaki', 'mediumaquamarine', 'slateblue', 'darkgreen', 'darksalmon', 'chocolate', 'lavender']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+
+
+

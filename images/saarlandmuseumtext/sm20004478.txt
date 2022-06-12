@@ -1,1 +1,11 @@
-['white', 'darkslategray', 'tan', 'darkgray', 'indianred', 'dimgray', 'darkslateblue', 'lightslategray', 'black', 'crimson', 'plum']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+WeißWeißWeißWeißWeißWeißWeißWeißWeiß
+BlauBlau
+Metallic
+
+
+
+
+
+

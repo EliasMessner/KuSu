@@ -1,1 +1,9 @@
-['olivedrab', 'yellowgreen', 'black', 'lightslategray', 'whitesmoke', 'darkslategray', 'darkseagreen', 'khaki', 'sienna', 'lightskyblue']
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+
+
+
+
+

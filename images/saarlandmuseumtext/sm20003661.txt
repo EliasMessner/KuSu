@@ -1,1 +1,9 @@
-['white', 'black', 'palegoldenrod', 'darkolivegreen', 'sandybrown', 'chocolate', 'darkgray', 'rosybrown', 'firebrick', 'maroon']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+WeißWeißWeißWeißWeißWeiß
+SchwarzSchwarzSchwarzSchwarzSchwarz
+MetallicMetallic
+GrauGrau
+Gelb
+
+
+

@@ -1,1 +1,10 @@
-['darkkhaki', 'darkolivegreen', 'saddlebrown', 'black', 'silver', 'crimson', 'darkturquoise', 'seagreen', 'midnightblue', 'firebrick', 'maroon', 'lightpink', 'slategray', 'teal', 'mediumaquamarine']
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+GrauGrauGrauGrau
+
+
+
+
+
+

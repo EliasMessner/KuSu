@@ -1,1 +1,9 @@
-['gray', 'tan', 'black', 'goldenrod', 'firebrick', 'midnightblue', 'mediumvioletred', 'seagreen', 'dodgerblue', 'indianred', 'olivedrab', 'maroon', 'darkolivegreen', 'darkslategray', 'dimgray', 'peru']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrünGrünGrünGrün
+
+
+
+
+
+

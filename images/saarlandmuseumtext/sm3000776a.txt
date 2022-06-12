@@ -1,1 +1,10 @@
-['black', 'darkgreen', 'slateblue', 'olive', 'slategray', 'indigo', 'saddlebrown', 'darkmagenta', 'violet', 'seagreen', 'green', 'dodgerblue', 'gray', 'thistle', 'darkkhaki', 'limegreen', 'cornflowerblue', 'palevioletred', 'midnightblue', 'lightgray', 'goldenrod', 'mediumblue', 'darksalmon', 'lightgreen', 'brown']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+BlauBlauBlauBlauBlauBlauBlauBlauBlauBlauBlau
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+MetallicMetallicMetallicMetallicMetallicMetallic
+ViolettViolettViolettViolett
+
+
+
+

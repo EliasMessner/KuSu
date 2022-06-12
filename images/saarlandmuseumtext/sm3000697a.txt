@@ -1,1 +1,11 @@
-['gray', 'sienna', 'darkkhaki', 'darkslategray', 'gainsboro', 'mediumseagreen', 'mediumturquoise', 'darkslateblue', 'deeppink', 'crimson', 'goldenrod', 'lemonchiffon', 'lightpink', 'saddlebrown']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+MetallicMetallicMetallicMetallicMetallicMetallicMetallic
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+Türkis-BlaugrünTürkis-BlaugrünTürkis-Blaugrün
+
+
+
+
+
+

@@ -1,1 +1,10 @@
-['wheat', 'gray', 'cadetblue', 'rosybrown', 'burlywood', 'darkolivegreen', 'saddlebrown']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+MetallicMetallicMetallicMetallicMetallicMetallic
+GelbGelbGelbGelb
+Türkis-BlaugrünTürkis-Blaugrün
+Grün
+
+
+

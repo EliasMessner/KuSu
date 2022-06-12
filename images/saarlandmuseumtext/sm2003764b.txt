@@ -1,1 +1,9 @@
-['gray', 'lightgray', 'black', 'deepskyblue', 'gold', 'seagreen', 'deeppink', 'firebrick', 'dimgray', 'olivedrab', 'steelblue', 'sienna']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+
+
+
+
+
+

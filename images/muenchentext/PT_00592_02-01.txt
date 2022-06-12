@@ -1,1 +1,8 @@
-['lightgray', 'black', 'gray', 'burlywood', 'peru', 'darkslategray', 'olive']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+GelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelb
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+BraunBraunBraunBraunBraun
+MetallicMetallicMetallic
+
+
+

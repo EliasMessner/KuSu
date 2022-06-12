@@ -1,1 +1,7 @@
-['khaki', 'black', 'sienna', 'antiquewhite', 'darkgoldenrod', 'dimgray']
+GelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelb
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+BraunBraunBraunBraunBraunBraunBraun
+MetallicMetallic
+Grün
+
+

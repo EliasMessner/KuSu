@@ -1,1 +1,8 @@
-['darkgray', 'honeydew', 'darkslategray', 'darkolivegreen', 'sienna', 'crimson', 'goldenrod', 'dimgray', 'steelblue', 'darksalmon', 'olivedrab', 'darkslateblue']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+Türkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-Blaugrün
+MetallicMetallicMetallicMetallicMetallicMetallic
+GrünGrünGrün
+BraunBraun
+
+
+

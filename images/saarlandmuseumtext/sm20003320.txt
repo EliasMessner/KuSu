@@ -1,1 +1,9 @@
-['white', 'darkseagreen', 'darkcyan', 'darkslategray', 'cadetblue', 'tan', 'darkolivegreen']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+Türkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-Blaugrün
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+WeißWeißWeißWeißWeißWeißWeißWeißWeiß
+BlauBlauBlauBlauBlau
+
+
+

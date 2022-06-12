@@ -1,1 +1,10 @@
-['palegoldenrod', 'black', 'sienna', 'darkslategray', 'darkslateblue', 'gray', 'lightslategray', 'darkolivegreen', 'lightgray', 'darkkhaki']
+GelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelb
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+MetallicMetallic
+Grau
+
+
+
+
+

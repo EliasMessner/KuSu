@@ -1,1 +1,11 @@
-['darkgray', 'saddlebrown', 'black', 'darkcyan', 'darkslateblue', 'crimson', 'turquoise', 'deeppink', 'greenyellow', 'gainsboro', 'rosybrown', 'darkkhaki', 'midnightblue', 'lavender', 'olivedrab', 'brown', 'teal']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+BraunBraunBraun
+
+
+
+
+
+
+
+

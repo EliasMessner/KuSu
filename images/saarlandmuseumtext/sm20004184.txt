@@ -1,1 +1,10 @@
-['darkgray', 'darkkhaki', 'black', 'white', 'seagreen', 'mediumvioletred', 'deepskyblue', 'crimson', 'gold', 'darkslateblue', 'darkolivegreen', 'indianred', 'darkgreen', 'maroon', 'teal', 'olivedrab', 'silver']
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+BraunBraun
+
+
+
+
+

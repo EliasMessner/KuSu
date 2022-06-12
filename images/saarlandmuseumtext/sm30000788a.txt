@@ -1,1 +1,12 @@
-['peru', 'darkgray', 'saddlebrown', 'white', 'black', 'darkslateblue', 'hotpink', 'tomato', 'yellow', 'turquoise', 'springgreen', 'seagreen', 'palevioletred', 'steelblue', 'darkkhaki', 'darkslategray', 'darkolivegreen', 'navajowhite']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+Grün
+
+
+
+
+
+
+
+

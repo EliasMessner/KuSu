@@ -1,1 +1,10 @@
-['gainsboro', 'cadetblue', 'khaki', 'lightslategray', 'gray', 'darkslategray', 'peru', 'indianred', 'darkseagreen', 'goldenrod']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+Türkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-BlaugrünTürkis-Blaugrün
+BraunBraunBraunBraunBraunBraunBraun
+Grün
+Gelb
+
+
+
+
+

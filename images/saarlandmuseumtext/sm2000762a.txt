@@ -1,1 +1,9 @@
-['darkgray', 'navajowhite', 'darkslategray', 'darkolivegreen', 'sienna', 'darkslateblue', 'peru', 'indianred']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+OrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrangeOrange
+Metallic
+Pink-Rosa
+
+
+
+

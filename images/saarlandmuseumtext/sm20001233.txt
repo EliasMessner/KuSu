@@ -1,1 +1,12 @@
-['darkgray', 'antiquewhite', 'darkslategray', 'salmon', 'firebrick', 'sandybrown', 'lightseagreen', 'midnightblue', 'lightpink', 'maroon', 'forestgreen', 'darkseagreen', 'palevioletred', 'slategray', 'chocolate', 'purple', 'olive', 'indianred', 'sienna']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+
+
+
+
+
+
+
+
+
+

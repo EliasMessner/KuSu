@@ -1,1 +1,9 @@
-['maroon', 'darkolivegreen', 'darkgoldenrod', 'antiquewhite', 'rosybrown', 'darkslateblue', 'firebrick', 'indigo', 'saddlebrown', 'steelblue', 'slateblue', 'olivedrab', 'midnightblue', 'indianred', 'thistle']
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+GrauGrauGrauGrauGrauGrauGrauGrau
+Pink-RosaPink-RosaPink-Rosa
+
+
+
+

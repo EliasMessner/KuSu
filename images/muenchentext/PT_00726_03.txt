@@ -1,1 +1,10 @@
-['gainsboro', 'darkslategray', 'gray', 'dimgray', 'darkkhaki', 'sienna', 'darkseagreen', 'lightsteelblue', 'darkslateblue', 'darkolivegreen', 'tan', 'lightgreen', 'mediumpurple', 'darkgoldenrod', 'aquamarine', 'indianred', 'mediumorchid', 'forestgreen', 'seagreen']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+
+
+
+
+
+
+
+

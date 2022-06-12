@@ -1,1 +1,8 @@
-['wheat', 'black', 'gray', 'darkslateblue', 'slategray', 'darkgray', 'darkslategray', 'darkkhaki', 'darkgreen']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+GrauGrauGrauGrau
+MetallicMetallic
+GrünGrün
+Pink-RosaPink-Rosa
+Blau
+

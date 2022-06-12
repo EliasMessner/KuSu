@@ -1,1 +1,12 @@
-['black', 'darkslategray', 'rosybrown', 'goldenrod', 'white', 'olivedrab', 'sienna', 'midnightblue', 'mediumturquoise', 'darkseagreen', 'palevioletred', 'chocolate', 'saddlebrown', 'slategray', 'burlywood', 'mistyrose', 'brown']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+Braun
+
+
+
+
+
+
+

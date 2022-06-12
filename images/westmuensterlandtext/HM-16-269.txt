@@ -1,1 +1,8 @@
-['snow', 'black', 'gray', 'darkkhaki', 'darkolivegreen', 'maroon', 'indianred', 'khaki', 'sienna', 'goldenrod']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+GrünGrünGrünGrün
+MetallicMetallicMetallicMetallic
+GelbGelbGelbGelb
+BraunBraun
+
+

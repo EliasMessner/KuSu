@@ -1,1 +1,9 @@
-['whitesmoke', 'rosybrown', 'saddlebrown', 'gray', 'black', 'indianred', 'navajowhite']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+MetallicMetallicMetallicMetallic
+ViolettViolett
+
+
+
+
+

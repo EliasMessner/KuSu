@@ -1,1 +1,9 @@
-['antiquewhite', 'darkslategray', 'gray', 'burlywood', 'dimgray', 'lightsteelblue', 'sienna', 'darkseagreen', 'darkolivegreen', 'darksalmon', 'darkslateblue', 'mediumpurple', 'khaki', 'olive', 'palevioletred', 'olivedrab', 'teal', 'darkorchid', 'skyblue', 'lavender', 'coral', 'goldenrod']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+
+
+
+
+
+

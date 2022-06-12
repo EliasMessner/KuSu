@@ -1,1 +1,12 @@
-['darkgray', 'sienna', 'darkslategray', 'whitesmoke', 'crimson', 'chocolate', 'darkslateblue', 'deeppink', 'gold', 'seagreen', 'deepskyblue', 'burlywood', 'maroon', 'teal', 'olivedrab', 'indianred', 'black', 'peru']
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+MetallicMetallicMetallicMetallicMetallicMetallic
+GrünGrünGrünGrünGrünGrün
+Pink-RosaPink-RosaPink-RosaPink-RosaPink-Rosa
+
+
+
+
+
+
+

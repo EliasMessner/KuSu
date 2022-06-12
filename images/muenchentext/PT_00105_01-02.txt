@@ -1,1 +1,10 @@
-['antiquewhite', 'black', 'darkkhaki', 'sienna', 'midnightblue', 'darkslategray', 'gray', 'goldenrod', 'thistle', 'mediumpurple', 'darkolivegreen', 'maroon']
+GelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelbGelb
+BraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraunBraun
+SchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarzSchwarz
+GrünGrünGrünGrün
+MetallicMetallic
+
+
+
+
+

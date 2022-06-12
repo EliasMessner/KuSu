@@ -1,1 +1,12 @@
-['dimgray', 'gainsboro', 'black', 'gray', 'olivedrab', 'slateblue', 'rosybrown', 'sandybrown', 'yellowgreen', 'darkorchid', 'darkolivegreen', 'midnightblue', 'royalblue', 'palegoldenrod', 'saddlebrown', 'mediumaquamarine', 'firebrick', 'plum', 'palevioletred', 'mediumorchid', 'darkslategray']
+GrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrauGrau
+GrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrünGrün
+MetallicMetallicMetallicMetallicMetallicMetallicMetallicMetallic
+BlauBlauBlau
+Pink-RosaPink-RosaPink-Rosa
+BraunBraun
+
+
+
+
+
+
