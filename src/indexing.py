@@ -1,6 +1,7 @@
 import datetime
 import os
 import timeit
+from pprint import pprint
 
 import xmltodict
 from elasticsearch import Elasticsearch

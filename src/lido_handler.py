@@ -15,6 +15,7 @@ def parse_lido_entry(lido_entry):
     result["events"] = parse_events(lido_entry)
     result["related_subjects"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectRelationWrap', 'lido:subjectWrap', 'lido:subjectSet', 'lido:subject', 'lido:subjectConcept', 'lido:term'], is_text=True, default="")
     result["url"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:administrativeMetadata', 'lido:recordWrap', 'lido:recordInfoSet'], is_text=True, default="")
+    result["img_url"] = (find_values_by_key_list(lido_entry, ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap', 'lido:resourceSet', 'lido:linkResource'], is_text=True, default=['']) + [''])[0]  # we use the first found element, because on our data the same link is present several times for each lido. Appending '' to the retrieved list, because if an empty list is returned we need to avoid index error
     return result
 
 
