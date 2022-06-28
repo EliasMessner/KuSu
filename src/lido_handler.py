@@ -15,7 +15,7 @@ def parse_lido_entry(lido_entry):
     result["events"] = parse_events(lido_entry)
     result["related_subjects"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectRelationWrap', 'lido:subjectWrap', 'lido:subjectSet', 'lido:subject', 'lido:subjectConcept', 'lido:term'], is_text=True, default="")
     result["url"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:administrativeMetadata', 'lido:recordWrap', 'lido:recordInfoSet'], is_text=True, default="")
-    result["img_url"] = (find_values_by_key_list(lido_entry, ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap', 'lido:resourceSet', 'lido:resourceRepresentation', 'lido:linkResource'], is_text=True, default=['']) + [''])[0]  # we use the first found element, because on our data the same link is present several times for each lido. Appending '' to the retrieved list, because if an empty list is returned we need to avoid index error
+    result["img_url"] = parse_img_url(lido_entry)
     return result
 
 
@@ -41,6 +41,16 @@ def parse_events(lido_entry):
         if len(new_event) > 0:
             resulting_events.append(new_event)
     return resulting_events
+
+
+def parse_img_url(lido_entry):
+    img_urls = find_values_by_key_list(lido_entry,
+                             ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap', 'lido:resourceSet',
+                              'lido:resourceRepresentation', 'lido:linkResource'], is_text=True, default=[''])
+    img_urls = img_urls if isinstance(img_urls, list) else [img_urls]
+    # we use the first element found, because on our data the same link is present several times for each lido.
+    # Appending '' to the retrieved list, because if an empty list is returned we need to avoid index error
+    return (img_urls + [''])[0]
 
 
 def find_values_by_key_list(d: dict | list, keys: list, is_text: bool, default: any, result=None):
