@@ -4,11 +4,14 @@ from pathlib import Path
 from constants import logs_dir, docs_dir, data_dir
 
 
-def atomize():
+def atomize(source_file_name):
+    """
+    :param source_file_name: where the entire XML data is now combined in one file
+    """
     Path(data_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
     Path(docs_dir).mkdir(parents=True, exist_ok=True)
     Path(logs_dir).mkdir(parents=True, exist_ok=True)
-    source_path = os.path.join(data_dir, "combined_data.xml")                    # where the entire XML data is now combined in one file
+    source_path = os.path.join(data_dir, source_file_name)
 
     with open(source_path, "r") as f:                    # read the whole source
         source_data = f.read()
@@ -26,7 +29,8 @@ def atomize():
         pos_b = source_data.find("</lido:lido>", pos_a)+12                         # end of closing tag
 
         entry_data = source_data[pos_a:pos_b]                                       # the part to be put in its own file
-        destination_path = os.path.join(docs_dir, "atomized_{}.xml".format(counter))          # the file path to write it into
+        data_source_ref = source_file_name.split('.')[0].split('_')[-1]
+        destination_path = os.path.join(docs_dir, f"atomized_{data_source_ref}_{counter}.xml")          # the file path to write it into
 
         with open(destination_path, "w") as g:                                   # write this entry
             g.write(entry_data)
@@ -39,5 +43,7 @@ def atomize():
         sys.stdout.write("\r\tDone atomizing {} entries.".format(counter))
 
 
-if __name__ == "__main__":
-    atomize()
+def atomize_all():
+    filenames = [filename for filename in os.listdir(data_dir) if filename.startswith("combined_data_") and filename.endswith(".xml")]
+    for filename in filenames:
+        atomize(filename)

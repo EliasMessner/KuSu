@@ -14,9 +14,12 @@ from pathlib import Path
 from constants import data_dir
 
 
-def combine():
-    file_paths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml", "LIDO_Exp.XML"]         # files to be combined into one
-    destination = os.path.join(data_dir, 'combined_data.xml')
+def combine(file_paths, dest_name):
+    """
+    :param file_paths: files to be combined into one
+    :param dest_name: reference name for destination file
+    """
+    destination = os.path.join(data_dir, f'combined_data_{dest_name}.xml')
     # remove file if it exists (so we can create a new file from scratch)
     if os.path.exists(destination):
         os.remove(destination)
@@ -44,7 +47,3 @@ def combine():
                 processed += len(entry_data) / 2**20                                 # how much data is left in this file in MiB
                 # sys.stdout.write("\r\t{} MB done.".format(round(processed,3)))      # overwrite in the same line to avoid flooding the terminal
             # print("\nFile done.\n")
-
-
-if __name__ == "__main__":
-    combine()
