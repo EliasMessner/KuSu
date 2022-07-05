@@ -1,4 +1,3 @@
-
 def parse_lido_entry(lido_entry):
     """
     Parses a lido entry to a dictionary only containing information relevant for retrieval.
@@ -6,133 +5,141 @@ def parse_lido_entry(lido_entry):
     :return: a dict ready for retrieval process
     """
     result = {}
-
-    _id = lido_entry['lido:lido']['lido:lidoRecID']['#text']
-    result["id"] = _id
-
-    titles = _parse_titles(lido_entry)
-    result["titles"] = titles
-
-    category = lido_entry['lido:lido']['lido:category']['lido:conceptID']['#text']
-    result["category"] = category
-
-    classification_terms = _parse_classification_terms(lido_entry)
-    result["classification"] = classification_terms
-
-    work_type = _parse_work_type(lido_entry)
-    result["work_type"] = work_type
-
-    inscriptions = _parse_inscriptions(lido_entry)
-    result["inscriptions"] = inscriptions
-
-    measurements = _parse_measurements(lido_entry)
-    result["measurements"] = measurements
-
-    events = _parse_events(lido_entry)
-    result["events"] = events
-
-    related_subjects = _parse_related_subjects(lido_entry)
-    result["related_subjects"] = related_subjects
-
-    # related work, possible todo
-    # ['lido:lido']['lido:descriptiveMetadata']['lido:objectRelationWrap']['lido:relatedWorksWrap']['lido:relatedWorkSet']['lido:relatedWorkRelType']['lido:term']['#text']
-    # ['lido:lido']['lido:descriptiveMetadata']['lido:objectRelationWrap']['lido:relatedWorksWrap']['lido:relatedWorkSet']
-
-    url = lido_entry['lido:lido']['lido:administrativeMetadata']['lido:recordWrap']['lido:recordInfoSet'][
-        'lido:recordInfoLink']
-    result["url"] = url
-
-    work_id = lido_entry['lido:lido']['lido:descriptiveMetadata']['lido:objectIdentificationWrap']['lido:repositoryWrap']['lido:repositorySet']['lido:workID']['#text']
-    result["work_id"] = work_id
-
+    result["id"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:lidoRecID'], is_text=True, default="")
+    result["titles"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:titleWrap', 'lido:titleSet', 'lido:appellationValue'], is_text=True, default="")
+    result["category"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:category', 'lido:conceptID'], is_text=True, default="")
+    result["classification"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:classificationWrap', 'lido:classification', 'lido:term'], is_text=True, default="")
+    result["work_type"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:objectWorkTypeWrap', 'lido:objectWorkType', 'lido:term'], is_text=True, default="")
+    result["inscriptions"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:inscriptionsWrap', 'lido:inscriptions', 'lido:inscriptionDescription', 'lido:descriptiveNoteValue'], is_text=False, default="")
+    result["measurements"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:objectMeasurementsWrap', 'lido:objectMeasurementsSet', 'lido:displayObjectMeasurements'], is_text=True, default="")
+    result["events"] = parse_events(lido_entry)
+    result["related_subjects"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectRelationWrap', 'lido:subjectWrap', 'lido:subjectSet', 'lido:subject', 'lido:subjectConcept', 'lido:term'], is_text=True, default="")
+    result["url"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:administrativeMetadata', 'lido:recordWrap', 'lido:recordInfoSet'], is_text=True, default="")
+    result["img_url"] = parse_img_url(lido_entry)
     return result
 
 
-def _parse_related_subjects(lido_entry):
-    subject_set = (lido_entry['lido:lido']['lido:descriptiveMetadata']['lido:objectRelationWrap'].get('lido:subjectWrap') or {}).get('lido:subjectSet', [])
-    subject_set = subject_set if isinstance(subject_set, list) else [subject_set]
-    related_subjects = []
-    for subject in subject_set:
-        if subject['lido:subject'].get('lido:subjectConcept') is not None:
-            term_set = subject['lido:subject']['lido:subjectConcept']['lido:term']
-            term_set = term_set if isinstance(term_set, list) else [term_set]
-            related_subjects += [t['#text'] for t in term_set if t.get('#text') is not None]
-        if subject['lido:subject'].get('lido:subjectActor') is not None:
-            name_actor_set = subject['lido:subject']['lido:subjectActor']['lido:actor']['lido:nameActorSet']
-            name_actor_set = name_actor_set if isinstance(name_actor_set, list) else [name_actor_set]
-            related_subjects += [name_actor['lido:appellationValue'].get('#text', "") for name_actor in name_actor_set]
-    return related_subjects
-
-
-def _parse_events(lido_entry):
-    events = lido_entry['lido:lido']['lido:descriptiveMetadata']['lido:eventWrap']['lido:eventSet']
-    events = events if isinstance(events, list) else [events]
+def parse_events(lido_entry):
+    event_data = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:eventWrap', 'lido:eventSet'], is_text=False, default=[])
+    event_data = event_data if isinstance(event_data, list) else [event_data]
     resulting_events = []
-    for event in events:
-        event_type = event['lido:event']['lido:eventType']['lido:term']['#text']
-        event_actors = event['lido:event'].get('lido:eventActor')
-        if event_actors is None:
-            event_actors = []
-        elif not isinstance(event_actors, list):
-            event_actors = [event_actors]
-        actors = [event_actor['lido:displayActorInRole']
-                  for event in events
-                  for event_actor in event_actors]
-        earliest_date = (event['lido:event'].get('lido:eventDate', {}).get('lido:date') or {}).get('lido:earliestDate', "")
-        latest_date = (event['lido:event'].get('lido:eventDate', {}).get('lido:date') or {}).get('lido:latestDate', "")
-        materials_tech_list = event['lido:event'].get('lido:eventMaterialsTech')
-        if materials_tech_list is None:
-            materials_tech_list = []
-        elif not isinstance(materials_tech_list, list):
-            materials_tech_list = [materials_tech_list]
-        materials = [mt['lido:displayMaterialsTech'] for mt in materials_tech_list]
-        resulting_events.append({"type": event_type,
-                                 "actors": actors,
-                                 "date": [earliest_date, latest_date],
-                                 "materials": materials})
+    for event in event_data:
+        new_event = {}
+        event_types = find_values_by_key_list(event, ['lido:event', 'lido:eventType', 'lido:term'], is_text=True, default=[])
+        if len(event_types) > 0:
+            new_event["types"] = event_types
+        event_actors = find_values_by_key_list(event, ['lido:event', 'lido:eventActor'], is_text=True, default=[])
+        if len(event_actors) > 0:
+            new_event["actors"] = event_actors
+        earliest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:earliestDate'], is_text=False, default="")
+        latest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:latestDate'], is_text=False, default="")
+        if earliest_date != "" or latest_date != "":
+            new_event["date"] = [earliest_date, latest_date]
+        materials = find_values_by_key_list(event, ['lido:event', 'lido:eventMaterialsTech', 'lido:displayMaterialsTech'], is_text=False, default="")
+        if len(materials) > 0:
+            new_event["materials"] = materials
+        if len(new_event) > 0:
+            resulting_events.append(new_event)
     return resulting_events
 
 
-def _parse_measurements(lido_entry):
-    measurements = (lido_entry['lido:lido']['lido:descriptiveMetadata']['lido:objectIdentificationWrap'].get('lido:objectMeasurementsWrap') or {}).get('lido:objectMeasurementsSet', {}).get('lido:displayObjectMeasurements', "")
-    return measurements
+def parse_img_url(lido_entry):
+    img_urls = find_values_by_key_list(lido_entry,
+                             ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap', 'lido:resourceSet',
+                              'lido:resourceRepresentation', 'lido:linkResource'], is_text=True, default=[''])
+    img_urls = img_urls if isinstance(img_urls, list) else [img_urls]
+    # we use the first element found, because on our data the same link is present several times for each lido.
+    # Appending '' to the retrieved list, because if an empty list is returned we need to avoid index error
+    return (img_urls + [''])[0]
 
 
-def _parse_inscriptions(lido_entry):
-    inscriptions_list = lido_entry['lido:lido']['lido:descriptiveMetadata']['lido:objectIdentificationWrap']['lido:inscriptionsWrap'][
-        'lido:inscriptions']
-    inscriptions_list = inscriptions_list if isinstance(inscriptions_list, list) else [inscriptions_list]
-    inscriptions = [inscription['lido:inscriptionDescription']['lido:descriptiveNoteValue'] for inscription in
-                    inscriptions_list]
-    return inscriptions
+def find_values_by_key_list(d: dict | list, keys: list, is_text: bool, default: any, result=None):
+    """
+    Searches dict for keys in given order, handles list or singletons as values. If any key is not present,
+    return default value. If is_text=True, performs nested search for '#text' key and ignores dict structure.
+    :param d: the dict to search on
+    :param keys: the keys in correct order
+    :param is_text: If set to true, the last key in the key list is assumed to be "#text". No other key may be "#text"
+    :param default: default value to return if any of the keys is not present
+    :param result: only used for recursive calls. Do not set this parameter for an initial call
+    :return: string value associated with the keys, or list of (list of)* strings if many values exist
+    """
+    if result is None:
+        result = []
+    if isinstance(d, list):
+        for item in d:
+            find_values_by_key_list(d=item, keys=keys, is_text=is_text, default=default, result=result)
+    elif isinstance(d, dict):
+        key = keys[0]
+        if key == "#text":
+            raise ValueError("Key '#text' not allowed. If you are searching for the #text key as last key, "
+                             "set is_text to True.")
+        value = d.get(key)
+        if isinstance(value, str):
+            result.append(value)
+            return result
+        if value is None:
+            return default
+        if len(keys) == 1:
+            value = value if isinstance(value, list) else [value]
+            for item in value:
+                if is_text:
+                    result += find_text_values(item, default)
+                else:
+                    result.append(item)
+        else:
+            find_values_by_key_list(d=value, keys=keys[1:], is_text=is_text, default=default, result=result)
+    if len(result) == 0:
+        return default
+    if len(result) == 1:
+        return result[0]
+    if is_text and isinstance(result, list):
+        # remove duplicates
+        result = list(set(result))
+    return result
 
 
-def _parse_work_type(lido_entry):
-    work_type_terms = lido_entry['lido:lido']['lido:descriptiveMetadata']['lido:objectClassificationWrap']['lido:objectWorkTypeWrap'][
-        'lido:objectWorkType'].get('lido:term')
-    if work_type_terms is not None:
-        work_type_terms = work_type_terms if isinstance(work_type_terms, list) else [work_type_terms]
-        work_type = [dt.get('#text', "") for dt in work_type_terms]
+def find_text_values(d: dict, default: any):
+    """
+    Searches for values associated with the key '#text', and returns them as a list. If a key beginning with
+    'lido:display' is present, only the sub-dict associated with that key will be searched. That's because the text
+    values we are looking for (natural language) are sometimes present in a lido:display sub-dict, while other #text
+    values outside that sub-dict are not natural language
+    :param d: the dict to be searched
+    :param default: default value to return if no #text keys were found
+    """
+    # search for lido:display key
+    display_values = find_values_by_key_condition(d, lambda key: key.startswith("lido:display"))
+    if len(display_values) > 1:
+        raise ValueError("Multiple 'lido:display' keys are present. Please specify more keys.")
+    elif len(display_values) == 1:
+        # exactly one lido:display key was found, search for #text keys only in the display sub-dict
+        text_values = find_values_by_key_condition(display_values[0], lambda key: key == "#text")
     else:
-        work_type = ""
-    return work_type
+        # no lido:display key was found, search for raw #text key
+        text_values = find_values_by_key_condition(d, lambda key: key == "#text")
+    if len(text_values) == 0:
+        return default
+    return list(set(text_values))
 
 
-def _parse_classification_terms(lido_entry):
-    classification_list = lido_entry['lido:lido']['lido:descriptiveMetadata']['lido:objectClassificationWrap'].get(
-        'lido:classificationWrap', {}).get('lido:classification', [])
-    classification_list = classification_list if isinstance(classification_list, list) else [classification_list]
-    classification_terms = []
-    for c in classification_list:
-        term_list = c['lido:term']
-        term_list = term_list if isinstance(term_list, list) else [term_list]
-        classification_terms += [t.get('#text', "") for t in term_list]
-    return classification_terms
-
-
-def _parse_titles(lido_entry):
-    title_set = lido_entry['lido:lido']['lido:descriptiveMetadata']['lido:objectIdentificationWrap']['lido:titleWrap'][
-        'lido:titleSet']
-    title_set = title_set if isinstance(title_set, list) else [title_set]
-    titles = [entry['lido:appellationValue']['#text'] for entry in title_set]
-    return titles
+def find_values_by_key_condition(d: dict | list, condition: callable(str), result=None):
+    """
+    Searches given dict for keys that fulfill a condition. The values associated with those keys are returned as a list
+    :param d: the dict to be searched
+    :param condition: condition that a key must fulfill, can be a lambda expression or any callable
+    :param result: only used for recursive calls. Do not set this parameter for an initial call
+    :return: list of values associated with matching keys, or default value if none were found
+    """
+    if result is None:
+        result = []
+    if isinstance(d, dict):
+        for key, value in d.items():
+            if condition(key):
+                result.append(value)
+                return result
+            find_values_by_key_condition(value, condition, result)
+    elif isinstance(d, list):
+        for item in d:
+            find_values_by_key_condition(item, condition, result)
+    return result
