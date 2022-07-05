@@ -3,28 +3,37 @@
 This search engine was built for a lab project in the Information Retrieval course lectured by Prof Martin Potthast at 
 the University of Leipzig.
 
-The data is a lido data set provided by the Museum für Kunst und Gewerbe Hamburg (MKG), and can be found here:
-https://github.com/MKGHamburg/MKGCollectionOnlineLIDO_XML. 
+### The Data
 
+The data we use for our index comes from three different sources.
+
+One data set is a lido data set provided by the Museum für Kunst und Gewerbe Hamburg (MKG), and can be found here:
+https://github.com/MKGHamburg/MKGCollectionOnlineLIDO_XML.
 We use the files <i>mkg_lido-dC.web_0.xml</i>, <i>mkg_lido-dC.web_1.xml</i>, and <i>mkg_lido-dC.web_2.xml</i>., totaling to about 12k documents.
 
-Dependencies:
+Additionally, we use a data set provided by Deutsches Museum (München), which can be found here:
+https://dmd.plus/opendata/digiporta/dm/xml/
+
+The last data set is provided by Westmünsterland Museum and can be found here:
+https://download.codingdavinci.de/index.php/s/y7wHa8r6dWtnTTm?dir=undefined&path=%2F&openfile=551921.
+Remarkable about this data set is that is consists of lido xml data as well as images to each entry.
+The images will be used for image analysis.
+
+Overall, the data consists of 18851 documents.
+
+### Dependencies:
 * Elasticsearch 7.17.3
 
-Python Packages:
+### Python Packages:
 * elasticsearch 7.13.3
 * xmltodict
 
 ## Preparing the data
 
-To download the data set, run the get_data.py script.
-3 Files will be downloaded into the "../data/" folder.
+The data from Westmünsterland Museum is already present in the "../data" folder.
+The data sets from MKG and Deutsches Museum need to be downloaded, since they are too large to be shipped with this project.
 
-Next, run the combine.py script, to combine the three xml files you just downloaded to one large xml file.
-The output file will be written to "../data/combined_data.xml"
-
-Finally, run the atomize.py script, so that the combined_data.xml file gets broken up into ~12k atomic xml files, each 
-representing a document for retrieval. They are stored in the "../docs/" folder
+To download and prepare the data sets, run the prepare_data.py script.
 
 The data is now ready to be indexed.
 

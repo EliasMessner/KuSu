@@ -1,0 +1,1 @@
+['sienna', 'lightgray', 'black', 'dimgray', 'maroon', 'mediumvioletred', 'forestgreen', 'gold', 'dodgerblue', 'crimson', 'darkslateblue', 'khaki', 'lightsalmon', 'rosybrown', 'indianred', 'midnightblue', 'olive', 'skyblue']

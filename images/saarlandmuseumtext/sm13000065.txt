@@ -1,0 +1,1 @@
+['black', 'darkgray', 'peru', 'maroon', 'midnightblue', 'teal', 'palevioletred', 'darkgreen', 'indianred', 'darkgoldenrod', 'purple', 'darkseagreen', 'olivedrab', 'chocolate', 'lightpink', 'dimgray', 'lightslategray']

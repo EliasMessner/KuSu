@@ -1,0 +1,1 @@
+['seashell', 'darkslategray', 'rosybrown', 'darkslateblue', 'khaki', 'sienna', 'skyblue', 'darkolivegreen', 'darksalmon', 'mediumturquoise', 'plum', 'yellowgreen', 'indianred', 'brown', 'olive', 'seagreen', 'chocolate']

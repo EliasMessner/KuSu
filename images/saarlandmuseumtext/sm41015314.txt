@@ -1,0 +1,1 @@
+['lavender', 'gray', 'sienna', 'khaki', 'darkolivegreen']

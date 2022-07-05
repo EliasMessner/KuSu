@@ -1,0 +1,1 @@
+['antiquewhite', 'black', 'peru', 'darkslategray', 'darkgray', 'darkslateblue', 'sienna']

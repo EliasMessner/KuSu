@@ -1,0 +1,1 @@
+['gray', 'silver', 'darkslategray', 'khaki', 'tomato', 'turquoise', 'hotpink', 'slateblue', 'lightskyblue', 'dimgray', 'palegoldenrod', 'seagreen', 'chocolate', 'steelblue']

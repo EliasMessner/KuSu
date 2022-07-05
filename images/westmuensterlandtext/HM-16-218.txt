@@ -1,0 +1,1 @@
+['gainsboro', 'gray', 'darkslategray', 'darkkhaki', 'rosybrown']

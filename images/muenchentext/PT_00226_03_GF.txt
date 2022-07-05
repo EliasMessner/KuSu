@@ -1,0 +1,1 @@
+['beige', 'darkolivegreen', 'rosybrown', 'black', 'silver', 'maroon']

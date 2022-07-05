@@ -1,0 +1,1 @@
+['gray', 'maroon', 'whitesmoke', 'midnightblue', 'darkslategray', 'mediumvioletred', 'steelblue', 'darkkhaki', 'firebrick', 'sienna', 'seagreen', 'lightpink']

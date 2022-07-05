@@ -1,0 +1,1 @@
+['dimgray', 'tan', 'indianred', 'lightblue', 'khaki', 'slategray', 'palevioletred', 'lightpink', 'olivedrab']

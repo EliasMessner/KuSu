@@ -1,0 +1,1 @@
+['darkkhaki', 'darkslategray', 'whitesmoke', 'gray', 'mediumvioletred', 'mediumturquoise', 'sandybrown', 'teal', 'darkslateblue', 'crimson', 'saddlebrown', 'maroon', 'palevioletred', 'darkgreen', 'brown', 'darkseagreen']

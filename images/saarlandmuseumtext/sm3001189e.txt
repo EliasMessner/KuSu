@@ -1,0 +1,1 @@
+['silver', 'peru', 'black', 'dimgray', 'darkslategray']

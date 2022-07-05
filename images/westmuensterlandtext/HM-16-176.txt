@@ -1,0 +1,1 @@
+['whitesmoke', 'lightpink', 'sienna', 'darkkhaki', 'black', 'dimgray', 'firebrick', 'peru']

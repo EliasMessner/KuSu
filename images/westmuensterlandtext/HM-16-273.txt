@@ -1,0 +1,1 @@
+['white', 'plum', 'gray', 'dimgray', 'indianred', 'lemonchiffon', 'black']

@@ -1,0 +1,1 @@
+['lavender', 'slategray', 'black', 'rosybrown', 'darkolivegreen']

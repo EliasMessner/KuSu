@@ -1,0 +1,1 @@
+['linen', 'darkslategray', 'gray', 'darkslateblue', 'lightsteelblue', 'skyblue', 'tan', 'sienna', 'burlywood', 'darkolivegreen', 'lightgreen']

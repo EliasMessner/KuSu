@@ -1,0 +1,1 @@
+['navajowhite', 'darkgray', 'darksalmon', 'white', 'darkslategray', 'darkslateblue', 'mediumseagreen', 'deepskyblue', 'yellow', 'deeppink', 'crimson', 'brown', 'darkolivegreen', 'darkgreen', 'goldenrod', 'teal', 'darkred', 'mistyrose']

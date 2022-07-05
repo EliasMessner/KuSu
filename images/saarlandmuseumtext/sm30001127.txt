@@ -1,0 +1,1 @@
+['darkgray', 'peru', 'black', 'darkolivegreen', 'white', 'brown', 'teal', 'mediumpurple', 'midnightblue', 'mediumorchid', 'orange', 'khaki', 'mediumturquoise', 'indigo', 'darksalmon', 'darkslateblue', 'darkseagreen', 'pink', 'chocolate', 'dimgray', 'darkgoldenrod', 'darkgreen', 'maroon', 'firebrick']

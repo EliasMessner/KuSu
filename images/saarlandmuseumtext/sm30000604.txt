@@ -1,0 +1,1 @@
+['lightgray', 'black', 'gray', 'lightslategray', 'tan', 'darkgreen', 'darkred', 'goldenrod', 'midnightblue', 'purple', 'indianred', 'maroon', 'olive']

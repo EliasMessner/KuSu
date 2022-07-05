@@ -1,0 +1,1 @@
+['sienna', 'darkslategray', 'white', 'darkgray', 'brown', 'maroon']

@@ -2,7 +2,7 @@ from pprint import pprint
 
 from elasticsearch import Elasticsearch
 
-from src.constants import data_dir, docs_dir
+from src.constants import docs_dir, bcolors
 import src.querying as querying
 from src.indexing import index_documents
 
@@ -15,7 +15,10 @@ def mainloop(command_function_mapping):
     """
     print("Connecting to default client at localhost:9200...")
     client = Elasticsearch([{"host": "localhost", "port": 9200}])
-    assert client.ping()  # assert that the client is connected
+    if not client.ping():  # assert that the client is connected
+        print(f"{bcolors.WARNING}Client not connected. Please make sure that ElasticSearch is running on your computer "
+              f"and connected to the default client at localhost:9200{bcolors.ENDC}")
+        quit()
     print("Client connected.")
     while True:
         input_tokens = input().lower().split()
@@ -47,7 +50,7 @@ def try_execute_function(command_function_mapping, input_tokens, client):
         check_arg_count(fun, input_tokens)
         fun["fun"](client, input_tokens)
     except ValueError as ve:
-        print(str(ve))
+        print(f"{bcolors.WARNING}{str(ve)}{bcolors.ENDC}")
 
 
 def get_fun(command_function_mapping, cmd):
@@ -100,18 +103,34 @@ def search(client, input_tokens):
 
 
 def index_all(client, input_tokens):
-    index_documents(client, index_name=input_tokens[1], docs_dir=docs_dir)
+    index = input_tokens[1]
+    if client.indices.exists(index):
+        print(f"Index '{index}' already exists.")
+        answer = prompt_confirm("Should it be overwritten [y], or added to [n]?")
+        if answer is None:
+            return
+        elif answer:
+            client.indices.delete(index)
+    index_documents(client, index_name=index, docs_dir=docs_dir)
 
 
 def create_index(client, input_tokens):
-    if client.indices.exists(input_tokens[1]):
+    index = input_tokens[1]
+    if client.indices.exists(index):
         print(f"Index {input_tokens[1]} already exists.")
-        return
-    print(client.indices.create(input_tokens[1]))
+        if prompt_confirm("Should it be overwritten?"):
+            client.indices.delete(index)
+        else:
+            return
+    print(client.indices.create(index))
 
 
 def delete_index(client, input_tokens):
-    print(client.indices.delete(input_tokens[1]))
+    index = input_tokens[1]
+    if not client.indices.exists(index):
+        print(f"Index '{index}' does not exist.")
+        return
+    print(client.indices.delete(index))
 
 
 def list_indices(client, input_tokens):
@@ -119,6 +138,13 @@ def list_indices(client, input_tokens):
 
 
 def check_arg_count(fun, input_tokens):
+    """
+    Checks the argument count for given command.
+    Raises ValueError in case of incorrect argument count, otherwise returns silently
+    :param fun: The command specification, a dict structured as in command_function_mapping
+    :param input_tokens: the passed input tokens (including the function name, i.e. the first input token)
+    :return: None
+    """
     expected = len(fun["args"])
     got = len(input_tokens) - 1
     allow_more = any(arg.endswith("*") for arg in fun["args"])
@@ -128,6 +154,27 @@ def check_arg_count(fun, input_tokens):
         condition = got == expected
     if not condition:
         raise ValueError(f"Command '{fun['fun'].__name__}' takes {expected} argument(s){' or more' if allow_more else ''}, got {got} instead.")
+
+
+def prompt_confirm(message):
+    """
+    Prompts the user for input to confirm using 'y', deny using 'n', or abort using 'x'.
+    If user enters something else, will prompt again until user enters 'y', 'n', or 'x'
+    :param message: The question to be answered with 'y' or 'n'
+    :return: True if 'y' was typed, False if 'n' was typed, None if 'x' was typed
+    """
+    message = message + " [y=yes, n=no, x=abort]"
+    while True:
+        answer = input(message).lower()
+        if answer == 'y':
+            return True
+        if answer == 'n':
+            return False
+        if answer == 'x':
+            return None
+        else:
+            message = f"Could not understand answer '{answer}'. Please type 'y' for yes, 'n' for no, or 'x' to abort."
+            continue
 
 
 def get_command_function_mapping():

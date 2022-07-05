@@ -1,0 +1,1 @@
+['sienna', 'white', 'black', 'burlywood', 'gray', 'pink', 'turquoise', 'mediumseagreen', 'yellow', 'darkslateblue', 'crimson', 'deeppink', 'salmon', 'chocolate', 'maroon']

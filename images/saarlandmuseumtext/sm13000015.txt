@@ -1,0 +1,1 @@
+['gray', 'black', 'darkolivegreen', 'whitesmoke', 'lemonchiffon', 'dimgray', 'cornflowerblue', 'sandybrown', 'brown', 'olive', 'hotpink']

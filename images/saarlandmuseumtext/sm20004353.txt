@@ -1,0 +1,1 @@
+['lightgray', 'dimgray', 'black', 'dodgerblue', 'seagreen', 'gold', 'crimson', 'mediumvioletred', 'midnightblue', 'saddlebrown', 'darkgoldenrod', 'darkgray', 'peru', 'steelblue']

@@ -1,0 +1,1 @@
+['darkgray', 'darkslategray', 'sienna', 'navajowhite', 'lightslategray', 'indianred', 'purple', 'plum', 'olivedrab', 'peru', 'black', 'teal', 'goldenrod', 'midnightblue', 'lightblue', 'maroon', 'palevioletred']

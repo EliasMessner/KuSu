@@ -1,0 +1,1 @@
+['papayawhip', 'darkslategray', 'darkkhaki', 'sienna', 'darkgray', 'goldenrod', 'darkolivegreen']

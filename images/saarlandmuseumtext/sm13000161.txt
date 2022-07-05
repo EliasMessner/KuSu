@@ -1,0 +1,1 @@
+['darkslategray', 'lightslategray', 'sienna', 'whitesmoke', 'burlywood']

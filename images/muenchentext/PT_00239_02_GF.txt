@@ -1,0 +1,1 @@
+['seashell', 'darkslategray', 'gray', 'sienna', 'darkseagreen']

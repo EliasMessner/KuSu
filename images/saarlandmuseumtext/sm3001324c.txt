@@ -1,0 +1,1 @@
+['black', 'darkkhaki', 'darkolivegreen', 'skyblue', 'darkslategray', 'midnightblue', 'royalblue', 'snow', 'saddlebrown']

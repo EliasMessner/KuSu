@@ -1,0 +1,1 @@
+['dimgray', 'wheat', 'black', 'maroon']

@@ -1,0 +1,1 @@
+['tan', 'darkslategray', 'darkslateblue', 'gainsboro', 'peru', 'darkolivegreen']

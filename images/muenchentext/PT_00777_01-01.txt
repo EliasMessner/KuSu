@@ -1,0 +1,1 @@
+['palegoldenrod', 'darkolivegreen', 'black', 'gray']

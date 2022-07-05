@@ -1,0 +1,1 @@
+['khaki', 'black', 'darkgoldenrod', 'darkolivegreen', 'indianred', 'dimgray', 'silver', 'goldenrod', 'darkslategray']
