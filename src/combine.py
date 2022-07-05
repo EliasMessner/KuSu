@@ -8,23 +8,27 @@
 # would only run at < 100 kiB/s, with it it processes the whole 197 MB in seconds.
 
 
-import sys
+import sys, os
 from pathlib import Path
 
 from constants import data_dir
 
 
-def main():
-    file_paths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml"]         # files to be combined into one
-    destination = data_dir + "combined_data.xml"                                                               # destination
-    Path(data_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
+def combine():
+    file_paths = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml", "LIDO_Exp.XML"]         # files to be combined into one
+    destination = os.path.join(data_dir, 'combined_data.xml')
+    # remove file if it exists (so we can create a new file from scratch)
+    if os.path.exists(destination):
+        os.remove(destination)
+    # create the directory if not exists
+    Path(data_dir).mkdir(parents=True, exist_ok=True)
 
     for item in file_paths:                                          # go through each file
-        with open(data_dir + item, "r") as f:
+        with open(os.path.join(data_dir, item), "r") as f:
             data = f.read()                                         # get complete content of each file
 
         file_size = round(len(data)/2**20, 3)                        # filesize in MiB
-        print("Read {}\nSize: {} MB".format(item, file_size))
+        # print("Read {}\nSize: {} MB".format(item, file_size))
 
         processed = 0                                               # processed data in MiB
         pos_a = 0
@@ -38,9 +42,9 @@ def main():
                 g.write(entry_data + "\n\n")                         # add that entry to the destination file
 
                 processed += len(entry_data) / 2**20                                 # how much data is left in this file in MiB
-                sys.stdout.write("\r\t{} MB done.".format(round(processed,3)))      # overwrite in the same line to avoid flooding the terminal
-            print("\nFile done.\n")
+                # sys.stdout.write("\r\t{} MB done.".format(round(processed,3)))      # overwrite in the same line to avoid flooding the terminal
+            # print("\nFile done.\n")
 
 
 if __name__ == "__main__":
-    main()
+    combine()
