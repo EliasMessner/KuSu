@@ -1,6 +1,7 @@
 Development / Usage informations.
 
 Flask internally requires that the HTML file(s) are located in a subdirectory "/templates/" relative to the server.py file.
+Furthermore, it requires that all image file(s) are located in a subdirectory "/static/" relative to the server.py file.
 Install Flask with "pip3 install Flask".
 Start the program with "python3 server.py" and open localhost:5000 in any browser.
 
@@ -8,8 +9,5 @@ When the user has entered their query and checked all desired checkboxes they sh
 This button calls a JavaScript function which collects all necessary data and sends a GET request to the localserver.
 This request can thus be accessed from python as a dictionary.
 
-Our categories are yet to be named.             (lines 121 - 147 and 463 - 487)
-The text at the end is yet to be inserted.      (line 519)
-
 The result-table can easily be expanded should the need arise.
-This result-table is automatically filled by Flask. Each entry consists of a list of three strings.
+This result-table is automatically filled by Flask. Each entry consists of a list of lists of strings.

@@ -6,12 +6,24 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <title>Suchmaschine</title>
+    <title>KuSu</title>
 
     <style>
       body {
-        background-color: whitesmoke;
         font-family: Verdana;
+        background-color: rgba(200, 200, 200, 1);
+
+      }
+
+      img {
+        position: absolute;
+        opacity: 0.4;
+        top: 0px;
+        left: 0px;
+        width: 1920px;
+        height: 1440px;
+        margin: 0;
+        z-index: -1;
       }
 
       table, th, tr, td {
@@ -237,18 +249,6 @@
         objquery.value = document.getElementById("query").value;
         form.appendChild(objquery);
 
-        /** var objminyear = document.createElement("input");
-        objminyear.type = "hidden";
-        objminyear.name = "minyear";
-        objminyear.value = document.getElementById("minYear").value;
-        form.appendChild(objminyear);
-
-        var objmaxyear = document.createElement("input");
-        objmaxyear.type = "hidden";
-        objmaxyear.name = "maxyear";
-        objmaxyear.value = document.getElementById("maxYear").value;
-        form.appendChild(objmaxyear); */
-
         var objcolors = document.createElement("input");
         objcolors.type = "hidden";
         objcolors.name = "colors";
@@ -271,18 +271,6 @@
         }
       }
 
-      /** function toggleYear() {
-        var tc = document.getElementById("yearChoice");
-        if (tc.style.display === "block") {
-          tc.style.display = "none";
-          document.getElementById("toggleYearButton").innerText = "Einblenden";
-
-        } else {
-          tc.style.display = "block";
-          document.getElementById("toggleYearButton").innerText = "Ausblenden";
-        }
-      } */
-
       function toggleCategory() {
         var tc = document.getElementById("categoryChoice");
         if (tc.style.display === "block") {
@@ -300,7 +288,10 @@
   </head>
 
   <body>
-    <h1>Suchmaschine</h1>
+
+    <img src="/static/Trichosurus_caninus.jpg">
+
+    <h1>Kusu</h1>
 
     <table>
       <tr>
@@ -311,36 +302,6 @@
           <input type="text" id="query" name="query">
           <button type="submit" onclick="send()">Suchen</button>                    <!-- Make a button of this and have it call JS, create invi form and submit -->
         </td>
-
-
-        <!---<td>
-          <table>
-            <tr>
-              <td>
-                <p>Jahre</p>
-              </td>
-              <td>
-                <button id="toggleYearButton" onclick="toggleYear()">Einblenden</button>
-              </td>
-            </tr>
-          </table>
-
-          <div id="yearChoice">
-          <table>
-            <tr>
-              <td>
-                <label for="minYear">von:</label>
-                <input type="text" id="minYear" name="minYear">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="maxYear">bis:</label>
-                <input type="text" id="maxYear" name="maxYear">
-              </td>
-          </table>
-          </div>
-        </td>   --->
 
         <td>
           <table>
@@ -515,8 +476,15 @@
 
     </table>
 
-    <hr>
-    <p id="bottomtext">Placeholder</p>                                  <!-- for a written by somebody else -->
+    <br>
+
+    <!--<p id="bottomtext">Placeholder</p>-->                                  <!-- for a written by somebody else -->
+    <p id="bottomtext">
+      <i>
+        Hintegrundbild: <a href="https://commons.wikimedia.org/wiki/File:Trichosurus_caninus.jpg">Donald Hobern from Copenhagen, Denmark</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons
+      </i>
+    </p>
+
 
   </body>
 </html>
