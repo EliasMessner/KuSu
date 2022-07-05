@@ -15,9 +15,9 @@ Additionally, we use a data set provided by Deutsches Museum (München), which c
 https://dmd.plus/opendata/digiporta/dm/xml/
 
 The last data set is provided by Westmünsterland Museum and can be found here:
-https://download.codingdavinci.de/index.php/s/y7wHa8r6dWtnTTm?dir=undefined&path=%2F&openfile=551921
-Remarkable about this data set is that is consists of lido xml data as well as images representing each entry.
-The images will be used for image analyses
+https://download.codingdavinci.de/index.php/s/y7wHa8r6dWtnTTm?dir=undefined&path=%2F&openfile=551921.
+Remarkable about this data set is that is consists of lido xml data as well as images to each entry.
+The images will be used for image analysis.
 
 Overall, the data consists of 18851 documents.
 
