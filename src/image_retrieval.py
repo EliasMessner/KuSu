@@ -55,7 +55,9 @@ def convert_rgb_to_names(rgb_tuple):
 
 
 def color_analysis_ext(image_path, file_path):
-    colors, pixel_count = extcolors.extract_from_path(image_path, 8)
+    img = PIL.Image.open(image_path)
+    img = scale_img(img, 0.25)
+    colors, pixel_count = extcolors.extract_from_image(img, 8)
     colors = dict(colors)
     names = {}
     for (key, value) in colors.items():
@@ -77,17 +79,21 @@ def color_analysis_ext(image_path, file_path):
     return names
 
 
+def scale_img(img, factor):
+    width, height = img.size
+    new_size = (int(width * factor), int(height * factor))
+    img = img.resize(new_size)
+    return img
+
+
 def analyse_images(folder, file_folder):
     pbar = tqdm(total=len(os.listdir(folder)))
     color_dict_all = dict.fromkeys(german_colors.keys(), 0)
     for filename in os.listdir(folder):
         if not filename.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff')):
             continue
-        img = PIL.Image.open(os.path.join(folder, filename))
-        width, height = img.size
-        new_size = (int(width/4), int(height/4))
-        img = img.resize(new_size)
-        result = color_analysis_ext(img, os.path.join(
+        img_path = os.path.join(folder, filename)
+        result = color_analysis_ext(img_path, os.path.join(
             file_folder) + "/" + filename.split('.')[0] + ".txt")
         for (key, value) in color_dict_all.items():
             if key not in result.keys():
@@ -119,3 +125,4 @@ if __name__ == "__main__":
     import sys
     #color_analysis_ext(sys.argv[1], sys.argv[2])
     analyse_images(sys.argv[1], sys.argv[2])
+    generate_plot()
