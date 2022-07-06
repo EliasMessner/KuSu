@@ -255,6 +255,12 @@
         objcolors.value = getColors();
         form.appendChild(objcolors);
 
+        var objcategories = document.createElement("input");
+        objcategories.type = "hidden";
+        objcategories.name = "categories";
+        objcategories.value = getCategories();
+        form.appendChild(objcategories);
+
         document.body.appendChild(form);
         form.submit();
       }

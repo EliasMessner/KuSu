@@ -18,6 +18,9 @@ def form_post():
         if categories.find(",") != -1:
             categories = categories.split(",")
 
+        results = [ ["Bild A", "M. Musterfrau", "localhost:5000"],\
+            ["Malerei", "Unbekannt", "localhost:5000"]]
+
         """
         call search engine with everything that belongs to it here.
         I didn't work on the backend, don't know precisely how to.
@@ -37,4 +40,4 @@ def form_post():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug = True)
