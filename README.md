@@ -27,6 +27,8 @@ Overall, the data consists of 18851 documents.
 ### Python Packages:
 * elasticsearch 7.13.3
 * xmltodict
+* tqdm
+* webcolors
 
 ## Preparing the data
 
