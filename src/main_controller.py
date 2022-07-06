@@ -2,7 +2,7 @@ from pprint import pprint
 
 from elasticsearch import Elasticsearch
 
-from src.constants import docs_dir, bcolors
+from src.constants import docs_dir, bcolors, get_settings, boost_default
 import src.querying as querying
 from src.indexing import index_documents
 
@@ -111,6 +111,8 @@ def index_all(client, input_tokens):
             return
         elif answer:
             client.indices.delete(index)
+    else:
+        create_index(client, ["", index])
     index_documents(client, index_name=index, docs_dir=docs_dir)
 
 
@@ -122,7 +124,9 @@ def create_index(client, input_tokens):
             client.indices.delete(index)
         else:
             return
-    print(client.indices.create(index))
+    body = get_settings(boost=boost_default, similarity="BM25", analyzer="german_light_analyzer")
+    # TODO remove hardcoded parameters
+    print(client.indices.create(index=index, body=body))
 
 
 def delete_index(client, input_tokens):

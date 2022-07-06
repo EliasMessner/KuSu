@@ -7,7 +7,6 @@ def parse_lido_entry(lido_entry):
     result = {}
     result["id"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:lidoRecID'], is_text=True, default="")
     result["titles"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:titleWrap', 'lido:titleSet', 'lido:appellationValue'], is_text=True, default="")
-    result["category"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:category', 'lido:conceptID'], is_text=True, default="")
     result["classification"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:classificationWrap', 'lido:classification', 'lido:term'], is_text=True, default="")
     result["work_type"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:objectWorkTypeWrap', 'lido:objectWorkType', 'lido:term'], is_text=True, default="")
     result["inscriptions"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:inscriptionsWrap', 'lido:inscriptions', 'lido:inscriptionDescription', 'lido:descriptiveNoteValue'], is_text=False, default="")
