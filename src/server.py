@@ -7,16 +7,14 @@ def index():                                                    # the default st
     return render_template("index.html")                        # wird von Flask relativ zu diesem file in "./templates/" gesucht
 
 
-@app.route("/", methods=["POST","GET"])                         # what happens if the button is pressed
+@app.route("/", methods=["POST", "GET"])                         # what happens if the button is pressed
 def form_post():
     if request.method == "POST":
         query = request.form["query"]                           # the written user input
         colors = request.form["colors"]                         # 0 to all colors as a string separated by comma
-        if colors.find(",") != -1:
-            colors = colors.split(",")
+        colors = colors.split(",")
         categories = request.form["categories"]                 # 0 to all categories as a string separated by comma
-        if categories.find(",") != -1:
-            categories = categories.split(",")
+        categories = categories.split(",")
 
         """
         call search engine with everything that belongs to it here.
