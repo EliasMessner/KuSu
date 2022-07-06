@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch
 from flask import Flask, request, render_template, redirect
 import querying
-from constants import default_index_name
+from src.constants import default_index_name
 
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ def form_post():
         categories = request.form["categories"]                 # 0 to all categories as a string separated by comma
         categories = categories.split(",")
 
-        results = [["Bild A", "M. Musterfrau", "localhost:5000"],
+        results = [["Bild A", "M. Musterfrau", "localhost:5000"], \
                    ["Malerei", "Unbekannt", "localhost:5000"]]
 
         # check if client connected
@@ -38,8 +38,8 @@ def form_post():
         res = querying.search(client=client, index=default_index_name, query_string=query)
         for hit in res['hits']['hits']:
             # results = [[title, author, url], [title, author, url], ...]
-            results.append([hit['_source']['titles'],
-                            hit['_source']['events'],
+            results.append([', '.join(hit['_source']['titles']),
+                            prettify_authors(hit),
                             hit['_source']['img_url']])
 
     return render_template("index.html", query=query, results=results)      # this updates the HTML page with the results
