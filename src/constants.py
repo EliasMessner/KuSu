@@ -12,10 +12,8 @@ logs_dir = str(os.path.join('..', 'logs'))
 docs_dir = str(os.path.join('..', 'docs'))
 
 image_filepaths = str(os.path.join("..", "images"))
-image_ex_image_blue = str(os.path.join("..", "images", "lamps", "HM-11-223.JPG"))
-image_ex_image_rosa = str(os.path.join("..", "images", "lamps", "HM-11-207.JPG"))
-image_alle_lampen = str(os.path.join("..", "images", "lamps"))
-image_saarland = str(os.path.join("..", "images", "saarland"))
+images_westmuensterland = str(os.path.join("..", "images", "lamps"))
+
 scale_percent = 5
 n_clusters = 5
 pbar_update_n = 1
