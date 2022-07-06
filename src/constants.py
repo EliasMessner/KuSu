@@ -21,6 +21,7 @@ n_clusters = 5
 pbar_update_n = 1
 plt_xticks_rotation = 'vertical'
 
+default_index_name = "default_index"
 
 # font colors in terminal output
 class bcolors:
