@@ -1,4 +1,6 @@
+
 import os
+
 
 urls = ["https://raw.githubusercontent.com/MKGHamburg/MKGCollectionOnlineLIDO_XML/master/mkg_lido-dC.web_0.xml",
         "https://raw.githubusercontent.com/MKGHamburg/MKGCollectionOnlineLIDO_XML/master/mkg_lido-dC.web_1.xml",
@@ -19,8 +21,6 @@ scale_percent = 5
 n_clusters = 5
 pbar_update_n = 1
 plt_xticks_rotation = 'vertical'
-
-default_index_name = "default-index"
 
 
 # font colors in terminal output
