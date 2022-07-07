@@ -15,12 +15,12 @@ def main():
     print("Establishing Connection...")
     client = Elasticsearch([{"host": "localhost", "port": 9200}])
     print("Done.")
-    print("Creating Indices...")
-    create_all_indices(client)
-    print("Done.")
-    # print("Creating results files...")
-    # create_results_files(client)
+    # print("Creating Indices...")
+    # create_all_indices(client)
     # print("Done.")
+    print("Creating results files...")
+    create_results_files(client)
+    print("Done.")
     # print("Creating run files...")
     # create_run_files(client)
     # print("Done.")
@@ -36,8 +36,7 @@ def create_results_files(client):
         with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results" + ".txt"), 'w') as results_file:
             for topic in tqdm(parse_topics(os.path.join(queries_dir, queries_file_name))):
                 results = set()
-                # for configuration_name, configuration_settings in get_run_configurations():
-                for configuration_name in ["boolean-german-analyzer"]:  # TODO use line above instead when all indices are created
+                for configuration_name, _ in get_run_configurations():
                     res = querying.search(client=client, index=configuration_name, query_string=topic["query"], size=20)
                     for hit in res["hits"]["hits"]:
                         results.add(prettify(hit))
@@ -70,8 +69,7 @@ def create_run_files(client):
         # create one run file per query file
         with open(os.path.join(run_files_dir, queries_file_name.split('.')[0] + "_run_file" + ".txt"), 'w') as run_file:
             # iterate the configurations. configuration_name is also the name of the index that uses this config.
-            # for configuration_name, configuration_settings in get_run_configurations():
-            for configuration_name in ["boolean-german-analyzer"]:  # TODO use line above instead when all indices are created
+            for configuration_name, _ in get_run_configurations():
                 topics = parse_topics(os.path.join(queries_dir, queries_file_name))
                 for topic in topics:
                     # need to scroll through results because there are too many (ranking all 18k documents)
