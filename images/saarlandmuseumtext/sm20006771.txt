@@ -1,1 +1,0 @@
-['antiquewhite', 'darkslategray', 'gray', 'indianred', 'mediumvioletred', 'sandybrown', 'seagreen', 'darkslateblue', 'cornflowerblue', 'sienna', 'palevioletred', 'brown', 'darksalmon']

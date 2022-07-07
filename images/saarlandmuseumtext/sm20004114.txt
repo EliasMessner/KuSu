@@ -1,1 +1,0 @@
-['black', 'khaki', 'dimgray', 'goldenrod', 'olivedrab', 'cadetblue', 'darkolivegreen', 'silver', 'peru', 'lightgreen', 'midnightblue']

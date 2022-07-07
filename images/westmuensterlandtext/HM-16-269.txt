@@ -1,1 +1,8 @@
-['snow', 'black', 'gray', 'darkkhaki', 'darkolivegreen', 'maroon', 'indianred', 'khaki', 'sienna', 'goldenrod']
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz 
+Grün Grün Grün Grün 
+Metallic Metallic Metallic Metallic 
+Gelb Gelb Gelb Gelb 
+Braun Braun 
+
+

@@ -1,1 +1,0 @@
-['darkgray', 'darkolivegreen', 'goldenrod', 'peru', 'bisque', 'darkslateblue', 'mediumturquoise', 'tomato', 'springgreen', 'hotpink', 'seagreen', 'dimgray', 'brown', 'darkslategray']

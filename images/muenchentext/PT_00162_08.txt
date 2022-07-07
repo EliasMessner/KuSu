@@ -1,1 +1,7 @@
-['gainsboro', 'black', 'darkolivegreen', 'lightslategray', 'gray', 'darkslateblue']
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz 
+Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic 
+Grün Grün Grün Grün 
+Braun Braun 
+
+

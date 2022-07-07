@@ -1,1 +1,0 @@
-['darkgray', 'black', 'dimgray', 'darkkhaki', 'peru', 'brown', 'steelblue', 'midnightblue', 'seagreen', 'maroon', 'palevioletred', 'indigo', 'goldenrod', 'lightyellow', 'saddlebrown', 'darkolivegreen', 'mediumaquamarine']

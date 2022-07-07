@@ -1,1 +1,0 @@
-['peru', 'darkslategray', 'saddlebrown', 'silver']

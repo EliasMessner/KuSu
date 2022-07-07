@@ -1,1 +1,0 @@
-['tan', 'darkolivegreen', 'whitesmoke', 'black', 'hotpink', 'lightcoral', 'khaki', 'aquamarine', 'sienna', 'darkslategray', 'royalblue', 'plum', 'cadetblue', 'mediumpurple', 'lightgray', 'brown']

@@ -9,8 +9,11 @@ data_dir = str(os.path.join('..', 'data'))
 logs_dir = str(os.path.join('..', 'logs'))
 docs_dir = str(os.path.join('..', 'docs'))
 
-image_filepaths = str(os.path.join("..", "images"))
-images_westmuensterland = str(os.path.join("..", "images", "lamps"))
+images_muenchen = str(os.path.join("..", "images", "muenchen"))
+images_westmuensterland = str(os.path.join("..", "images", "westmuensterland"))
+
+textfiles_muenchen = str(os.path.join("..", "images", "muenchentext"))
+textfiles_westmuensterland = str(os.path.join("..", "images", "westmuensterlandtext"))
 
 scale_percent = 5
 n_clusters = 5

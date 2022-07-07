@@ -106,9 +106,16 @@ def analyse_images(folder, file_folder):
     return result
 
 
-def generate_plot(image_folder, file_folder, alpha, label, name):
-    data = analyse_images(os.path.join(image_folder),
-                          os.path.join(file_folder))
+def generate_plot_from_files(file_folder, alpha, label, name):
+    data = dict.fromkeys(german_colors, 0)
+    for filename in os.listdir(file_folder):
+        if not filename.lower().endswith(('.txt')):
+            continue
+        with open(os.path.join(os.listdir(file_folder), filename)) as f:
+            contents = f.readlines()
+            contents = contents.split()
+            for item in contents:
+                data[item] += contents.count(item)
     total = sum(data.values())
     indices = range(len(data.values()))
     width = np.min(np.diff(indices)) / 3.
@@ -122,7 +129,6 @@ def generate_plot(image_folder, file_folder, alpha, label, name):
 
 
 if __name__ == "__main__":
-    import sys
-    #color_analysis_ext(sys.argv[1], sys.argv[2])
-    analyse_images(sys.argv[1], sys.argv[2])
-    generate_plot()
+    from constants import images_muenchen, images_westmuensterland, textfiles_muenchen, textfiles_westmuensterland
+    #analyse_images(images_muenchen, textfiles_muenchen)
+    analyse_images(images_westmuensterland, textfiles_westmuensterland)

@@ -1,1 +1,0 @@
-['mediumaquamarine', 'black', 'darkslategray', 'gray']

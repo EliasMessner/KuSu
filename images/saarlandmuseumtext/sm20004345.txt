@@ -1,1 +1,0 @@
-['wheat', 'gray', 'sandybrown', 'steelblue', 'darkslategray', 'lightcoral', 'paleturquoise', 'saddlebrown', 'sienna']

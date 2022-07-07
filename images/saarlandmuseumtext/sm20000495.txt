@@ -1,1 +1,0 @@
-['blanchedalmond', 'rosybrown', 'darkslategray', 'slategray', 'midnightblue', 'steelblue', 'darkslateblue']

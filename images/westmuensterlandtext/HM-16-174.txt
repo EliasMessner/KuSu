@@ -1,1 +1,7 @@
-['white', 'darkgray', 'palevioletred', 'darkslategray', 'saddlebrown', 'pink']
+Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ 
+Grau Grau Grau Grau Grau Grau Grau Grau 
+Violett Violett Violett 
+Pink-Rosa 
+
+
+

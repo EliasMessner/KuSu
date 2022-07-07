@@ -1,1 +1,9 @@
-['white', 'burlywood', 'dimgray', 'darkgray', 'saddlebrown', 'peru']
+Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ 
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun 
+Metallic 
+
+
+
+
+

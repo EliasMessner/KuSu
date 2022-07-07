@@ -1,1 +1,5 @@
-['darkolivegreen', 'gainsboro', 'black', 'darkseagreen']
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün 
+Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz 
+Metallic 
+

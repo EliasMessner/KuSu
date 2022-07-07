@@ -1,1 +1,0 @@
-['wheat', 'sandybrown', 'cadetblue', 'dimgray', 'tomato', 'lightsalmon', 'saddlebrown', 'darkslategray']

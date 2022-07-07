@@ -1,1 +1,0 @@
-['black', 'goldenrod', 'darkolivegreen', 'lightgray', 'peru', 'sienna', 'slategray', 'midnightblue']

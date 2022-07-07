@@ -1,1 +1,0 @@
-['dimgray', 'white', 'darkkhaki', 'black', 'saddlebrown']

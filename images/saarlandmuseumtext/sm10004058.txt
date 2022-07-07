@@ -1,1 +1,0 @@
-['darkslategray', 'whitesmoke', 'rosybrown', 'palevioletred', 'lightslategray', 'khaki', 'sienna']

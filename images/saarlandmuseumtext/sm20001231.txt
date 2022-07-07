@@ -1,1 +1,0 @@
-['darkgray', 'papayawhip', 'black', 'lightsalmon', 'maroon', 'indigo', 'teal', 'crimson', 'darkkhaki', 'sandybrown', 'olivedrab', 'palevioletred', 'darkslategray', 'peru', 'mediumaquamarine', 'lightpink', 'darkolivegreen', 'dimgray']

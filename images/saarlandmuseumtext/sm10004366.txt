@@ -1,1 +1,0 @@
-['darkgray', 'darkslategray', 'indianred', 'steelblue', 'darkslateblue', 'olivedrab', 'navajowhite', 'peru', 'dimgray', 'sienna']

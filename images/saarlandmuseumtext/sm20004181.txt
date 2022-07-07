@@ -1,1 +1,0 @@
-['darkgray', 'darkslategray', 'whitesmoke', 'deepskyblue', 'seagreen', 'crimson', 'gold', 'mediumvioletred', 'darkslateblue', 'darkgoldenrod', 'maroon', 'darkolivegreen', 'burlywood', 'teal']

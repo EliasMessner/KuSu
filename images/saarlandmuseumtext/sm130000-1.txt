@@ -1,1 +1,0 @@
-['darkslategray', 'silver', 'darkkhaki', 'lemonchiffon', 'sienna', 'orchid']

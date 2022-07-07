@@ -1,1 +1,0 @@
-['wheat', 'gray', 'darksalmon', 'darkseagreen', 'darkkhaki', 'darkslategray', 'sienna']

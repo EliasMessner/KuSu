@@ -1,1 +1,0 @@
-['darkkhaki', 'slategray', 'darkslategray', 'steelblue', 'black']

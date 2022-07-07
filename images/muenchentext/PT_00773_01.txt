@@ -1,1 +1,6 @@
-['gainsboro', 'darkslategray', 'gray', 'slategray', 'cadetblue', 'midnightblue', 'saddlebrown', 'burlywood', 'darkolivegreen']
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun 
+Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic 
+Pink-Rosa Pink-Rosa 
+
+

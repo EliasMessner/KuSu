@@ -1,1 +1,0 @@
-['gainsboro', 'black', 'gray', 'brown', 'seagreen', 'sandybrown', 'mediumvioletred', 'darkslateblue', 'skyblue', 'dimgray', 'darkolivegreen', 'khaki', 'darksalmon', 'saddlebrown', 'darkslategray']

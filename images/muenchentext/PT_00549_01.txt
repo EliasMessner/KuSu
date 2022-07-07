@@ -1,1 +1,8 @@
-['gainsboro', 'darkslategray', 'gray', 'dimgray', 'darkkhaki', 'darkseagreen', 'saddlebrown', 'skyblue', 'darkslateblue', 'darkolivegreen', 'palevioletred', 'royalblue', 'lightgreen', 'brown', 'mediumorchid', 'coral', 'teal', 'chocolate', 'olive', 'thistle']
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic 
+
+
+
+
+
+

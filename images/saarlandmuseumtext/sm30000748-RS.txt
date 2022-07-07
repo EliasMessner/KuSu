@@ -1,1 +1,0 @@
-['sienna', 'gainsboro', 'black', 'dimgray', 'tan', 'indianred', 'dodgerblue', 'teal', 'darkslateblue', 'darkkhaki', 'maroon', 'rosybrown', 'darkolivegreen']

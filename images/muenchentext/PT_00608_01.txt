@@ -1,1 +1,5 @@
-['black', 'gray', 'darkolivegreen', 'gainsboro', 'darkkhaki', 'dimgray']
+Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic 
+Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz 
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün 
+

@@ -1,1 +1,11 @@
-['white', 'plum', 'gray', 'dimgray', 'indianred', 'lemonchiffon', 'black']
+Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ 
+Violett Violett Violett Violett Violett Violett 
+Grau Grau Grau Grau 
+Metallic Metallic Metallic 
+Pink-Rosa Pink-Rosa Pink-Rosa 
+Braun 
+
+
+
+
+
