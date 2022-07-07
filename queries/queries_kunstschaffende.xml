@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Alexandra -->
+<topic number="1" type="single">
+    <query> Kubismus </query>
+    <description>
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="2" type="single">
+    <query> 1890-1928 </query>
+    <description>
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="3" type="single">
+    <query> Blauer Reiter </query>
+    <description>
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="4" type="single">
+    <query> Kubismus Japan </query>
+    <description>
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="5" type="single">
+    <query> Kubismus Möbel </query>
+    <description>
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Aaron -->
+<topic number="6" type="single">
+    <query> Impressionismus</query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann Impressionistische Bilder gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="7" type="single">
+    <query> Impressionismus Claude Monet </query>
+    <description>
+        Ich möchte wissen, ob es Impressionistische Bilder von Claude Monet gibt (weil/ wenn ich schon weiß, dass es Impressionistische Bilder hier gibt)
+        Anmerkung: Hier wird ein komplexer Suchvorgang geschildert.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="8" type="single">
+    <query> Seerosen Claude Monet </query>
+    <description>
+        Ich möchte wissen, ob es Seerosenbilder von Claude Monet in den Museen gibt, die es hier zu durchsuchen gibt.
+        Anmerkung: alternativ wurde folgende Anfrage gegeben: "Seerosenbilder Claude Monet"
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="9" type="single">
+    <query> Kunstschrank </query>
+    <description>
+        Ich möchte wissen, ob es Kunstschränke/ Kabinette in den Museen, die ich hier durchsuchen kann, gibt.        
+        Anmerkung: alternativ wurde folgende Anfrage gegeben: "Kabinett", "Kunstschränke"
+        Anmerkung: zusätzlich wurde folgendes Need und Anfrage gegeben: Information Need: Ich möchte wissen, was für ein Inhalt in den Kunstschränken ist. Anfrage:
+        “Kunstschränke Inhalt”; “Kunstschrank Inhalt”; “Kabinett Inhalt”
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="10" type="single">
+    <query> Kunstschrank Augsburg</query>
+    <description>
+        Ich möchte wissen, ob es Kunstschränke aus Augsburg in den Museen gibt (weil/ wenn ich schon weiß, dass es Kunstschränke hier gibt). 
+        Anmerkung: Hier wurde ebenfalls ein komplexer Suchvorgang geschildert. 
+        Anmerkung: alternativ wurden folgende Anfragen gegeben: "Kunstschränke Augsburg”; “Kabinett Augsburg
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Katja -->
+<topic number="11" type="single">
+    <query> Heinrich Reinhold </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier surchsuchen kann, Werke des Künstlers Heinrich Reinhold gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="12" type="single">
+    <query> Heinrich Reinhold Zeit </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Werke gibt, die aus dem gleichen Zeitraum wie die Heinrich Reinholds stammen. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="13" type="single">
+    <query> Manet Technik </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Werke gibt, die eine vergleichbare/ähnliche Technik aufweisen wie die Edouard Manets. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="14" type="single">
+    <query> Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Werke gibt, die im selben Umfeld entstanden wie die Rodins.  </query>
+    <description>
+        Rodin Umfeld
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="15" type="single">
+    <query> Wachsarbeiten vor 1575 </query>
+    <description>
+        Ich möchte wissen, welche Wachsarbeiten in den Museen, die ich hier durchsuchen kann, vor dem Jahr 1575 enstanden. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Nahuel -->
+<topic number="16" type="single">
+    <query> Messgewand</query>
+    <description>
+        Ich möchte wissen ob es in den Museen, die ich hier durchsuchen kann Messgewänder gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="17" type="single">
+    <query> Zar Portraits </query>
+    <description>
+        Ich möchte wissen ob es in den Museen, die ich hier durchsuchen kann Portraits von Zaren gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="18" type="single">
+    <query> Öllampen aus dem 16. Jh. Länder </query>
+    <description>
+        Ich möchte alle Länder in Erfahrung bringen, für die in der Datenbank Öllampen aus dem 16. Jh. hinterlegt sind
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="19" type="single">
+    <query> große Skizzen von Naturalien </query>
+    <description>
+        Ich möchte wissen ob es in den Museen, die ich hier durchsuchen kann großformatige Skizzen von beliebigen Naturalien gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="20" type="single">
+    <query> Aquarelle von Künstlerinnen</query>
+    <description>
+        Ich möchte wissen ob es in der Datenbank Aquarelle gibt, die explizit von Künstlerinnen angefertigt wurden.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Anne -->
+<topic number="21" type="single">
+    <query> Kara Walker </query>
+    <description>
+        Ich will wissen, ob es aus meiner Suchanfrage z.B. die Künstlerin dort gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="22" type="single">
+    <query> politische Kunst </query>
+    <description>
+        Ich möchte wissen ob es politische Kunstwerke gibt 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="23" type="single">
+    <query> Abstrakt </query>
+    <description>
+        Ich möchte wissen ob es abstrakte Kunstwerke gibt 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="24" type="single">
+    <query> Fotografien </query>
+    <description>
+        Ich möchte wissen ob es Fotografien gibt 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="25" type="single">
+    <query> feministische Kunst </query>
+    <description>
+        Ich möchte wissen ob es feministische Kunstwerke gibt 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Aaron -->
+<topic number="26" type="single">
+    <query> Plastik, Kunststoff, Gummi, PET  </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="27" type="single">
+    <query> Holz, Baumrinde, Parkett, Furnier, Intarsien </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="28" type="single">
+    <query> Metall, Stahl, Rost, Aluminium, Oxidation, Gold </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität  
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="29" type="single">
+    <query> Glas, Gläser, Flaschen, Scherben, Splitter </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität  
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="30" type="single">
+    <query> Stein, Marmor, Achat, Granit, Beton </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität  
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Myriam -->
+<topic number="31" type="single">
+    <query> Original-Scherenschnitte von Lotte Reiniger  </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Scherenschnitte von Lotte Reiniger gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="32" type="single">
+    <query> Charlotte Berend-Corinth: Zeichnungen und Lithographien von Valeska Gert </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Zeichnungen und/oder Lithographien gibt, die Charlotte Berend-Corinth von Valeska Gert gemacht hat. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="33" type="single">
+    <query> Suse Byk: Fotografien und Filme von Valeska Gert </query>
+    <description>
+         Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Fotografien und/oder Filmaufnahmen gibt, die Suse Byk von Valeska Gert gemacht hat. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="34" type="single">
+    <query> Plakate von Valeska Gert </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Plakate zu den Auftritten von Valeska Gert gibt, z.B. Ankündigungen ihrer Solo-Tanzabende und Plakate ihrer eigenen Kabarettlokale  
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="35" type="single">
+    <query> Sophie Taeuber-Arp: Möbel und Entwürfe für Möbel </query>
+    <description>
+         Ich möchte wissen, aus welchem Zeitraum und aus welchem Land (Schweiz, Deutschland, Frankreich) es Möbel und Möbelentwürfe von Sophie Taeuber-Arp gibt.  
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Katja -->
+<topic number="36" type="single">
+    <query> Textur </query>
+    <description>
+        Ich möchte wissen ob es in dem Datenbank Texturen gibt, die mich visuell ansprechen.
+    </description>
+	Muster, Struktur
+    <narrative> </narrative>
+</topic>
+
+<topic number="37" type="single">
+    <query>  Blumen </query>
+    <description>
+        Ich möchte wissen ob es in dem Datenbank Texturen/Hintergründe gibt, die mich visuell ansprechen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="38" type="single">
+    <query> Spielzeug </query>
+    <description>
+        Gibt es hier Objekte, die simpel genug sind, um diese in 3D nachzubauen? 
+    </description>
+	Möbel, Stuhl
+    <narrative> </narrative>
+</topic>
+
+<topic number="39" type="single">
+    <query> Auge </query>
+    <description>
+        Kann die Suchmaschine nach einzelnen Bestandteilen eines Bildes suchen? Wie viele Bilder mit Augen sind in der Datenbank?
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="40" type="single">
+    <query> Bibliothek </query>
+    <description>
+        Gibt es hier Bilder auf dem die Einrichtung, Mobiliar, Layout eine Bibliothek zu sehen sind? 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Heike -->
+<topic number="41" type="single">
+    <query> Luftperspektive </query>
+    <description>
+        suche Gemälde, Zeichungen, Fotos von Landschaften in "typischer" Luftperspektive bis zu Stadtfotos des 20. Jahrhunderts, die das Leben in (über)bevölkerten Städten inkl. Smog und anderen Begleiterscheinungen illustrieren können
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="42" type="single">
+    <query> Wasser und Eis </query>
+    <description>
+        ich möchte auf Formen und Nutzungen des Wassers verweisen (Aggregatzustände, Lebensmittel, Chemikalie (z.B.: Fotos wässern) etc.)
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="43" type="single">
+    <query> Natur </query>
+    <description>
+        Artefakte werden zum Verhältnis zur und Umgang mit Natur für möglichst unterschiedliche Bevölkerungsgruppen rund um die Welt gesucht
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="44" type="single">
+    <query> Jugendstil </query>
+    <description>
+        Es sollen Gemeinsamkeiten, Unterschiede und Beeinflussungen zwischen Jugend- und Bauhausstil erarbeitet und präsentiert werden.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="45" type="single">
+    <query> Koralle </query>
+    <description>
+        ich suche Artefakte (Schmuck- und Dekostücke, Gemälde, Postkarten usw.), die einen Überblick über die Nutzung von Korallen über die Jahrhunderte geben können
+    </description>
+    <narrative> </narrative>
+</topic>
+
+

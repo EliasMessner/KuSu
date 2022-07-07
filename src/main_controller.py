@@ -127,7 +127,7 @@ def create_index(client, input_tokens):
             client.indices.delete(index)
         else:
             return
-    body = get_settings(boost=boost_default, similarity="BM25", analyzer="german_light_analyzer")
+    body = get_settings(boost=boost_default, similarity="boolean", analyzer="german_analyzer")
     # TODO remove hardcoded parameters
     #  instead use optimal settings for body
     print(client.indices.create(index=index, body=body))

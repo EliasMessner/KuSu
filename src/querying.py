@@ -16,5 +16,5 @@ def get_query_body(query_string: str) -> dict:
     }
 
 
-def search(client: Elasticsearch, index: str, query_string: str):
-    return client.search(index=index, body=get_query_body(query_string))
+def search(client: Elasticsearch, index: str, query_string: str, size=20):
+    return client.search(index=index, body=get_query_body(query_string), size=size)

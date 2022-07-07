@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Selina -->
+<topic number="1" type="single">
+    <query> Mode der 1950er </query>
+    <description>
+        bezüglich der Mode/Textil Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="2" type="single">
+    <query> Skizze </query>
+    <description>
+        Grafische Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="3" type="single">
+    <query> Lithografie 1890er </query>
+    <description>
+        Grafische Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="4" type="single">
+    <query> Kupferstich </query>
+    <description>
+        Grafische Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="5" type="single">
+    <query> Athene Vase </query>
+    <description>
+        Ich möchte wissen, wie weit eine bestimmte Gottheit in der Antike auf Alltagsgegenständen abgebildet war, um deren Verehrung abschätzen zu können, Anfrage: "[Name der Gottheit] Vase"
+        Anmerkung: In der Query manuell "Athene" als Gottheit ergänzt
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Sinja -->
+<!-- Zum Thema Kunststil, Künstlereinordnung und Motivik -->
+<topic number="6" type="single">
+    <query> Impressionismus</query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann Impressionistische Bilder gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="7" type="single">
+    <query> Impressionismus Claude Monet </query>
+    <description>
+        Ich möchte wissen, ob es Impressionistische Bilder von Claude Monet gibt (weil/ wenn ich schon weiß, dass es Impressionistische Bilder hier gibt)
+        Anmerkung: Hier wird ein komplexer Suchvorgang geschildert.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="8" type="single">
+    <query> Seerosen Claude Monet </query>
+    <description>
+        Ich möchte wissen, ob es Seerosenbilder von Claude Monet in den Museen gibt, die es hier zu durchsuchen gibt.
+        Anmerkung: alternativ wurde folgende Anfrage gegeben: "Seerosenbilder Claude Monet"
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Zum Thema Kunstobjekt, Zeit- und Lokaleinordnung -->
+<topic number="9" type="single">
+    <query> Kunstschrank </query>
+    <description>
+        Ich möchte wissen, ob es Kunstschränke/ Kabinette in den Museen, die ich hier durchsuchen kann, gibt.        
+        Anmerkung: alternativ wurde folgende Anfrage gegeben: "Kabinett", "Kunstschränke"
+        Anmerkung: zusätzlich wurde folgendes Need und Anfrage gegeben: Information Need: Ich möchte wissen, was für ein Inhalt in den Kunstschränken ist. Anfrage:
+        “Kunstschränke Inhalt”; “Kunstschrank Inhalt”; “Kabinett Inhalt”
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="10" type="single">
+    <query> Kunstschrank Augsburg</query>
+    <description>
+        Ich möchte wissen, ob es Kunstschränke aus Augsburg in den Museen gibt (weil/ wenn ich schon weiß, dass es Kunstschränke hier gibt). 
+        Anmerkung: Hier wurde ebenfalls ein komplexer Suchvorgang geschildert. 
+        Anmerkung: alternativ wurden folgende Anfragen gegeben: "Kunstschränke Augsburg”; “Kabinett Augsburg
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Finn -->
+<topic number="11" type="single">
+    <query> Heinrich Reinhold </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier surchsuchen kann, Werke des Künstlers Heinrich Reinhold gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="12" type="single">
+    <query> Heinrich Reinhold Zeit </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Werke gibt, die aus dem gleichen Zeitraum wie die Heinrich Reinholds stammen. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="13" type="single">
+    <query> Manet Technik </query>
+    <description>
+        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Werke gibt, die eine vergleichbare/ähnliche Technik aufweisen wie die Edouard Manets. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="14" type="single">
+    <query> Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann, Werke gibt, die im selben Umfeld entstanden wie die Rodins.  </query>
+    <description>
+        Rodin Umfeld
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="15" type="single">
+    <query> Wachsarbeiten vor 1575 </query>
+    <description>
+        Ich möchte wissen, welche Wachsarbeiten in den Museen, die ich hier durchsuchen kann, vor dem Jahr 1575 enstanden. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Christian -->
+<topic number="16" type="single">
+    <query> Messgewand</query>
+    <description>
+        Ich möchte wissen ob es in den Museen, die ich hier durchsuchen kann Messgewänder gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="17" type="single">
+    <query> Zar Portraits </query>
+    <description>
+        Ich möchte wissen ob es in den Museen, die ich hier durchsuchen kann Portraits von Zaren gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="18" type="single">
+    <query> Öllampen aus dem 16. Jh. Länder </query>
+    <description>
+        Ich möchte alle Länder in Erfahrung bringen, für die in der Datenbank Öllampen aus dem 16. Jh. hinterlegt sind
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="19" type="single">
+    <query> große Skizzen von Naturalien </query>
+    <description>
+        Ich möchte wissen ob es in den Museen, die ich hier durchsuchen kann großformatige Skizzen von beliebigen Naturalien gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="20" type="single">
+    <query> Aquarelle von Künstlerinnen</query>
+    <description>
+        Ich möchte wissen ob es in der Datenbank Aquarelle gibt, die explizit von Künstlerinnen angefertigt wurden.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Annalena -->
+<topic number="21" type="single">
+    <query> Japanische Kunst 19. Jh </query>
+    <description>
+        Ich möchte wissen welche Werke aus Japan und von japanischen Künstlern aus dem 19. Jahrhundert in dieser Sammlung zu finden sind    
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="22" type="single">
+    <query> Frauenportrait </query>
+    <description>
+        Ich würde gerne erfahren ob die Sammlung Frauenportraits egal aus welchem Zeitraum/Land beinhaltet     
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="23" type="single">
+    <query> Porzellan Asien </query>
+    <description>
+        Ich möchte wissen welche Art asiatischen Porzellans es in der Sammlung zu finden gibt
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="24" type="single">
+    <query> Barock </query>
+    <description>
+        Ich möchte wissen welche Objekte des Museums der Kunstepoche des Barocks zugeordnet werden können
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="25" type="single">
+    <query> 1900 </query>
+    <description>
+        Mich interessiert welche Objekte aus dem Jahre 1900 in dem Museum existieren?
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Hannah -->
+<topic number="26" type="single">
+    <query> Kupferstich </query>
+    <description>
+        Ich möchte wissen, welche Werke in diesem Medium das Museum hat. Dabei denke ich aber weniger an eine "ob"-Frage, sondern gehe eigentlich davon aus, dass es irgendwelche Kupferstiche gibt, und möchte mehrere anschauen und vergleichen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="27" type="single">
+    <query> Familie </query>
+    <description>
+        Eigentlich das selbe wie oben, nur diesmal suche ich einen bestimmten Inhalt (Familiendarstellungen), und das Medium ist egal. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="28" type="single">
+    <query> Dürer </query>
+    <description>
+        Nochmal das selbe, nur diesmal geht es um den Künstler.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="29" type="single">
+    <query> Schreinerhandwerk Mittelalter </query>
+    <description>
+        Ich interessiere mich für die Geschichte der Branche und möchte wissen, ob in irgendeiner Form (seien es mittelalterliche bildliche Darstellungen eines Schreiners, altes Werkzeug, ein mittelalterlicher Text, ...) etwas relevantes im Museum vorliegt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="30" type="single">
+    <query> Rokoko Definition </query>
+    <description>
+        Ich möchte wissen,  wie ich den Rokoko-Stil gegenüber anderen Stilrichtungen erkennen kann.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Alexander -->
+<topic number="31" type="single">
+    <query> Mode </query>
+    <description>
+        So würde nach einem bestimmten "Thema" suchen, das mich interessiert, in dr Hoffnung, dass es unter en Ergebnissen die Möglichkeit gibt, weiter einzuschränken 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="32" type="single">
+    <query> Teresa Avila </query>
+    <description>
+        Ich würde bei diesem Begriff wissen wollen, ob es Objekte gibt, die mit Teresa von Ávila in Zusammenhang stehen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="33" type="single">
+    <query> Carte de Visite </query>
+    <description>
+        Wenn ich nach bestimmten Medien suche, wäre es hilfreich, ALLE Objekte dieses Typs angezeigt zu bekommen, auch um bspw. zu erfahren, wie groß der Bestand eines Museums an bestimmten Datenträgern ist.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="34" type="single">
+    <query> DDR Spielzeug </query>
+    <description>
+        Ich würde gern wissen, ob es Spielsachen aus der DDR gibt
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="35" type="single">
+    <query> Barock </query>
+    <description>
+        Wenn ich, etwa für eine Präsentation in einem Seminar oder für einen Vortrag, Beispiele zu Merkmalen einer bestimmten Epoche suche, würde ich den gängigen Epochenbegriff eingeben und dann die Ergebnisse filtern, um ein geeignetes Beispiel zu finden.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Carina -->
+<topic number="36" type="single">
+    <query> Prähistorischen Archäologische Funde </query>
+    <description>
+       Ich suche nach Beispiel Objekten für eine Seminararbeit 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="37" type="single">
+    <query> Archäologischen Funde Bronze Zeit </query>
+    <description>
+        Ich möchte genauere Beispiele finden
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="38" type="single">
+    <query> Archäologische Funde Bronze Zeit Schottland </query>
+    <description>
+        Ich möchte meine Suche weiter eingrenzen und nach Länderspezifischen Kriterien vergleichen
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="39" type="single">
+    <query> Archäologische Funde Bronze Zeit England </query>
+    <description>
+         Ich möchte meine Suche weiter eingrenzen und nach Länderspezifischen Kriterien vergleichen
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="40" type="single">
+    <query> Wendelring Bronze Zeit </query>
+    <description>
+         Ich hab ein Objekt aus der Sammlung gefunden das ich für meine Seminararbeit verwenden
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Clemens -->
+<topic number="41" type="single">
+    <query> Spielzeug </query>
+    <description>
+       Ich will wissen, ob Spielzeug in die Definition von Kunstgewerbe fällt (also ob es Suchergebnisse gibt)
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="42" type="single">
+    <query> Antike </query>
+    <description>
+        Ich will ein Gefühl dafür bekommen, wie weit die Sammlung des Museums zurückreicht (also wie viele Suchergebnisse es gibt)
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="43" type="single">
+    <query> Buchdruck Muster </query>
+    <description>
+        Ich will wissen, ob die Verzierungen, die sich in vielen mittelalterlichen Büchern finden, separat katalogisiert sind 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="44" type="single">
+    <query> Tapetenmuster </query>
+    <description>
+         Ich will wissen, ob dieses Thema, das heute nur noch eine Randerscheinung darstellt, einmal groß und wichtig genug war um museal katalogisiert worden zu sein 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="45" type="single">
+    <query> Ozeanien </query>
+    <description>
+         Ich will wissen, wie eurozentrisch die Museumssammlung ist
+    </description>
+    <narrative> </narrative>
+</topic>
+
