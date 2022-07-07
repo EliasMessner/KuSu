@@ -29,6 +29,7 @@ Overall, the data consists of 18851 documents.
 * xmltodict
 * tqdm
 * webcolors
+* validators
 
 ## Preparing the data
 
