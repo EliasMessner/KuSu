@@ -39,7 +39,7 @@ def form_post():
         for hit in res['hits']['hits']:
             # results = [[title, author, url], [title, author, url], ...]
             results.append([hit['_source']['titles'],
-                            prettify_authors(hit),
+                            hit['_source']['events'],
                             hit['_source']['img_url']])
 
     return render_template("index.html", query=query, results=results)      # this updates the HTML page with the results
