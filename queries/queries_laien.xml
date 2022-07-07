@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Robin -->
+<topic number="1" type="single">
+    <query> Mode der 1950er </query>
+    <description>
+        bezüglich der Mode/Textil Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="2" type="single">
+    <query> Skizze </query>
+    <description>
+        Grafische Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="3" type="single">
+    <query> Lithografie 1890er </query>
+    <description>
+        Grafische Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="4" type="single">
+    <query> Kupferstich </query>
+    <description>
+        Grafische Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="5" type="single">
+    <query> Athene Vase </query>
+    <description>
+        Ich möchte wissen, wie weit eine bestimmte Gottheit in der Antike auf Alltagsgegenständen abgebildet war, um deren Verehrung abschätzen zu können, Anfrage: "[Name der Gottheit] Vase"
+        Anmerkung: In der Query manuell "Athene" als Gottheit ergänzt
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Sebastian -->
+<topic number="6" type="single">
+    <query> Albrecht Dürer </query>
+    <description>
+        Wichtigste Gemälde des Künstlers.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="7" type="single">
+    <query> Blauer Himmel </query>
+    <description>
+        Fotos und Gemälde von blauem Himmel 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="8" type="single">
+    <query> Sonnenuntergang </query>
+    <description>
+        Fotos und Gemälde von Sonnenuntergängen
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="9" type="single">
+    <query> Zeichenstil von Albrecht Dürer </query>
+    <description>
+        Das was die Anfrage sagt würde ich erwarten.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="10" type="single">
+    <query> Wann starb Albrecht Dürer </query>
+    <description>
+        Wann er starb.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Hannes -->
+<topic number="11" type="single">
+    <query> Napoleon </query>
+    <description>
+        Alle Kunstwerke und Bilder von Napoleon 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="12" type="single">
+    <query> Stehlampen bis 1800 </query>
+    <description>
+        Stehlampen die spaetestens 1800 entstanden sind 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="13" type="single">
+    <query> Becher aus Kokosnuss </query>
+    <description>
+        Coconut cup eingedeutscht 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="14" type="single">
+    <query> Schwarzweiss Fotos WWI </query>
+    <description>
+        Alle SW Fotos aus dem ersten WK 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="15" type="single">
+    <query> Kunstwerke Deutschland </query>
+    <description>
+        Kunstwerke die in Deutschland produziert wurden 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Theresa -->
+<topic number="16" type="single">
+    <query> Kunstwerk Expressionismus </query>
+    <description>
+        Ich möchte wissen, ob es Kunstwerke aus der Epoche Expressionismus gibt
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="17" type="single">
+    <query> Blauer Reiter </query>
+    <description>
+        Gibt es Bilder von der Künstlergruppe Blauer Reiter
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="18" type="single">
+    <query> Bild mit blauem Pferd </query>
+    <description>
+        Gibt es Bilder mit blauen Pferden 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="19" type="single">
+    <query> griechisch Marmorstatue </query>
+    <description>
+        Gibt es griechische Statuen aus Marmor 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="20" type="single">
+    <query> Bilder 1960 bis 1980 </query>
+    <description>
+        Gibt es Bilder aus den Jahren 1960 bis 1980
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Lena -->
+<topic number="21" type="single">
+    <query> Renaissance </query>
+    <description>
+        Kunstwerke/Gemälde der Renaissance
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="22" type="single">
+    <query> Fundort Griechenland </query>
+    <description>
+        Alle Kunstwerke/Gemälde die in Griechenland gefunden/entstanden sind.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="23" type="single">
+    <query> Portrait schwarz weiß Zeichnung </query>
+    <description>
+        Alle Portraits, die mit Bleistift/Kohle gezeichnet worden sind. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="24" type="single">
+    <query> Mythologie </query>
+    <description>
+        Alle Werke, die mythologische Figuren zeigen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="25" type="single">
+    <query> Bilder 1960 bis 1980 </query>
+    <description>
+        Gibt es Bilder aus den Jahren 1960 bis 1980
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Karima -->
+<topic number="26" type="single">
+    <query> Lampen m it Figuren </query>
+    <description>
+        Gibt es Lampen als Figuren?
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="27" type="single">
+    <query> selbstpoirtraits von 1890 </query>
+    <description>
+        Alle Selbstpotraits von 1890
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="28" type="single">
+    <query> Impressionismus Gemälde </query>
+    <description>
+        Welche Impressionistischen Gemälde gibt es? 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="29" type="single">
+    <query> Statur </query>
+    <description>
+        Ich möchte alle Statuen sehen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="30" type="single">
+    <query> Landschaftsgemälde </query>
+    <description>
+        Ich möchte alle Landschaftsgemälde sehen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Vera -->
+<topic number="31" type="single">
+    <query> Paar </query>
+    <description>
+         weil ich z.B. weiß, dass das gesuchte Gemälde überwiegend gold ist, dass ein Paar darauf ist
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="32" type="single">
+    <query> Gold </query>
+    <description>
+        weil ich z.B. weiß, dass das gesuchte Gemälde überwiegend gold ist
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="33" type="single">
+    <query> Jahrhundert </query>
+    <description>
+        Aus welchen Jahrhundert stammt „der Kuss“ von Klimt? 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="34" type="single">
+    <query> Umarmung </query>
+    <description>
+        weil ich z.B. weiß, dass das gesuchte Gemälde überwiegend gold ist, dass ein Paar darauf ist, das sich küsst usw
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="35" type="single">
+    <query> Kuss </query>
+    <description>
+        weil ich z.B. weiß, dass das gesuchte Gemälde überwiegend gold ist, dass ein Paar darauf ist, das sich küsst
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!-- Lars -->
+<topic number="36" type="single">
+    <query> antike lampe </query>
+    <description>
+         keine Ahnung wie das aussehen soll, deswegen interessiert mich das 
+    </description>
+	 lampe antik
+    <narrative> </narrative>
+</topic>
+
+<topic number="37" type="single">
+    <query> physikerin, wissenschaftlerin </query>
+    <description>
+        würde mich einfach mal interessieren, wie sie in diesen daten vertreten sind 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="38" type="single">
+    <query> Lampe Keramik</query>
+    <description>
+        Mich interessiert einfach ab wann die Leute Keramik für Lampen genutzt haben und in welchem Ausmaß 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="34" type="single">
+    <query> brettspiel </query>
+    <description>
+        vlt gibt's ja daten zu sachen was die leute früher gespielt haben
+    </description>
+	spiel
+    <narrative> </narrative>
+</topic>
+
+<topic number="35" type="single">
+    <query> kirschblüten(motiv) </query>
+    <description>
+        weil ich weiß dass es zeichungen aus japan gab und mich interessieren würde, wie häufig dieses motiv darin vorkommt
+    </description>
+    <narrative> </narrative>
+</topic>
+
+
