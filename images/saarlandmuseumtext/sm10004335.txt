@@ -1,1 +1,0 @@
-['darkslategray', 'darkgray', 'linen', 'sienna']

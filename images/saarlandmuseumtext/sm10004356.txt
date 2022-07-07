@@ -1,1 +1,0 @@
-['darkslategray', 'linen', 'darkseagreen', 'olivedrab', 'indianred', 'khaki', 'darkslateblue', 'skyblue', 'mediumvioletred', 'rosybrown']

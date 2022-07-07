@@ -1,1 +1,0 @@
-['gray', 'lightgray', 'black', 'dodgerblue', 'deeppink', 'gold', 'seagreen', 'crimson', 'indianred', 'sienna', 'lightseagreen']

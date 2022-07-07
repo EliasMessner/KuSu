@@ -1,1 +1,0 @@
-['darkgray', 'honeydew', 'darkslategray', 'darkolivegreen', 'sienna', 'crimson', 'goldenrod', 'dimgray', 'steelblue', 'darksalmon', 'olivedrab', 'darkslateblue']

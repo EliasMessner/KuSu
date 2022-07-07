@@ -1,1 +1,0 @@
-['burlywood', 'darkolivegreen', 'white', 'black', 'gray', 'tomato', 'turquoise', 'darkslategray', 'mediumseagreen', 'darkslateblue', 'hotpink', 'sienna', 'lightsalmon', 'darkcyan', 'olivedrab', 'pink', 'lightgray', 'midnightblue', 'cornflowerblue', 'brown']

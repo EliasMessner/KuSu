@@ -1,1 +1,0 @@
-['darkgray', 'antiquewhite', 'black', 'gray', 'darksalmon', 'crimson', 'khaki', 'olivedrab', 'sienna', 'mediumturquoise', 'midnightblue', 'darkgreen', 'chocolate', 'darkseagreen', 'gold', 'seagreen', 'mediumvioletred', 'darkslateblue']

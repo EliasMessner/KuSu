@@ -1,1 +1,0 @@
-['sienna', 'whitesmoke', 'black', 'gray', 'burlywood', 'deepskyblue', 'mediumaquamarine', 'maroon', 'red', 'seagreen', 'crimson', 'midnightblue', 'gold', 'lightpink', 'darkslategray', 'lightskyblue', 'indianred', 'slategray', 'yellowgreen', 'goldenrod']

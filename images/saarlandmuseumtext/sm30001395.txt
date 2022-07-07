@@ -1,1 +1,0 @@
-['maroon', 'darkolivegreen', 'darkgoldenrod', 'antiquewhite', 'rosybrown', 'darkslateblue', 'firebrick', 'indigo', 'saddlebrown', 'steelblue', 'slateblue', 'olivedrab', 'midnightblue', 'indianred', 'thistle']

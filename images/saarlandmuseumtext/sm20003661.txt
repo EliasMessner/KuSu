@@ -1,1 +1,0 @@
-['white', 'black', 'palegoldenrod', 'darkolivegreen', 'sandybrown', 'chocolate', 'darkgray', 'rosybrown', 'firebrick', 'maroon']

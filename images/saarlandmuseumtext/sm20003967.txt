@@ -1,1 +1,0 @@
-['moccasin', 'darkgray', 'black', 'sandybrown', 'gold', 'deeppink', 'lightcyan', 'crimson', 'mediumseagreen', 'deepskyblue', 'darkslateblue', 'dodgerblue', 'mistyrose', 'maroon', 'darkslategray', 'olive', 'brown']

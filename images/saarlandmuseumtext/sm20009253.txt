@@ -1,1 +1,0 @@
-['darkgray', 'darkslategray', 'white', 'seagreen', 'darkslateblue', 'deepskyblue', 'crimson', 'deeppink', 'yellow', 'palevioletred', 'darkkhaki', 'saddlebrown', 'lightpink', 'darkolivegreen', 'steelblue', 'maroon']

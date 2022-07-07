@@ -1,1 +1,0 @@
-['black', 'dimgray', 'rosybrown', 'white', 'saddlebrown', 'firebrick', 'sienna', 'yellow', 'mediumvioletred', 'seagreen', 'dodgerblue', 'midnightblue', 'khaki', 'tomato', 'skyblue', 'purple', 'olive']

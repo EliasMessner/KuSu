@@ -1,1 +1,0 @@
-['gray', 'snow', 'darkslategray', 'darkgray', 'aquamarine', 'lightcoral', 'cornflowerblue', 'violet', 'mediumaquamarine', 'rosybrown', 'steelblue', 'cadetblue', 'saddlebrown']

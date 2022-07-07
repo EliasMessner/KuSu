@@ -1,1 +1,10 @@
-['white', 'black', 'dimgray', 'darkgray', 'darkslateblue', 'tan']
+Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ Weiﬂ 
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Metallic 
+
+
+
+
+
+
+

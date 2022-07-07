@@ -1,1 +1,7 @@
-['darkgray', 'black', 'darkolivegreen', 'palegoldenrod', 'dimgray', 'gray']
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic 
+Gelb Gelb Gelb Gelb Gelb Gelb Gelb 
+Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz 
+Grün Grün Grün Grün Grün 
+Braun Braun Braun 
+

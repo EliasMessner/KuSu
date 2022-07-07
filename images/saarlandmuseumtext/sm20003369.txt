@@ -1,1 +1,0 @@
-['tan', 'lightslategray', 'darkslategray', 'darkolivegreen', 'steelblue', 'mediumseagreen', 'indianred']

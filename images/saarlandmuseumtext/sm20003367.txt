@@ -1,1 +1,0 @@
-['wheat', 'salmon', 'darkslategray', 'gray', 'mediumaquamarine', 'sienna', 'dimgray']

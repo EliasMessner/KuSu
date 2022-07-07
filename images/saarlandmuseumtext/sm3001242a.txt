@@ -1,1 +1,0 @@
-['dimgray', 'whitesmoke', 'black', 'burlywood', 'tomato', 'lightskyblue', 'khaki', 'hotpink', 'mediumspringgreen', 'slateblue', 'teal', 'thistle', 'sienna', 'seagreen', 'palevioletred', 'darkgreen', 'cornflowerblue', 'darkkhaki', 'darkslategray']

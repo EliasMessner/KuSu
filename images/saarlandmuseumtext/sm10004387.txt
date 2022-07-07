@@ -1,1 +1,0 @@
-['black', 'rosybrown', 'darkolivegreen', 'seagreen', 'saddlebrown', 'chocolate', 'oldlace']

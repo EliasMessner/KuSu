@@ -1,1 +1,0 @@
-['tan', 'black', 'mediumturquoise', 'seagreen', 'mediumvioletred', 'goldenrod', 'crimson', 'midnightblue', 'dimgray', 'maroon', 'burlywood', 'olivedrab', 'darkgreen', 'rosybrown', 'royalblue']

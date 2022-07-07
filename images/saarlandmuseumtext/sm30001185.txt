@@ -1,1 +1,0 @@
-['rosybrown', 'darkslategray', 'honeydew', 'indianred', 'steelblue', 'darkkhaki', 'darkslateblue', 'sienna', 'pink', 'saddlebrown', 'darkolivegreen']

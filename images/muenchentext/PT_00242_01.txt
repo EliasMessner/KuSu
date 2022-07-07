@@ -1,1 +1,6 @@
-['darkolivegreen', 'lightgoldenrodyellow', 'black', 'darkkhaki']
+Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün Grün 
+Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb 
+Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun 
+Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic 
+Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz 
+Grau Grau 

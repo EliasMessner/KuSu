@@ -1,1 +1,0 @@
-['lavender', 'sienna', 'darkslategray', 'tomato', 'midnightblue', 'lightslategray', 'lightpink', 'maroon']

@@ -1,1 +1,0 @@
-['sienna', 'darkgray', 'black', 'dimgray']

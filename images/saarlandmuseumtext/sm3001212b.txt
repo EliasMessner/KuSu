@@ -1,1 +1,0 @@
-['darkgray', 'maroon', 'black', 'sienna', 'darkolivegreen', 'midnightblue', 'firebrick', 'slategray']

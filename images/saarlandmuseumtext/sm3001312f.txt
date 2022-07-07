@@ -1,1 +1,0 @@
-['black', 'gainsboro', 'saddlebrown', 'gray', 'darkkhaki', 'darkolivegreen', 'brown', 'midnightblue', 'steelblue', 'moccasin']

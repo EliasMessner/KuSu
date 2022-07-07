@@ -1,1 +1,6 @@
-['gainsboro', 'darkslategray', 'gray', 'slategray', 'darkkhaki', 'sienna', 'darkolivegreen', 'thistle', 'cadetblue', 'brown', 'darkslateblue', 'lightpink', 'darkseagreen']
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic 
+Pink-Rosa Pink-Rosa Pink-Rosa Pink-Rosa Pink-Rosa 
+Braun Braun 
+
+

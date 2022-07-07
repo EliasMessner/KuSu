@@ -1,1 +1,0 @@
-['black', 'silver', 'dimgray', 'brown', 'darkslategray', 'rosybrown', 'maroon', 'saddlebrown', 'goldenrod', 'deepskyblue', 'mediumvioletred', 'darkslateblue', 'sandybrown', 'forestgreen', 'mistyrose', 'crimson', 'mediumturquoise', 'lemonchiffon', 'dodgerblue']

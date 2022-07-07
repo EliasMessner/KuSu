@@ -1,1 +1,0 @@
-['darkgreen', 'gray', 'floralwhite', 'sienna', 'khaki', 'darkslategray', 'lightsteelblue', 'midnightblue']

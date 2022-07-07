@@ -1,1 +1,6 @@
-['wheat', 'black', 'darkolivegreen', 'peru', 'darkgray']
+Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun Braun 
+Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz 
+Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau Grau 
+Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic Metallic 
+Gelb Gelb Gelb Gelb 
+Grün Grün Grün 
