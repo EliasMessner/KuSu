@@ -38,7 +38,7 @@ def form_post():
         res = querying.search(client=client, index=default_index_name, query_string=query)
         for hit in res['hits']['hits']:
             # results = [[title, author, url], [title, author, url], ...]
-            results.append([', '.join(hit['_source']['titles']),
+            results.append([hit['_source']['titles'],
                             prettify_authors(hit),
                             hit['_source']['img_url']])
 
