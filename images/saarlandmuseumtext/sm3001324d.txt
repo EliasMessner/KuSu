@@ -1,1 +1,0 @@
-['gray', 'black', 'darkolivegreen', 'lightblue', 'darkslategray', 'antiquewhite']

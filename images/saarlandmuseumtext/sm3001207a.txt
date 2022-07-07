@@ -1,1 +1,0 @@
-['sienna', 'ghostwhite', 'darkslategray', 'darkgray', 'peru']

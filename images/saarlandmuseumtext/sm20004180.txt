@@ -1,1 +1,0 @@
-['burlywood', 'darkgray', 'black', 'crimson', 'deeppink', 'white', 'gold', 'seagreen', 'sienna', 'palevioletred', 'brown', 'darkslategray', 'darkgoldenrod']

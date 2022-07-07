@@ -155,7 +155,7 @@ def check_arg_count(fun, input_tokens):
     """
     expected = len([arg for arg in fun["args"] if not arg.endswith("?")])  # args ending with ? are optional
     got = len(input_tokens) - 1
-    allow_more = any(arg.endswith("*", "?") for arg in fun["args"])
+    allow_more = any(arg.endswith(("*", "?")) for arg in fun["args"])
     if allow_more:
         condition = got >= expected
     else:

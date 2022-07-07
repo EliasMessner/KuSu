@@ -1,1 +1,0 @@
-['darkgray', 'oldlace', 'darkslategray', 'lightsalmon', 'maroon', 'teal', 'khaki', 'hotpink', 'firebrick', 'midnightblue', 'darkgreen', 'darkseagreen', 'chocolate', 'mediumturquoise', 'sienna', 'purple', 'orange']

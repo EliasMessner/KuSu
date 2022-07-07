@@ -1,1 +1,0 @@
-['lightslategray', 'darkolivegreen', 'cornflowerblue', 'black', 'peru', 'saddlebrown', 'darkslategray', 'dodgerblue', 'gainsboro', 'olivedrab', 'midnightblue', 'khaki', 'rosybrown', 'seagreen', 'indigo', 'dimgray']

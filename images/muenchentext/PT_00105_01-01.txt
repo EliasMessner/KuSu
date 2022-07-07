@@ -1,1 +1,6 @@
-['palegoldenrod', 'black', 'dimgray', 'darkslategray', 'darkkhaki', 'saddlebrown']
+Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb Gelb 
+Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz Schwarz 
+Braun Braun Braun Braun Braun Braun 
+Metallic Metallic Metallic Metallic Metallic Metallic 
+Grün Grün 
+

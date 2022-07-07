@@ -1,1 +1,0 @@
-['olivedrab', 'yellowgreen', 'black', 'lightslategray', 'whitesmoke', 'darkslategray', 'darkseagreen', 'khaki', 'sienna', 'lightskyblue']

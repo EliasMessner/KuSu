@@ -9,11 +9,12 @@ data_dir = str(os.path.join('..', 'data'))
 logs_dir = str(os.path.join('..', 'logs'))
 docs_dir = str(os.path.join('..', 'docs'))
 
-image_filepaths = str(os.path.join("..", "images"))
-image_ex_image_blue = str(os.path.join("..", "images", "lamps", "HM-11-223.JPG"))
-image_ex_image_rosa = str(os.path.join("..", "images", "lamps", "HM-11-207.JPG"))
-image_alle_lampen = str(os.path.join("..", "images", "lamps"))
-image_saarland = str(os.path.join("..", "images", "saarland"))
+images_muenchen = str(os.path.join("..", "images", "muenchen"))
+images_westmuensterland = str(os.path.join("..", "images", "westmuensterland"))
+
+textfiles_muenchen = str(os.path.join("..", "images", "muenchentext"))
+textfiles_westmuensterland = str(os.path.join("..", "images", "westmuensterlandtext"))
+
 scale_percent = 5
 n_clusters = 5
 pbar_update_n = 1
@@ -90,6 +91,9 @@ def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dic
                     #"type": "text",
                     "enabled": False,
                 },
+                "img_id": {
+                    "enabled": False
+                },
                 "titles": {
                     "type": "text",
                     "similarity": similarity,
@@ -137,6 +141,12 @@ def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dic
                     "similarity": similarity,
                     "analyzer": analyzer,
                     "boost": boost.get("related_subjects", 1)
+                },
+                "colors": {
+                    "type": "text",
+                    "similarity": similarity,
+                    "analyzer": analyzer,
+                    "boost": boost.get("colors", 1)
                 },
                 "url": {
                     #"type": "text",

@@ -1,1 +1,0 @@
-['gray', 'black', 'saddlebrown', 'gainsboro', 'darkkhaki', 'crimson', 'seagreen', 'midnightblue', 'deepskyblue', 'gold', 'deeppink', 'darkred', 'indianred', 'burlywood', 'darkslateblue', 'chocolate', 'darkslategray', 'maroon', 'silver']

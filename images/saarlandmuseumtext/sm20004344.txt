@@ -1,1 +1,0 @@
-['wheat', 'darkslategray', 'gold', 'olivedrab', 'gray', 'darkgreen', 'olive', 'saddlebrown', 'khaki']

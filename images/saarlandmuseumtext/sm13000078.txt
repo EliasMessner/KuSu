@@ -1,1 +1,0 @@
-['darkslategray', 'ghostwhite', 'darkgray', 'indianred', 'burlywood', 'cornflowerblue', 'darkslateblue', 'sienna', 'rosybrown']

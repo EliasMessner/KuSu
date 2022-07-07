@@ -1,1 +1,0 @@
-['tan', 'dimgray', 'mediumaquamarine', 'mediumseagreen', 'plum', 'chocolate', 'goldenrod', 'black', 'saddlebrown', 'indianred']

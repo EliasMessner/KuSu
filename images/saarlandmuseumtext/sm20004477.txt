@@ -1,1 +1,0 @@
-['gainsboro', 'dimgray', 'black', 'darkkhaki', 'dodgerblue', 'firebrick', 'seagreen', 'goldenrod', 'mediumvioletred', 'midnightblue', 'indianred', 'maroon', 'silver', 'darkolivegreen', 'darkslategray']

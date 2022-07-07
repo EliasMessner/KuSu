@@ -1,1 +1,0 @@
-['sienna', 'silver', 'maroon', 'darkkhaki', 'darkslategray', 'steelblue', 'mediumvioletred', 'midnightblue', 'firebrick', 'peru', 'darkolivegreen', 'goldenrod', 'palevioletred']

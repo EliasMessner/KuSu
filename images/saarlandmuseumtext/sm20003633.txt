@@ -1,1 +1,0 @@
-['moccasin', 'black', 'dimgray', 'peru', 'brown', 'white']

@@ -1,1 +1,0 @@
-['darkgray', 'antiquewhite', 'darkslategray', 'maroon', 'lightsalmon', 'mediumseagreen', 'hotpink', 'gold', 'lightseagreen', 'chocolate', 'khaki', 'darkolivegreen', 'darkslateblue', 'darkorange', 'olivedrab', 'rosybrown', 'mistyrose', 'saddlebrown']

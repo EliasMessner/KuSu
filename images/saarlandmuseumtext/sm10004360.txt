@@ -1,1 +1,0 @@
-['linen', 'dimgray', 'darkkhaki', 'palevioletred', 'slategray', 'khaki', 'lightsteelblue', 'indianred']

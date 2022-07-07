@@ -1,1 +1,0 @@
-['darkslategray', 'gainsboro', 'gray', 'darkolivegreen', 'cornflowerblue', 'palegoldenrod', 'mediumvioletred', 'darkblue', 'forestgreen', 'gold', 'firebrick', 'darksalmon', 'sienna', 'plum', 'olivedrab', 'teal', 'saddlebrown']

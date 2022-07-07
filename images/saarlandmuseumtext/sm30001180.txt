@@ -1,1 +1,0 @@
-['darkgray', 'darkslategray', 'black', 'sienna', 'goldenrod', 'crimson', 'midnightblue', 'steelblue', 'peru', 'ghostwhite', 'palevioletred', 'saddlebrown', 'firebrick', 'purple']

@@ -1,1 +1,0 @@
-['tan', 'darkolivegreen', 'lavender', 'gray', 'palevioletred', 'cornflowerblue', 'darkslateblue', 'seagreen', 'chocolate', 'khaki', 'darkslategray', 'brown', 'plum', 'lightcoral', 'darkkhaki', 'yellowgreen', 'sienna']

@@ -1,1 +1,0 @@
-['wheat', 'black', 'gray', 'mediumvioletred', 'seagreen', 'crimson', 'gold', 'dodgerblue', 'midnightblue', 'khaki', 'sienna', 'saddlebrown', 'darkslategray', 'darkslateblue', 'lightcoral', 'goldenrod']

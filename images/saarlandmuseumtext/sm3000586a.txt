@@ -1,1 +1,0 @@
-['silver', 'tan', 'dimgray', 'black', 'sienna', 'saddlebrown', 'darkslategray', 'darkgreen', 'yellowgreen', 'midnightblue', 'steelblue', 'darkred', 'burlywood', 'mediumseagreen', 'forestgreen', 'goldenrod', 'rosybrown', 'royalblue', 'cornflowerblue', 'chocolate', 'mediumvioletred', 'seagreen']

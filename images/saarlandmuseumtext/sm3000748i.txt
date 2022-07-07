@@ -1,1 +1,0 @@
-['dimgray', 'darkgray', 'darkslategray', 'darkslateblue']
