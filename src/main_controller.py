@@ -2,7 +2,7 @@ from pprint import pprint
 
 from elasticsearch import Elasticsearch
 
-from src.constants import docs_dir, bcolors, get_settings, boost_default
+from src.constants import docs_dir, bcolors, get_settings, boost_default, default_index_name
 import src.querying as querying
 from src.indexing import index_documents
 
@@ -74,7 +74,7 @@ def print_help(command_function_mapping):
     """
     Generates and prints a help string from the function_mappings.
     """
-    help_string = ""
+    help_string = "Arguments ending with ? are optional. Arguments ending with * can consist of more than one token. \n"
     for key in command_function_mapping:
         help_string += '[ ' + ' | '.join([key] + command_function_mapping[key]["alts"]) + ' ] '\
                        + " ".join([f"<{arg_name}>" for arg_name in command_function_mapping[key]["args"]]) \
@@ -103,7 +103,10 @@ def search(client, input_tokens):
 
 
 def index_all(client, input_tokens):
-    index = input_tokens[1]
+    if len(input_tokens) == 2:
+        index = input_tokens[1]
+    else:
+        index = default_index_name
     if client.indices.exists(index):
         print(f"Index '{index}' already exists.")
         answer = prompt_confirm("Should it be overwritten [y], or added to [n]?")
@@ -126,6 +129,7 @@ def create_index(client, input_tokens):
             return
     body = get_settings(boost=boost_default, similarity="BM25", analyzer="german_light_analyzer")
     # TODO remove hardcoded parameters
+    #  instead use optimal settings for body
     print(client.indices.create(index=index, body=body))
 
 
@@ -149,9 +153,9 @@ def check_arg_count(fun, input_tokens):
     :param input_tokens: the passed input tokens (including the function name, i.e. the first input token)
     :return: None
     """
-    expected = len(fun["args"])
+    expected = len([arg for arg in fun["args"] if not arg.endswith("?")])  # args ending with ? are optional
     got = len(input_tokens) - 1
-    allow_more = any(arg.endswith("*") for arg in fun["args"])
+    allow_more = any(arg.endswith("*", "?") for arg in fun["args"])
     if allow_more:
         condition = got >= expected
     else:
@@ -209,8 +213,9 @@ def get_command_function_mapping():
         "index_all": {
             "fun": index_all,
             "alts": ["ia"],
-            "help": "Indexes all xml documents in '../docs' to the specified index.",
-            "args": ["index_name"]
+            "help": "Indexes all xml documents in '../docs' to the specified index. If index_name is not specified, "
+                    "the default index name will be assigned.",
+            "args": ["index_name?"]
         },
         "search": {
             "fun": search,
