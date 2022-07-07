@@ -35,7 +35,10 @@ class bcolors:
 
 def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dict:
     """
-    Constructs a dict for elasticsearch settings.
+    Constructs a dict for elasticsearch settings
+    :param boost: dict with attribute names as keys and boost values as values. All absent keys will be 1.
+    :param similarity: a string specifying the similarity measure to be used, for example BM25.
+    :param analyzer: a string specifying the analyzer to be used.
     """
     assert analyzer in ["german_analyzer", "german_light_analyzer"]
     return {
@@ -85,7 +88,6 @@ def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dic
         "mappings": {
             "properties": {
                 "id": {
-                    #"type": "text",
                     "enabled": False,
                 },
                 "titles": {
@@ -137,11 +139,9 @@ def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dic
                     "boost": boost.get("related_subjects", 1)
                 },
                 "url": {
-                    #"type": "text",
                     "enabled": False
                 },
                 "img_url": {
-                    #"type": "text",
                     "enabled": False
                 }
             }
@@ -149,7 +149,7 @@ def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dic
     }
 
 
-boost_default = {}  # all values 1
+boost_default = {}  # all values not specified will be set to 1 in get_settings
 boost_2 = {
     "titles": 2,
     "related_subjects": 0.5
