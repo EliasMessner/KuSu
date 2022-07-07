@@ -1,10 +1,11 @@
-import copy
 import tarfile
-
-import requests, os, re
-from constants import urls, data_dir, docs_dir, muenchen_data_tar
 from pathlib import Path
+
+import os
+import requests
 from tqdm import tqdm
+
+from constants import urls, data_dir, docs_dir, muenchen_data_tar
 
 
 def download_file(url, data_dir):

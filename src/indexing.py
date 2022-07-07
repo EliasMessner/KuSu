@@ -7,8 +7,8 @@ import xmltodict
 from elasticsearch import Elasticsearch
 from tqdm import tqdm
 
-from src.lido_handler import parse_lido_entry
-from src.constants import textfiles_muenchen, textfiles_westmuensterland
+from lido_handler import parse_lido_entry
+from constants import textfiles_muenchen, textfiles_westmuensterland
 
 
 def xml_to_dict(filepath: str):
