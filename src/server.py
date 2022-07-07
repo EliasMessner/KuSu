@@ -31,7 +31,7 @@ def form_post():
             return render_template("index.html", query=query, results=results)
 
         # concatenate categories and colors to query
-        query += ' '.join(categories) + ' '.join(colors)
+        query += ' ' + ' '.join(categories) + ' '.join(colors)
 
         # search the index
         # TODO check if default index exists, if not give bad response
