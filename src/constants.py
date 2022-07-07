@@ -21,7 +21,7 @@ n_clusters = 5
 pbar_update_n = 1
 plt_xticks_rotation = 'vertical'
 
-default_index_name = "default_index"
+default_index_name = 'boost_default-german_light_analyzer-boolean'
 
 # font colors in terminal output
 class bcolors:
