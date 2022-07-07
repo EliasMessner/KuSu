@@ -91,6 +91,9 @@ def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dic
                     #"type": "text",
                     "enabled": False,
                 },
+                "img_id": {
+                    "enabled": False
+                },
                 "titles": {
                     "type": "text",
                     "similarity": similarity,
@@ -138,6 +141,12 @@ def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dic
                     "similarity": similarity,
                     "analyzer": analyzer,
                     "boost": boost.get("related_subjects", 1)
+                },
+                "colors": {
+                    "type": "text",
+                    "similarity": similarity,
+                    "analyzer": analyzer,
+                    "boost": boost.get("colors", 1)
                 },
                 "url": {
                     #"type": "text",

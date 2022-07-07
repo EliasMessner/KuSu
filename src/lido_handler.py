@@ -10,6 +10,7 @@ def parse_lido_entry(lido_entry):
     """
     result = {}
     result["id"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:lidoRecID'], is_text=True, default="")
+    result["img_id"] = parse_img_id(lido_entry)
     result["titles"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:titleWrap', 'lido:titleSet', 'lido:appellationValue'], is_text=True, default="")
     result["classification"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:classificationWrap', 'lido:classification', 'lido:term'], is_text=True, default="")
     result["work_type"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:objectWorkTypeWrap', 'lido:objectWorkType', 'lido:term'], is_text=True, default="")
@@ -33,7 +34,7 @@ def remove_urls(iterable: list[str]):
 
 def all_values_to_string(result):
     for key, value in result.items():
-        if key in ["events", "img_url"]:
+        if key in ["events", "img_url", "img_id", "colors"]:
             continue
         assert isinstance(value, Iterable)
         result[key] = ', '.join(flatten(value))
@@ -59,6 +60,25 @@ def all_values_to_string(result):
             event_string += ', '.join(flatten(event["materials"]))
         event_strings.append(event_string)
     result["events"] = "\n".join(event_strings)
+
+
+def parse_img_id(lido_entry):
+    """
+    The img_id will be used as the filename for image retrieval
+    """
+    # img id for muenchen comes from resourceID
+    img_id = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap', 'lido:resourceSet', 'lido:resourceID'], is_text=True, default=[None])
+    if len(img_id) > 0:
+        img_id = img_id[0]
+        if img_id is not None and img_id.startswith("PT_"):
+            return img_id
+    # img id for westmuensterland comes from workID
+    img_id = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:repositoryWrap', 'lido:repositorySet', 'lido:workID'], is_text=True, default=[None])
+    if len(img_id) > 0:
+        img_id = img_id[0]
+        if img_id is not None and img_id.startswith("HM-"):
+            return img_id
+    return ""
 
 
 def parse_events(lido_entry):
