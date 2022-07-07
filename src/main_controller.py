@@ -2,9 +2,9 @@ from pprint import pprint
 
 from elasticsearch import Elasticsearch
 
-from src.constants import docs_dir, bcolors
-import src.querying as querying
-from src.indexing import index_documents
+from constants import docs_dir, bcolors
+import querying as querying
+from indexing import index_documents
 
 
 def mainloop(command_function_mapping):
