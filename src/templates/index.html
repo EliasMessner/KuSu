@@ -10,34 +10,31 @@
 
     <style>
       body {
-        font-family: Verdana;
+        font-family: Verdana,sans-serif;
         background-color: rgba(200, 200, 200, 1);
-
       }
 
-      * {
+/*      * {
             margin: 0;
             padding: 0;
-        }
-        .imgbox {
-            display: grid;
-            height: 100%;
-        }
-        .center-fit {
-            max-width: 100%;
-            max-height: 100vh;
-            margin: auto;
-        }
+        }*/
 
-      img {
-        position: absolute;
+      .background-img {
+        position: fixed;
         opacity: 0.4;
-        top: 0px;
-        left: 0px;
-        width: 1920px;
-        height: 1440px;
-        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        margin: auto;
         z-index: -1;
+        display: grid;
+        background-attachment: fixed;
+      }
+
+      .thumbnail {
+        width: 200px;
+        height: auto;
       }
 
       table, th, tr, td {
@@ -309,9 +306,7 @@
 
   <body>
 
-    <div class="imgbox">
-      <img class="center-fit" src="/static/Trichosurus_caninus.jpg">
-    </div>
+      <img class="background-img" src="/static/Trichosurus_caninus.jpg">
 
     <h1>KuSu</h1>
 
@@ -484,15 +479,15 @@
     <table>
       <tr>
         <th>Titel</th>
-        <th>Künstler*in</th>
-        <th>URL</th>
+        <th>Info</th>
+        <th>Bild</th>
       </tr>
 
       {% for item in results %}
       <tr>
         <td>{{item[0]}}</td>
         <td>{{item[1]}}</td>
-        <td><a href={{item[2]}}>{{item[2]}}</a></td>
+        <td><a href="{{item[2]}}"><img src="{{item[2]}}" class="thumbnail"/></a></td>
       </tr>
       {% endfor %}
 
