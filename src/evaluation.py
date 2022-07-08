@@ -15,15 +15,15 @@ def main():
     print("Establishing Connection...")
     client = Elasticsearch([{"host": "localhost", "port": 9200}])
     print("Done.")
-    # print("Creating Indices...")
-    # create_all_indices(client)
-    # print("Done.")
+    print("Creating Indices...")
+    create_all_indices(client)
+    print("Done.")
     print("Creating results files...")
     create_results_files(client)
     print("Done.")
-    # print("Creating run files...")
-    # create_run_files(client)
-    # print("Done.")
+    print("Creating run files...")
+    create_run_files(client)
+    print("Done.")
 
 
 def create_results_files(client):
@@ -69,12 +69,12 @@ def create_run_files(client):
         # create one run file per query file
         with open(os.path.join(run_files_dir, queries_file_name.split('.')[0] + "_run_file" + ".txt"), 'w') as run_file:
             # iterate the configurations. configuration_name is also the name of the index that uses this config.
-            for configuration_name, _ in get_run_configurations():
+            for configuration_name, _ in tqdm(get_run_configurations()):
                 topics = parse_topics(os.path.join(queries_dir, queries_file_name))
                 for topic in topics:
                     # need to scroll through results because there are too many (ranking all 18k documents)
                     rank = 1
-                    for hits in tqdm(scroll(client, index=configuration_name, body=querying.get_query_body(topic["query"]), scroll='2m', size=20), total=int(18000/20)):
+                    for hits in scroll(client, index=configuration_name, body=querying.get_query_body(topic["query"]), scroll='30s', size=500):
                         for hit in hits:
                             new_line = ' '.join([topic["number"], "Q0", hit["_id"], str(rank), str(hit["_score"]), configuration_name])
                             run_file.write(new_line + "\n")
@@ -90,6 +90,7 @@ def scroll(client, index, body, scroll, size, **kw):
         page = client.scroll(scroll_id=scroll_id, scroll=scroll)
         scroll_id = page['_scroll_id']
         hits = page['hits']['hits']
+    client.clear_scroll(scroll_id=page['_scroll_id'])
 
 
 def create_all_indices(client: Elasticsearch):
