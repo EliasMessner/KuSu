@@ -9,6 +9,7 @@ from tqdm import tqdm
 import querying
 from src.constants import queries_dir, run_files_dir, boost_default, boost_2, get_settings, docs_dir, query_results_dir
 from indexing import index_documents
+from lido_handler import prettify
 
 
 def main():
@@ -67,18 +68,6 @@ def create_run_files(client):
                             new_line = ' '.join([topic["number"], "Q0", hit["_id"], str(rank), str(hit["_score"]), configuration_name])
                             run_file.write(new_line + "\n")
                             rank += 1
-
-
-def prettify(hit):
-    result = f"Titel: {hit['_source']['titles']}\n" \
-              f"Beschreibung: {hit['_source']['inscriptions']}\n" \
-              f"Klassifikation: {hit['_source']['classification']}\n" \
-              f"Kategorie: {hit['_source']['work_type']}\n" \
-              f"Maße: {hit['_source']['measurements']}\n" \
-              f"Ereignisse: {hit['_source']['events']}\n" \
-              f"Verwandte Themen: {hit['_source']['related_subjects']}\n" \
-              f"Bild-URL: {hit['_source']['img_url']}\n"
-    return result
 
 
 def scroll(client, index, body, scroll, size, **kw):
