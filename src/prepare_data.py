@@ -11,7 +11,7 @@ from constants import data_dir
 if __name__ == "__main__":
     get_data(data_dir)
     file_paths_mkg = ["mkg_lido-dC.web_0.xml", "mkg_lido-dC.web_1.xml", "mkg_lido-dC.web_2.xml"]
-    file_paths_digi_porta = ["LIDO_Exp.XML"]
+    file_paths_westmuensterland = ["LIDO_Exp.XML"]
     combine(file_paths_mkg, "mkg")
-    combine(file_paths_digi_porta, "digiPorta")
+    combine(file_paths_westmuensterland, "westmuensterland")
     atomize_all()

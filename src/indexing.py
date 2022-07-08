@@ -61,7 +61,7 @@ def index_documents(client: Elasticsearch, index_name: str, docs_dir: str, overw
             print(res)
         responses.append(res)
     stop = timeit.default_timer()
-    print(f"Done indexing {len(xml_filepaths)} documents. Took {str(datetime.timedelta(seconds=stop-start)).split('.')[0]}.")
+    print(f"Done indexing {len(xml_filepaths)} documents into index '{index_name}'. Took {str(datetime.timedelta(seconds=stop-start)).split('.')[0]}.")
     return responses
 
 

@@ -48,10 +48,18 @@ The data is now ready to be indexed.
 Before you start the search engine, make sure that elasticsearch is up and running on your computer by opening 
 localhost:9200 in your browser.
 
-
 ## Web Interface
 
 For a convenient user experience, you can use the KuSu Web Interface.
+
+The web interface searches on the default index. The default index can be automatically created by running 
+create_default_index.py.
+
+The default index is the one with the optimal settings as determined in the course of our 
+research.
+
+Creating the default index can take up to 10 minutes, depending on your machine's performance. When the script has
+finished creating the index, you are good to start up the web interface.
 
 To start the web interface, run the server.py script, and visit localhost:5000 in your favorite web browser.
 
