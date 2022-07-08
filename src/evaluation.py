@@ -47,18 +47,6 @@ def create_results_files(client):
                 results_file.write('\n'.join(results_shuffled) + '\n\n')
 
 
-def prettify(hit):
-    result = f"Titel: {hit['_source']['titles']}\n" \
-              f"Beschreibung: {hit['_source']['inscriptions']}\n" \
-              f"Klassifikation: {hit['_source']['classification']}\n" \
-              f"Kategorie: {hit['_source']['work_type']}\n" \
-              f"Maße: {hit['_source']['measurements']}\n" \
-              f"Ereignisse: {hit['_source']['events']}\n" \
-              f"Verwandte Themen: {hit['_source']['related_subjects']}\n" \
-              f"Bild-URL: {hit['_source']['img_url']}\n"
-    return result
-
-
 def create_run_files(client):
     """
     Create a run file for each query file. The run file can then be used to evaluate the search results on different
@@ -79,6 +67,18 @@ def create_run_files(client):
                             new_line = ' '.join([topic["number"], "Q0", hit["_id"], str(rank), str(hit["_score"]), configuration_name])
                             run_file.write(new_line + "\n")
                             rank += 1
+
+
+def prettify(hit):
+    result = f"Titel: {hit['_source']['titles']}\n" \
+              f"Beschreibung: {hit['_source']['inscriptions']}\n" \
+              f"Klassifikation: {hit['_source']['classification']}\n" \
+              f"Kategorie: {hit['_source']['work_type']}\n" \
+              f"Maße: {hit['_source']['measurements']}\n" \
+              f"Ereignisse: {hit['_source']['events']}\n" \
+              f"Verwandte Themen: {hit['_source']['related_subjects']}\n" \
+              f"Bild-URL: {hit['_source']['img_url']}\n"
+    return result
 
 
 def scroll(client, index, body, scroll, size, **kw):
