@@ -118,87 +118,29 @@
     <script>
 
       function getCategories() {
-        var catlist = "";
-
-          if (document.getElementById("cat1").checked) {
-            catlist = catlist + "cat1,";                        // replace desired backend variable name here
+        var catList = "", catTable = document.getElementById('categoryTable');
+        for (let i = 0; row = catTable.rows[i]; i++) {
+         for (let j = 0; cell = row.cells[j]; j++) {
+          let input = cell.getElementsByTagName('input')[0];
+          if (input.checked) {
+            catList += input.id + ",";
           }
-          if (document.getElementById("cat2").checked) {
-            catlist = catlist + "cat2,";                        // and here
-          }
-          if (document.getElementById("cat3").checked) {
-            catlist = catlist + "cat3,";                        // and here
-          }
-          if (document.getElementById("cat4").checked) {
-            catlist = catlist + "cat4,";                        // and here
-          }
-          if (document.getElementById("cat5").checked) {
-            catlist = catlist + "cat5,";                        // and here
-          }
-          if (document.getElementById("cat6").checked) {
-            catlist = catlist + "cat6,";                        // and here
-          }
-
-        return catlist.slice(0,-1);
+         }
+        }
+        return catList.slice(0,-1);
       }
 
       function getColors() {
-
-        var colorlist = "";
-
-        if (document.getElementById("colorRed").checked) {
-          colorlist = colorlist + "rot,";
+        var colorList = "", colorTable = document.getElementById('colorTable');
+        for (let i = 0; row = colorTable.rows[i]; i++) {
+         for (let j = 0; cell = row.cells[j]; j++) {
+          let input = cell.getElementsByTagName('input')[0];
+          if (input.checked) {
+            colorList += input.id + ",";
+          }
+         }
         }
-        if (document.getElementById("colorYellow").checked) {
-          colorlist = colorlist + "gelb,";
-        }
-        if (document.getElementById("colorBlue").checked) {
-          colorlist = colorlist + "blau,";
-        }
-        if (document.getElementById("colorBlack").checked) {
-          colorlist = colorlist + "schwarz,";
-        }
-        if (document.getElementById("colorGreen").checked) {
-          colorlist = colorlist + "grün,";
-        }
-        if (document.getElementById("colorViolet").checked) {
-          colorlist = colorlist + "violett,";
-        }
-        if (document.getElementById("colorOrange").checked) {
-          colorlist = colorlist + "orange,";
-        }
-        if (document.getElementById("colorWhite").checked) {
-          colorlist = colorlist + "weiß,";
-        }
-        if (document.getElementById("colorPurple").checked) {
-          colorlist = colorlist + "purpur,";
-        }
-        if (document.getElementById("colorTurquoise").checked) {
-          colorlist = colorlist + "blaugrün,";
-        }
-        if (document.getElementById("colorLightGreen").checked) {
-          colorlist = colorlist + "hellgrün,";
-        }
-        if (document.getElementById("colorIndigo").checked) {
-          colorlist = colorlist + "blauviolett,";
-        }
-        if (document.getElementById("colorDarkYellow").checked) {
-          colorlist = colorlist + "dunkelgelb,";
-        }
-        if (document.getElementById("colorOrangeRed").checked) {
-          colorlist = colorlist + "orangerot,";
-        }
-        if (document.getElementById("colorGold").checked) {
-          colorlist = colorlist + "gold,";
-        }
-        if (document.getElementById("colorBrown").checked) {
-          colorlist = colorlist + "braun,";
-        }
-        if (document.getElementById("colorGray").checked) {
-          colorlist = colorlist + "grau,";
-        }
-
-        return colorlist.slice(0,-1);
+        return colorList.slice(0,-1);
       }
 
       function send() {
@@ -264,7 +206,7 @@
       <tr>
         <td>
           <label for="query">Anfrage: </label>
-          <input type="text" id="query" name="query">
+          <input type="text" id="query" name="query" value={{query}}>
           <button type="submit" onclick="send()">Suchen</button>                    <!-- Make a button of this and have it call JS, create invi form and submit -->
         </td>
 
@@ -281,87 +223,87 @@
           </table>
 
           <div id="colorChoice">
-            <table>
+            <table id="colorTable">
               <tr>
                 <td id="cellRed">
-                  <label for="colorRed">Rot</label>
-                  <input type="checkbox" id="colorRed">
+                  <!--label for="colorRed">Rot</label-->
+                  <input type="checkbox" id="rot">
                 </td>
                 <td id="cellYellow">
-                  <label for="colorYellow">Gelb</label>
-                  <input type="checkbox" id="colorYellow">
+                  <!--label for="colorYellow">Gelb</label-->
+                  <input type="checkbox" id="gelb">
                 </td>
                 <td id="cellBlue">
-                  <label for="colorBlue">Blau</label>
-                  <input type="checkbox" id="colorBlue">
+                  <!--label for="colorBlue">Blau</label-->
+                  <input type="checkbox" id="blau">
                 </td>
                 <td id="cellBlack">
-                  <label for="colorBlack">Schwarz</label>
-                  <input type="checkbox" id="colorBlack">
+                  <!--label for="colorBlack">Schwarz</label-->
+                  <input type="checkbox" id="schwarz">
                 </td>
               </tr>
 
               <tr>
                 <td id="cellGreen">
-                  <label for="colorGreen">Grün</label>
-                  <input type="checkbox" id="colorGreen">
+                  <!--label for="colorGreen">Grün</label-->
+                  <input type="checkbox" id="grün">
                 </td>
                 <td id="cellViolet">
-                  <label for="colorViolet">Violett</label>
-                  <input type="checkbox" id="colorViolet">
+                  <!--label for="colorViolet">Violett</label-->
+                  <input type="checkbox" id="violett">
                 </td>
                 <td id="cellOrange">
-                  <label for="colorOrange">Orange</label>
-                  <input type="checkbox" id="colorOrange">
+                  <!--label for="colorOrange">Orange</label-->
+                  <input type="checkbox" id="orange">
                 </td>
                 <td id="cellWhite">
-                  <label for="colorWhite">Weiß</label>
-                  <input type="checkbox" id="colorWhite">
+                  <!--label for="colorWhite">Weiß</label-->
+                  <input type="checkbox" id="weiß">
                 </td>
               </tr>
 
               <tr>
                 <td id="cellPurple">
-                  <label for="colorPurple">Purpur</label>
-                  <input type="checkbox" id="colorPurple">
+                  <!--label for="colorPurple">Purpur</label-->
+                  <input type="checkbox" id="purpur">
                 </td>
                 <td id="cellTurquoise">
-                  <label for="colorTurquoise">Blaugrün</label>
-                  <input type="checkbox" id="colorTurquoise">
+                  <!--label for="colorTurquoise">Blaugrün</label-->
+                  <input type="checkbox" id="blaugrün">
                 </td>
                 <td id="cellLightGreen">
-                  <label for="colorLightGreen">Hellgrün</label>
-                  <input type="checkbox" id="colorLightGreen">
+                  <!--label for="colorLightGreen">Hellgrün</label-->
+                  <input type="checkbox" id="hellgrün">
                 </td>
                 <td id="cellIndigo">
-                  <label for="colorIndigo">Blauviolett</label>
-                  <input type="checkbox" id="colorIndigo">
+                  <!--label for="colorIndigo">Blauviolett</label-->
+                  <input type="checkbox" id="blauviolett">
                 </td>
               </tr>
 
               <tr>
                 <td id="cellDarkYellow">
-                  <label for="colorDarkYellow">Dunkelgelb</label>
-                  <input type="checkbox" id="colorDarkYellow">
+                  <!--label for="colorDarkYellow">Dunkelgelb</label-->
+                  <input type="checkbox" id="dunkelgelb">
                 </td>
                 <td id="cellOrangeRed">
-                  <label for="colorOrangeRed">Orangerot</label>
-                  <input type="checkbox" id="colorOrangeRed">
+                  <!--label for="colorOrangeRed">Orangerot</label-->
+                  <input type="checkbox" id="orangerot">
                 </td>
                 <td id="cellGold">
-                  <label for="colorGold">Gold</label>
-                  <input type="checkbox" id="colorGold">
+                  <!--label for="colorGold">Gold</label-->
+                  <input type="checkbox" id="gold">
                 </td>
                 <td id="cellBrown">
-                  <label for="colorBrown">Braun</label>
-                  <input type="checkbox" id="colorBrown">
+                  <!--label for="colorBrown">Braun</label-->
+                  <input type="checkbox" id="braun">
                 </td>
               </tr>
 
               <tr>
                 <td id="cellGray">
-                  <label for="colorGray">Grau</label>
-                  <input type="checkbox" id="colorGray">
+                  <!--label for="colorGray">Grau</label-->
+                  <input type="checkbox" id="grau">
                 </td>
               </tr>
 
@@ -383,35 +325,61 @@
           </table>
 
           <div id="categoryChoice">
-            <table>
+            <table id="categoryTable">
               <tr>
                 <td>
-                  <label for="cat1">Category 1</label>        <!-- replace "Category 1" (and that only) with desired German name (if desired) -->
-                  <input type="checkbox" id="cat1">
+                  <label for="Fotografie">Fotografie</label>
+                  <input type="checkbox" id="Fotografie">
                 </td>
                 <td>
-                  <label for="cat4">Category 4</label>        <!-- here too -->
-                  <input type="checkbox" id="cat4">
+                  <label for="Musik">Musik</label>
+                  <input type="checkbox" id="Musik">
+                </td>
+                <td>
+                  <label for="Persönlichkeiten">Persönlichkeiten</label>
+                  <input type="checkbox" id="Persönlichkeiten">
                 </td>
               </tr>
               <tr>
                 <td>
-                  <label for="cat2">Category 2</label>        <!-- here too -->
-                  <input type="checkbox" id="cat2">
+                  <label for="Religion">Religion</label>
+                  <input type="checkbox" id="Religion">
                 </td>
                 <td>
-                  <label for="cat5">Category 5</label>        <!-- here too -->
-                  <input type="checkbox" id="cat5">
+                  <label for="Tod">Tod</label>
+                  <input type="checkbox" id="Tod">
+                </td>
+                <td>
+                  <label for="Natur">Natur</label>
+                  <input type="checkbox" id="Natur">
                 </td>
               </tr>
               <tr>
                 <td>
-                  <label for="cat3">Category 3</label>        <!-- here too -->
-                  <input type="checkbox" id="cat3">
+                  <label for="Essen und Trinken">Essen und Trinken</label>
+                  <input type="checkbox" id="Essen und Trinken">
                 </td>
                 <td>
-                  <label for="cat6">Category 6</label>        <!-- here too -->
-                  <input type="checkbox" id="cat6">
+                  <label for="Wohnen und Kleiden: Textilien, Schmuck und Möbel">Wohnen und Kleiden: Textilien, Schmuck und Möbel</label>
+                  <input type="checkbox" id="Wohnen und Kleiden: Textilien, Schmuck und Möbel">
+                </td>
+                <td>
+                  <label for="Licht">Licht</label>
+                  <input type="checkbox" id="Licht">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="Lesen, Schreiben, Zeichnen, Malen">Lesen, Schreiben, Zeichnen, Malen</label>
+                  <input type="checkbox" id="Lesen, Schreiben, Zeichnen, Malen">
+                </td>
+                <td>
+                  <label for="Rund ums Haus">Rund ums Haus</label>
+                  <input type="checkbox" id="Rund ums Haus">
+                </td>
+                <td>
+                  <label for="Naturwissenschaft und Technik">Naturwissenschaft und Technik</label>
+                  <input type="checkbox" id="Naturwissenschaft und Technik">
                 </td>
               </tr>
             </table>
@@ -421,7 +389,7 @@
       </tr>
     </table>
 
-    <p>Ergebnisse für: <i><u>{{query}}</u></i></p>
+    <p>{{results|length}} Ergebnisse für: <i><u>{{query}}</u></i></p>
 
     <table>
       <tr>
