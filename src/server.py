@@ -2,6 +2,7 @@ from elasticsearch import Elasticsearch
 from flask import Flask, request, render_template, redirect
 import querying
 from constants import default_index_name
+from lido_handler import prettify
 
 app = Flask(__name__)
 
@@ -20,9 +21,6 @@ def form_post():
         categories = request.form["categories"]                 # 0 to all categories as a string separated by comma
         categories = categories.split(",")
 
-        results = [["Bild A", "M. Musterfrau", "localhost:5000"],
-                   ["Malerei", "Unbekannt", "localhost:5000"]]
-
         # check if client connected
         results = []
         client = prepare_client()
@@ -38,25 +36,11 @@ def form_post():
         res = querying.search(client=client, index=default_index_name, query_string=query)
         for hit in res['hits']['hits']:
             # results = [[title, author, url], [title, author, url], ...]
-            results.append([', '.join(hit['_source']['titles']),
-                            prettify_authors(hit),
+            results.append([hit['_source']['titles'],
+                            f"{prettify(hit, include_title=False)}",
                             hit['_source']['img_url']])
 
     return render_template("index.html", query=query, results=results)      # this updates the HTML page with the results
-
-
-def prettify_authors(hit) -> str:
-    authors = []
-    for event in hit['_source']['events']:
-        author = ""
-        if event.get('actors') is None:
-            continue
-        author += event['actors']
-        if event.get('actors') is not None:
-            author += f" ({event['types']})"
-        authors.append(author)
-    authors = '; '.join(authors)
-    return authors
 
 
 def prepare_client():

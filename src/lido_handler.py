@@ -225,6 +225,20 @@ def flatten_helper(iterable: Iterable):
             yield x
 
 
+def prettify_authors(hit) -> str:
+    authors = []
+    for event in hit['_source']['events']:
+        author = ""
+        if event.get('actors') is None:
+            continue
+        author += event['actors']
+        if event.get('actors') is not None:
+            author += f" ({event['types']})"
+        authors.append(author)
+    authors = '; '.join(authors)
+    return authors
+
+
 def prettify(hit, include_title=True):
     """
     Returns a human-readable german string from a hit as returned by Elasticsearch.
