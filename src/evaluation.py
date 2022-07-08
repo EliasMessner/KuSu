@@ -115,7 +115,8 @@ def prettify_for_markdown(hit):
     return f"{hit['_source']['titles']}\n\n" \
            f"<img src=\"{hit['_source']['img_url']}\" width=\"400\" />\n\n" \
            f"{hit['_source']['url']}\n\n" \
-           f"relevant: <input type=\"checkbox\" name=\"test\" />\n\n"
+           f"relevant: <input type=\"checkbox\" name=\"test\" />\n\n" \
+           f"nicht relevant: <input type=\"checkbox\" name=\"test\" />\n\n"
 
 
 def create_run_files(client):
