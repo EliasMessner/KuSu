@@ -223,3 +223,40 @@ def flatten_helper(iterable: Iterable):
             yield from flatten_helper(x)
         else:
             yield x
+
+
+def prettify_authors(hit) -> str:
+    authors = []
+    for event in hit['_source']['events']:
+        author = ""
+        if event.get('actors') is None:
+            continue
+        author += event['actors']
+        if event.get('actors') is not None:
+            author += f" ({event['types']})"
+        authors.append(author)
+    authors = '; '.join(authors)
+    return authors
+
+
+def prettify(hit, include_title=True):
+    """
+    Returns a human-readable german string from a hit as returned by Elasticsearch.
+    :param hit: the hit from the ES response, can be found under res['hits’]['hits'].
+    :param include_title: True if the title should be included in the string.
+    """
+    result = f"Titel: {hit['_source']['titles']}\n" if include_title else ""
+    result += f"Beschreibung: {hit['_source']['inscriptions']}\n" \
+              f"Klassifikation: {hit['_source']['classification']}\n" \
+              f"Kategorie: {hit['_source']['work_type']}\n" \
+              f"Maße: {hit['_source']['measurements']}\n" \
+              f"Ereignisse: {hit['_source']['events']}\n" \
+              f"Verwandte Themen: {hit['_source']['related_subjects']}\n" \
+              f"Bild-URL: {hit['_source']['img_url']}\n"
+    return result
+
+
+def get_title_and_img_string(hit):
+    result = f"Titel: {hit['_source']['titles']}\n" \
+             f"Bild-URL: {hit['_source']['img_url']}\n"
+    return result

@@ -2,9 +2,9 @@ from pprint import pprint
 
 from elasticsearch import Elasticsearch
 
-from src.constants import docs_dir, bcolors, get_settings, boost_default, default_index_name
-import src.querying as querying
-from src.indexing import index_documents
+from constants import docs_dir, bcolors, get_settings, boost_default, default_index_name
+import querying as querying
+from indexing import index_documents
 
 
 def mainloop(command_function_mapping):
@@ -127,7 +127,7 @@ def create_index(client, input_tokens):
             client.indices.delete(index)
         else:
             return
-    body = get_settings(boost=boost_default, similarity="BM25", analyzer="german_light_analyzer")
+    body = get_settings(boost=boost_default, similarity="boolean", analyzer="german_analyzer")
     # TODO remove hardcoded parameters
     #  instead use optimal settings for body
     print(client.indices.create(index=index, body=body))
