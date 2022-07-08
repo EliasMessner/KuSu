@@ -240,3 +240,9 @@ def prettify(hit, include_title=True):
               f"Verwandte Themen: {hit['_source']['related_subjects']}\n" \
               f"Bild-URL: {hit['_source']['img_url']}\n"
     return result
+
+
+def get_title_and_img_string(hit):
+    result = f"Titel: {hit['_source']['titles']}\n" \
+             f"Bild-URL: {hit['_source']['img_url']}\n"
+    return result

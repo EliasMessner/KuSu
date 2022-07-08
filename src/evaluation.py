@@ -9,43 +9,113 @@ from tqdm import tqdm
 import querying
 from src.constants import queries_dir, run_files_dir, boost_default, boost_2, get_settings, docs_dir, query_results_dir
 from indexing import index_documents
-from lido_handler import prettify
+from lido_handler import prettify, get_title_and_img_string
 
 
 def main():
     print("Establishing Connection...")
     client = Elasticsearch([{"host": "localhost", "port": 9200}])
     print("Done.")
+
     print("Creating Indices...")
     create_all_indices(client)
     print("Done.")
-    print("Creating results files...")
-    create_results_files(client)
-    print("Done.")
-    print("Creating run files...")
-    create_run_files(client)
+
+    # print("Creating unranked results files...")
+    # create_results_files(client=client, ranked=False)
+    # print("Done.")
+
+    print("Creating unranked results markdown files...")
+    create_results_markdown(client=client)
     print("Done.")
 
+    # print("Creating ranked results files...")
+    # create_results_files(client=client, ranked=True)
+    # print("Done.")
 
-def create_results_files(client):
+    # print("Creating run files...")
+    # create_run_files(client)
+    # print("Done.")
+
+
+def create_results_files(client, ranked: bool, size=20):
     """
     Create human-readable file for users to evaluate each search result w.r.t. relevance.
     """
     Path(query_results_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
     for queries_file_name in os.listdir(queries_dir):
         # create one results file per query file
-        with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results" + ".txt"), 'w') as results_file:
+        filename_ending = "_ranked.txt" if ranked else ".txt"
+        with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results" + filename_ending), 'w') as results_file:
+            if ranked:
+                write_results_ranked(client, results_file, queries_file_name, size)
+            else:
+                write_results_unranked_as_set(client, results_file, queries_file_name, size)
+
+
+def write_results_ranked(client, results_file, queries_file_name, size):
+    """
+    Separates the topic's search results for EACH configuration, and writes them to the results_file in ranked order.
+    """
+    for configuration_name, _ in tqdm(get_run_configurations()):
+        results_file.write(f"CONFIGURATION: {configuration_name}\n\n")
+        for topic in parse_topics(os.path.join(queries_dir, queries_file_name)):
+            results_file.write(f"\nQuery #{topic['number']} '{topic['query']}'\n\n")
+            res = querying.search(client=client, index=configuration_name, query_string=topic["query"], size=size)
+            rank = 1
+            for hit in res["hits"]["hits"]:
+                results_file.write(f"Rank: {rank}\n")
+                results_file.write(get_title_and_img_string(hit))
+                results_file.write("\n")
+                rank += 1
+        results_file.write("\n\n")
+
+
+def write_results_unranked_as_set(client, results_file, queries_file_name, size):
+    """
+    Unites the topic's search results of all configurations into a set, shuffles them and writes them to the results_file.
+    """
+    for topic in tqdm(parse_topics(os.path.join(queries_dir, queries_file_name))):
+        results = set()
+        for configuration_name, _ in get_run_configurations():
+            res = querying.search(client=client, index=configuration_name, query_string=topic["query"], size=size)
+            for hit in res["hits"]["hits"]:
+                results.add(prettify(hit))
+        topic_headline = f"Suchanfrage {topic['number']}: '{topic['query']}'\n"
+        results_file.write(topic_headline)
+        # shuffle the results to avoid ranking bias when presenting them to the users
+        results_shuffled = random.sample(list(results), len(results))
+        results_file.write('\n'.join(results_shuffled) + '\n\n')
+
+
+def create_results_markdown(client, size=20):
+    """
+    Create human-readable markdown file for users to evaluate each search result w.r.t. relevance, by clicking a checkbox
+    """
+    Path(query_results_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
+    for queries_file_name in os.listdir(queries_dir):
+        # create one results file per query file
+        with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results.md"), 'w') as results_file:
             for topic in tqdm(parse_topics(os.path.join(queries_dir, queries_file_name))):
+                results_file.write(f"#### Suchanfrage {topic['number']}: '{topic['query']}'\n")
                 results = set()
                 for configuration_name, _ in get_run_configurations():
-                    res = querying.search(client=client, index=configuration_name, query_string=topic["query"], size=20)
+                    res = querying.search(client=client, index=configuration_name, query_string=topic["query"], size=size)
                     for hit in res["hits"]["hits"]:
-                        results.add(prettify(hit))
-                topic_headline = f"Suchanfrage {topic['number']}: '{topic['query']}'\n"
-                results_file.write(topic_headline)
+                        results.add(prettify_for_markdown(hit))
                 # shuffle the results to avoid ranking bias when presenting them to the users
                 results_shuffled = random.sample(list(results), len(results))
-                results_file.write('\n'.join(results_shuffled) + '\n\n')
+                if len(results_shuffled) == 0:
+                    results_file.write('Keine Suchergebnisse.\n\n')
+                else:
+                    results_file.write('\n'.join(results_shuffled) + '\n\n')
+
+
+def prettify_for_markdown(hit):
+    return f"{hit['_source']['titles']}\n\n" \
+           f"<img src=\"{hit['_source']['img_url']}\" width=\"400\" />\n\n" \
+           f"{hit['_source']['url']}\n\n" \
+           f"relevant: <input type=\"checkbox\" name=\"test\" />\n\n"
 
 
 def create_run_files(client):
