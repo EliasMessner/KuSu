@@ -14,11 +14,6 @@
         background-color: rgba(200, 200, 200, 1);
       }
 
-/*      * {
-            margin: 0;
-            padding: 0;
-        }*/
-
       .background-img {
         position: fixed;
         opacity: 0.4;
@@ -40,7 +35,7 @@
       table, th, tr, td {
         border: 1px solid;
         background-color: white;
-        margin: 0px;
+        margin: 0;
       }
 
       td {
@@ -50,85 +45,66 @@
       #cellRed {
         background-color: red;
       }
-
       #cellGreen {
         background-color: green;
       }
-
       #cellYellow {
         background-color: yellow;
       }
-
       #cellBlack {
         background-color: black;
         color: white;
       }
-
       #cellBlue {
         background-color: blue;
         color: white;
       }
-
       #cellViolet {
         background-color: violet;
         color: white;
       }
-
       #cellOrange {
         background-color: orange;
       }
-
       #cellWhite {
         background-color: white;
       }
-
       #cellPurple {
         background-color: purple;
         color: white;
       }
-
       #cellTurquoise {
         background-color: turquoise;
       }
-
       #cellLightGreen {
         background-color: lightgreen;
       }
-
       #cellIndigo {
         background-color: indigo;
         color: white;
       }
-
       #cellDarkYellow {
         background-color: rgb(253, 198, 11);
       }
-
       #cellOrangeRed {
         background-color: orangered;
       }
-
       #cellGold {
         background-color: gold;
       }
-
       #cellBrown {
         background-color: brown;
         color: white;
       }
-
       #cellGray {
         background-color: gray;
       }
-
       #colorChoice, #yearChoice, #categoryChoice {
         display: none;
       }
-
       #minYear, #maxYear {
         width: 100px;
       }
-
       #bottomtext {
         font-size: 10pt;
       }
@@ -144,32 +120,21 @@
           if (document.getElementById("cat1").checked) {
             catlist = catlist + "cat1,";                        // replace desired backend variable name here
           }
-
-
           if (document.getElementById("cat2").checked) {
             catlist = catlist + "cat2,";                        // and here
           }
-
-
           if (document.getElementById("cat3").checked) {
             catlist = catlist + "cat3,";                        // and here
           }
-
-
           if (document.getElementById("cat4").checked) {
             catlist = catlist + "cat4,";                        // and here
           }
-
-
           if (document.getElementById("cat5").checked) {
             catlist = catlist + "cat5,";                        // and here
           }
-
-
           if (document.getElementById("cat6").checked) {
             catlist = catlist + "cat6,";                        // and here
           }
-
 
         return catlist.slice(0,-1);
       }
@@ -181,67 +146,51 @@
         if (document.getElementById("colorRed").checked) {
           colorlist = colorlist + "rot,";
         }
-
         if (document.getElementById("colorYellow").checked) {
           colorlist = colorlist + "gelb,";
         }
-
         if (document.getElementById("colorBlue").checked) {
           colorlist = colorlist + "blau,";
         }
-
         if (document.getElementById("colorBlack").checked) {
           colorlist = colorlist + "schwarz,";
         }
-
         if (document.getElementById("colorGreen").checked) {
           colorlist = colorlist + "grün,";
         }
-
         if (document.getElementById("colorViolet").checked) {
           colorlist = colorlist + "violett,";
         }
-
         if (document.getElementById("colorOrange").checked) {
           colorlist = colorlist + "orange,";
         }
-
         if (document.getElementById("colorWhite").checked) {
           colorlist = colorlist + "weiß,";
         }
-
         if (document.getElementById("colorPurple").checked) {
           colorlist = colorlist + "purpur,";
         }
-
         if (document.getElementById("colorTurquoise").checked) {
           colorlist = colorlist + "blaugrün,";
         }
-
         if (document.getElementById("colorLightGreen").checked) {
           colorlist = colorlist + "hellgrün,";
         }
-
         if (document.getElementById("colorIndigo").checked) {
           colorlist = colorlist + "blauviolett,";
         }
-
         if (document.getElementById("colorDarkYellow").checked) {
           colorlist = colorlist + "dunkelgelb,";
         }
-
         if (document.getElementById("colorOrangeRed").checked) {
           colorlist = colorlist + "orangerot,";
         }
-
         if (document.getElementById("colorGold").checked) {
           colorlist = colorlist + "gold,";
         }
-
         if (document.getElementById("colorBrown").checked) {
           colorlist = colorlist + "braun,";
         }
-
         if (document.getElementById("colorGray").checked) {
           colorlist = colorlist + "grau,";
         }
@@ -305,15 +254,11 @@
   </head>
 
   <body>
-
       <img class="background-img" src="/static/Trichosurus_caninus.jpg">
-
     <h1>KuSu</h1>
 
     <table>
       <tr>
-
-
         <td>
           <label for="query">Anfrage: </label>
           <input type="text" id="query" name="query">
@@ -470,7 +415,6 @@
           </div>
         </td>
 
-
       </tr>
     </table>
 
@@ -495,7 +439,6 @@
 
     <br>
 
-    <!--<p id="bottomtext">Placeholder</p>-->                                  <!-- for a written by somebody else -->
     <p id="bottomtext">
       <i>
         Hintegrundbild: <a href="https://commons.wikimedia.org/wiki/File:Trichosurus_caninus.jpg">Donald Hobern from Copenhagen, Denmark</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons
