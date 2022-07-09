@@ -1,18 +1,68 @@
 from xml.etree import ElementTree
+import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 from constants import docs_dir
 from indexing import get_all_xml_filepaths
 
 
-def print_statistics(xml_filepaths):
+def main():
+    all_xml_filepaths = get_all_xml_filepaths(docs_dir)
+    mkg_filepaths = \
+        [filepath for
+         filepath in
+         get_all_xml_filepaths(docs_dir) if
+         filepath.split('/')[-1].startswith("atomized_mkg")]
+    westmuensterland_filepaths = \
+        [filepath for
+         filepath in
+         get_all_xml_filepaths(docs_dir) if
+         filepath.split('/')[-1].startswith("atomized_westmuensterland")]
+    digiporta_filepaths = \
+        [filepath for
+         filepath in
+         get_all_xml_filepaths(docs_dir) if
+         filepath.split('/')[-1].startswith("PT_")]
+
+    response = "ALL:\n" \
+               + get_statistics_string(get_all_xml_filepaths(docs_dir)) \
+               + "\nMKG:" \
+               + get_statistics_string(mkg_filepaths) \
+               + "\nLampensammlung:" \
+               + get_statistics_string(westmuensterland_filepaths) \
+               + "\ndigiporta:" \
+               + get_statistics_string(digiporta_filepaths)
+    print(response)
+
+    plot(get_statistics(all_xml_filepaths))
+    plot(get_statistics(mkg_filepaths))
+    plot(get_statistics(westmuensterland_filepaths))
+    plot(get_statistics(digiporta_filepaths))
+
+
+def plot(data):
+    plt.bar(range(len(data)), list(data.values()), align='center')
+    plt.xticks(range(len(data)), list(data.keys()))
+    plt.show()
+
+
+def get_statistics_string(xml_filepaths):
+    scores = get_statistics(xml_filepaths)
+    return f"Parsed {scores['counted']} length values.\n" \
+           f"Longest = {scores['max']}\n" \
+           f"shortest = {scores['min']}\n" \
+           f"Average = {scores['avg']}\n"
+
+
+def get_statistics(xml_filepaths):
     lengths = []
-    for filepath in xml_filepaths:
+    for filepath in tqdm(xml_filepaths):
         length = get_raw_length(filepath)
         lengths.append(length)
-    print(f"Parsed {len(lengths)} length values.")
-    print(f"Longest = {max(lengths)}")
-    print(f"shortest = {min(lengths)}")
-    print(f"Average = {sum(lengths) / len(lengths)}")
+    return {"counted": len(lengths),
+            "max": max(lengths),
+            "min": min(lengths),
+            "avg": sum(lengths) / len(lengths)}
 
 
 def get_raw_length(xml_path):
@@ -41,12 +91,21 @@ def get_length_only_data(xml_path):
     return len(all_data)
 
 
+def remove_all_tags(xml_path) -> str:
+    """
+    Removes all tags of an xml file and returns the remaining characters as string
+    """
+    no_tags = ""
+    with open(xml_path, 'r') as xml_file:
+        inside_tag = False
+        for c in xml_file.read():
+            if c in ['<', '>']:
+                inside_tag = not inside_tag
+                continue
+            if not inside_tag:
+                no_tags += c
+    return no_tags
+
+
 if __name__ == "__main__":
-    print("ALL:")
-    print_statistics(get_all_xml_filepaths(docs_dir))
-    print("\nMKG:")
-    print_statistics([filepath for filepath in get_all_xml_filepaths(docs_dir) if filepath.split('/')[-1].startswith("atomized_mkg")])
-    print("\nLampensammlung:")
-    print_statistics([filepath for filepath in get_all_xml_filepaths(docs_dir) if filepath.split('/')[-1].startswith("atomized_westmuensterland")])
-    print("\ndigiporta:")
-    print_statistics([filepath for filepath in get_all_xml_filepaths(docs_dir) if filepath.split('/')[-1].startswith("PT_")])
+    main()
