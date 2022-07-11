@@ -38,22 +38,6 @@ def main():
     # print("Done.")
 
 
-def parse_relevance_judgements(dir_path) -> list:
-    """
-    Reads from each feedback file the relevance feedback for each hit, for each query.
-    Determines for each hit the unique _id for, each of the 8 indices.
-    Returns a list of tuples, each with the values:
-    (qid, 0, doc, rel)
-    Meaning:
-        qid: topic number
-        0: unused, always 0
-        doc: a dict with 8 entries, one for each index, where key is index name and value is the _id of the hit doc in
-            the index -> {index_name: doc_id}
-        rel: relevance judgement (bool)
-    """
-    raise NotImplementedError  # TODO
-
-
 def create_results_files(client, ranked: bool, size=20):
     """
     Create human-readable file for users to evaluate each search result w.r.t. relevance.
