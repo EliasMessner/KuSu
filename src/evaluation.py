@@ -18,7 +18,7 @@ def main():
     print("Done.")
 
     print("Creating Indices...")
-    create_all_indices(client, overwrite_if_exists=False)
+    create_all_indices(client, overwrite_if_exists=True)
     print("Done.")
 
     # print("Creating unranked results files...")
@@ -33,9 +33,9 @@ def main():
     # create_results_files(client=client, ranked=True)
     # print("Done.")
 
-    print("Creating run files...")
-    create_run_files(client)
-    print("Done.")
+    # print("Creating run files...")
+    # create_run_files(client)
+    # print("Done.")
 
 
 def create_results_files(client, ranked: bool, size=20):
