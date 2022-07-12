@@ -4,7 +4,7 @@ from elasticsearch import Elasticsearch
 import os
 
 from lido_handler import prettify
-from evaluation import get_run_configurations, get_unique_hits_from_configurations, parse_topics
+from evaluation import get_run_configurations, get_all_hits_from_all_configs_no_duplicates, parse_topics
 from constants import manual_relevance_feedbacks_dir, queries_dir
 
 
@@ -12,18 +12,17 @@ def main():
     print("Establishing Connection...")
     client = Elasticsearch([{"host": "localhost", "port": 9200}])
     print("Done.")
-    time.sleep(3)  # sleep
-
+    time.sleep(3)  # sleep so that elasticsearch warnings can be output and not interrupt the following outputs
     for queries_filename in os.listdir(queries_dir):
         if queries_filename in ["queries_kunstgeschichte.xml", "queries_kunstschaffende.xml", "queries_laien.xml"]:
             continue
-        name = queries_filename[8:-4]
+        name = queries_filename[8:-4]  # 'queries_test.xml' becomes 'test'
         rel_feedback_filename = "rel_feedback_" + name + ".txt"
         with open(os.path.join(manual_relevance_feedbacks_dir, rel_feedback_filename), 'w') as rel_feedback_file:
             topics = parse_topics(os.path.join(queries_dir, queries_filename))
             for topic, i in zip(topics, range(2)):
                 print(f"\n\nQuery {topic['number']}/{len(topics)}: {topic['query']}\n###########")
-                hits = get_unique_hits_from_configurations(topic["query"], client=client, size=20)
+                hits = get_all_hits_from_all_configs_no_duplicates(topic["query"], client=client, size=20)
                 for hit in hits:
                     print("\n")
                     print(prettify(hit))
