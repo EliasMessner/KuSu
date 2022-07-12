@@ -18,24 +18,24 @@ def main():
     print("Done.")
 
     print("Creating Indices...")
-    create_all_indices(client)
+    create_all_indices(client, overwrite_if_exists=False)
     print("Done.")
 
     # print("Creating unranked results files...")
     # create_results_files(client=client, ranked=False)
     # print("Done.")
 
-    print("Creating unranked results markdown files...")
-    create_results_markdown(client=client)
-    print("Done.")
+    # print("Creating unranked results markdown files...")
+    # create_results_markdown(client=client)
+    # print("Done.")
 
     # print("Creating ranked results files...")
     # create_results_files(client=client, ranked=True)
     # print("Done.")
 
-    # print("Creating run files...")
-    # create_run_files(client)
-    # print("Done.")
+    print("Creating run files...")
+    create_run_files(client)
+    print("Done.")
 
 
 def create_results_files(client, ranked: bool, size=20):
@@ -76,16 +76,27 @@ def write_results_unranked_as_set(client, results_file, queries_file_name, size)
     Unites the topic's search results of all configurations into a set, shuffles them and writes them to the results_file.
     """
     for topic in tqdm(parse_topics(os.path.join(queries_dir, queries_file_name))):
-        results = set()
-        for configuration_name, _ in get_run_configurations():
-            res = querying.search(client=client, index=configuration_name, query_string=topic["query"], size=size)
-            for hit in res["hits"]["hits"]:
-                results.add(prettify(hit))
+        results = {prettify(hit) for hit in
+                   get_unique_hits_from_configurations(query=topic["query"], client=client, size=size)}
         topic_headline = f"Suchanfrage {topic['number']}: '{topic['query']}'\n"
         results_file.write(topic_headline)
         # shuffle the results to avoid ranking bias when presenting them to the users
         results_shuffled = random.sample(list(results), len(results))
         results_file.write('\n'.join(results_shuffled) + '\n\n')
+
+
+def get_unique_hits_from_configurations(query, client, size):
+    results = []
+    for configuration_name, _ in get_run_configurations():
+        res = querying.search(client=client, index=configuration_name, query_string=query, size=size)
+        for hit in res["hits"]["hits"]:
+            results.append(hit)
+    # remove duplicate ids
+    d = {x['_id']: x for x in results}
+    results = list(d.values())
+    # assert that there are no duplicate ids
+    assert all(this['_id'] != that['_id'] or that == this for this in results for that in results)
+    return results
 
 
 def create_results_markdown(client, size=20):
@@ -98,11 +109,8 @@ def create_results_markdown(client, size=20):
         with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results.md"), 'w') as results_file:
             for topic in tqdm(parse_topics(os.path.join(queries_dir, queries_file_name))):
                 results_file.write(f"#### Suchanfrage {topic['number']}: '{topic['query']}'\n")
-                results = set()
-                for configuration_name, _ in get_run_configurations():
-                    res = querying.search(client=client, index=configuration_name, query_string=topic["query"], size=size)
-                    for hit in res["hits"]["hits"]:
-                        results.add(prettify_for_markdown(hit))
+                results = {prettify_for_markdown(hit) for hit in
+                           get_unique_hits_from_configurations(query=topic["query"], client=client, size=size)}
                 # shuffle the results to avoid ranking bias when presenting them to the users
                 results_shuffled = random.sample(list(results), len(results))
                 if len(results_shuffled) == 0:
@@ -153,10 +161,14 @@ def scroll(client, index, body, scroll, size, **kw):
     client.clear_scroll(scroll_id=page['_scroll_id'])
 
 
-def create_all_indices(client: Elasticsearch):
+def create_all_indices(client: Elasticsearch, overwrite_if_exists: bool):
     for index_name, conf_body in get_run_configurations():
         if client.indices.exists(index_name):
-            continue
+            if overwrite_if_exists:
+                client.indices.delete(index=index_name)
+                print(f"Overwriting index '{index_name}'.")
+            else:
+                continue
         client.indices.create(index=index_name, body=conf_body)
         index_documents(client=client, index_name=index_name, docs_dir=docs_dir)
 

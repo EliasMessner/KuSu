@@ -2,13 +2,15 @@ from collections.abc import Iterable
 import validators
 
 
-def parse_lido_entry(lido_entry):
+def parse_lido_entry(lido_entry, filename):
     """
     Parses a lido entry to a dictionary only containing information relevant for retrieval.
+    :param filename: name of the xml file in docs folder
     :param lido_entry: the lido entry as dict
     :return: a dict ready for retrieval process
     """
     result = {}
+    result["filename"] = filename
     result["id"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:lidoRecID'], is_text=True, default="")
     result["img_id"] = parse_img_id(lido_entry)
     result["titles"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:titleWrap', 'lido:titleSet', 'lido:appellationValue'], is_text=True, default="")
@@ -34,7 +36,7 @@ def remove_urls(iterable: list[str]):
 
 def all_values_to_string(result):
     for key, value in result.items():
-        if key in ["events", "img_url", "img_id", "colors"]:
+        if key in ["events", "img_url", "img_id", "colors", "filename"] or isinstance(value, str):
             continue
         assert isinstance(value, Iterable)
         result[key] = ', '.join(flatten(value))

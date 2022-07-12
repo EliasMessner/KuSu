@@ -20,7 +20,7 @@ def xml_to_dict(filepath: str):
     with open(filepath, 'r') as file:
         xml_data = file.read()
     lido_dict = xmltodict.parse(xml_data)
-    parsed_dict = parse_lido_entry(lido_dict)
+    parsed_dict = parse_lido_entry(lido_dict, os.path.basename(filepath))
     return parsed_dict
 
 
@@ -56,7 +56,7 @@ def index_documents(client: Elasticsearch, index_name: str, docs_dir: str, overw
     for filepath in tqdm(xml_filepaths):  # tqdm is for progress bar in console
         data_dict = xml_to_dict(filepath)
         data_dict["colors"] = read_image_data_if_exists(data_dict["img_id"])
-        res = client.index(index=index_name, body=data_dict)
+        res = client.index(index=index_name, body=data_dict, id=data_dict['filename'])
         if console_output:
             print(res)
         responses.append(res)
