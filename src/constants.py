@@ -13,6 +13,7 @@ docs_dir = str(os.path.join('..', 'docs'))
 queries_dir = str(os.path.join('..', 'queries'))
 run_files_dir = str(os.path.join('..', 'run_files'))
 query_results_dir = str(os.path.join('..', 'query_results'))
+manual_relevance_feedbacks_dir = str(os.path.join('..', 'manual_relevance_feedbacks'))
 
 images_muenchen = str(os.path.join("..", "images", "muenchen"))
 images_westmuensterland = str(os.path.join("..", "images", "westmuensterland"))
