@@ -88,15 +88,30 @@ def write_results_unranked_as_set(client, results_file, queries_file_name, size)
 def get_unique_hits_from_configurations(query, client, size):
     results = []
     for configuration_name, _ in get_run_configurations():
+        sub_results = []
         res = querying.search(client=client, index=configuration_name, query_string=query, size=size)
         for hit in res["hits"]["hits"]:
-            results.append(hit)
+            sub_results.append(hit)
+        results.append(sub_results)
+    # check if any of the configurations got different hits
+    # print("All Configs Same results:", all(set_equal(sub_results1, sub_results2, lambda x: x["_id"]) for sub_results1 in results for sub_results2 in results))
+    results = [result for sub_results in results for result in sub_results]
     # remove duplicate ids
     d = {x['_id']: x for x in results}
     results = list(d.values())
     # assert that there are no duplicate ids
     assert all(this['_id'] != that['_id'] or that == this for this in results for that in results)
     return results
+
+
+def set_equal(l1, l2, lam):
+    for x in l1:
+        if not any(lam(x) == lam(y) for y in l2):
+            return False
+    for y in l2:
+        if not any(lam(y) == lam(x) for x in l1):
+            return False
+    return True
 
 
 def create_results_markdown(client, size=20):
