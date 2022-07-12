@@ -1,11 +1,11 @@
+import os
 import time
 
 from elasticsearch import Elasticsearch
-import os
 
-from lido_handler import prettify
-from evaluation import get_run_configurations, get_all_hits_from_all_configs_no_duplicates, parse_topics
 from constants import manual_relevance_feedbacks_dir, queries_dir
+from evaluation import get_all_hits_from_all_configs_no_duplicates, parse_topics
+from lido_handler import prettify
 
 
 def main():
