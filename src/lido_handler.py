@@ -1,3 +1,4 @@
+import re
 from collections.abc import Iterable
 import validators
 
@@ -17,6 +18,9 @@ def parse_lido_entry(lido_entry, filename):
     result["classification"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:classificationWrap', 'lido:classification', 'lido:term'], is_text=True, default="")
     result["work_type"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:objectWorkTypeWrap', 'lido:objectWorkType', 'lido:term'], is_text=True, default="")
     result["inscriptions"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:inscriptionsWrap', 'lido:inscriptions', 'lido:inscriptionDescription', 'lido:descriptiveNoteValue'], is_text=False, default="")
+    description = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:objectDescriptionWrap', 'lido:objectDescriptionSet', 'lido:descriptiveNoteValue'], is_text=True, default="")
+    description = description[0] if isinstance(description, list) and len(description) else description
+    result["inscriptions"] += "\n" + description
     result["measurements"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:objectMeasurementsWrap', 'lido:objectMeasurementsSet', 'lido:displayObjectMeasurements'], is_text=True, default="")
     result["events"] = parse_events(lido_entry)
     result["related_subjects"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectRelationWrap', 'lido:subjectWrap', 'lido:subjectSet', 'lido:subject', 'lido:subjectConcept', 'lido:term'], is_text=True, default="")
@@ -40,6 +44,7 @@ def all_values_to_string(result):
             continue
         assert isinstance(value, Iterable)
         result[key] = ', '.join(flatten(value))
+        result[key] = re.sub(r"\s+", " ", result[key])
     event_strings = []
     for event in result["events"]:
         event_string = ""
@@ -95,8 +100,10 @@ def parse_events(lido_entry):
         event_actors = find_values_by_key_list(event, ['lido:event', 'lido:eventActor'], is_text=True, default=[])
         if len(event_actors) > 0:
             new_event["actors"] = event_actors
-        earliest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:earliestDate'], is_text=False, default="")
-        latest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:latestDate'], is_text=False, default="")
+        earliest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:earliestDate'], is_text=True, default="")
+        latest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:latestDate'], is_text=True, default="")
+        earliest_date = earliest_date[0] if len(earliest_date) else ""
+        latest_date = latest_date[0] if len(latest_date) else ""
         if earliest_date != "" or latest_date != "":
             new_event["date"] = [earliest_date, latest_date]
         materials = find_values_by_key_list(event, ['lido:event', 'lido:eventMaterialsTech', 'lido:displayMaterialsTech'], is_text=False, default="")
@@ -166,7 +173,7 @@ def find_values_by_key_list(d: dict | list, keys: list, is_text: bool, default: 
     if is_text and isinstance(result, list):
         # remove duplicates
         result = list(set(result))
-    return flatten(result)
+    return flatten(result) if is_text else result
 
 
 def find_text_values(d: dict, default: any):
