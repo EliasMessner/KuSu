@@ -7,7 +7,7 @@ import random
 from tqdm import tqdm
 
 import querying
-from src.constants import queries_dir, run_files_dir, boost_default, boost_2, get_settings, query_results_dir
+from constants import queries_dir, run_files_dir, boost_default, boost_2, get_settings, query_results_dir
 from lido_handler import prettify, get_title_and_img_string
 from create_all_indices import create_all_indices
 
