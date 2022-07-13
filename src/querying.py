@@ -30,23 +30,24 @@ def get_improved_query_body(query_string: str) -> dict:
             "bool": {
                 "should": [
                     {
-                        "match": {
+                        "multi_match": {
                             "query": query_string,
                             "type": "best_fields",
                             "fields": get_all_search_fields()
                         }
                     },
                     {
-                        "match": {
+                        "multi_match": {
                             "query": query_string,
                             "operator": "and",
                             "fields": get_all_search_fields()
                         }
                     },
                     {
-                        "match_phrase": {
+                        "multi_match": {
                             "query": query_string,
                             "fields": get_all_search_fields(),
+                            "type": "phrase",
                             "boost": 2
                         }
                     }
