@@ -1,5 +1,7 @@
 from elasticsearch import Elasticsearch
 
+from constants import get_all_search_fields
+
 
 def get_query_body(query_string: str) -> dict:
     """
@@ -29,25 +31,23 @@ def get_improved_query_body(query_string: str) -> dict:
                 "should": [
                     {
                         "match": {
-                            "content": {
-                                "query": query_string
-                            }
+                            "query": query_string,
+                            "type": "best_fields",
+                            "fields": get_all_search_fields()
                         }
                     },
                     {
                         "match": {
-                            "content": {
-                                "query": query_string,
-                                "operator": "and"
-                            }
+                            "query": query_string,
+                            "operator": "and",
+                            "fields": get_all_search_fields()
                         }
                     },
                     {
                         "match_phrase": {
-                            "content": {
-                                "query": query_string,
-                                "boost": 2
-                            }
+                            "query": query_string,
+                            "fields": get_all_search_fields(),
+                            "boost": 2
                         }
                     }
                 ]
@@ -57,4 +57,4 @@ def get_improved_query_body(query_string: str) -> dict:
 
 
 def search(client: Elasticsearch, index: str, query_string: str, size=20):
-    return client.search(index=index, body=get_improved_query_body(query_string), size=size)
+    return client.search(index=index, body=get_query_body(query_string), size=size)
