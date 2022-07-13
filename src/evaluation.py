@@ -7,9 +7,9 @@ import random
 from tqdm import tqdm
 
 import querying
-from src.constants import queries_dir, run_files_dir, boost_default, boost_2, get_settings, docs_dir, query_results_dir
-from indexing import index_documents
+from src.constants import queries_dir, run_files_dir, boost_default, boost_2, get_settings, query_results_dir
 from lido_handler import prettify, get_title_and_img_string
+from create_all_indices import create_all_indices
 
 
 def main():
@@ -179,25 +179,6 @@ def scroll(client, index, body, scroll, size, **kw):
         scroll_id = page['_scroll_id']
         hits = page['hits']['hits']
     client.clear_scroll(scroll_id=page['_scroll_id'])
-
-
-def create_all_indices(client: Elasticsearch, overwrite_if_exists: bool):
-    """
-    Creates all indices returned by get_all_run_configurations and fills each of them with data by calling
-    indexing.index_documents.
-    :param client: ElasticSearch client with active connection.
-    :param overwrite_if_exists: if True, overwrite an index if such an index name already exists. If False, omit
-        existing index.
-    """
-    for index_name, conf_body in get_run_configurations():
-        if client.indices.exists(index_name):
-            if overwrite_if_exists:
-                client.indices.delete(index=index_name)
-                print(f"Overwriting index '{index_name}'.")
-            else:
-                continue
-        client.indices.create(index=index_name, body=conf_body)
-        index_documents(client=client, index_name=index_name, docs_dir=docs_dir)
 
 
 def parse_topics(filepath):
