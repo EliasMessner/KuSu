@@ -4,7 +4,7 @@ import time
 from elasticsearch import Elasticsearch
 
 from constants import manual_relevance_feedbacks_dir, queries_dir
-from evaluation import get_all_hits_from_all_configs_no_duplicates, parse_topics
+from evaluation import get_all_hits_from_all_configs_merged_as_set, parse_topics
 from lido_handler import prettify
 
 
@@ -22,7 +22,7 @@ def main():
             topics = parse_topics(os.path.join(queries_dir, queries_filename))
             for topic, i in zip(topics, range(2)):
                 print(f"\n\nQuery {topic['number']}/{len(topics)}: {topic['query']}\n###########")
-                hits = get_all_hits_from_all_configs_no_duplicates(topic["query"], client=client, size=20)
+                hits = get_all_hits_from_all_configs_merged_as_set(topic["query"], client=client, size=20)
                 for hit in hits:
                     print("\n")
                     print(prettify(hit))

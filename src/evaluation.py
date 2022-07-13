@@ -18,8 +18,10 @@ def main():
     print("Done.")
 
     print("Creating Indices...")
-    create_all_indices(client, overwrite_if_exists=True)
+    create_all_indices(client, overwrite_if_exists=True)  # TODO set to False
     print("Done.")
+
+    # TODO un-comment code
 
     # print("Creating unranked results files...")
     # create_results_files(client=client, ranked=False)
@@ -77,7 +79,7 @@ def write_results_unranked_as_set(client, results_file, queries_file_name, size)
     """
     for topic in tqdm(parse_topics(os.path.join(queries_dir, queries_file_name))):
         results = {prettify(hit) for hit in
-                   get_all_hits_from_all_configs_no_duplicates(query=topic["query"], client=client, size=size)}
+                   get_all_hits_from_all_configs_merged_as_set(query=topic["query"], client=client, size=size)}
         topic_headline = f"Suchanfrage {topic['number']}: '{topic['query']}'\n"
         results_file.write(topic_headline)
         # shuffle the results to avoid ranking bias when presenting them to the users
@@ -85,7 +87,18 @@ def write_results_unranked_as_set(client, results_file, queries_file_name, size)
         results_file.write('\n'.join(results_shuffled) + '\n\n')
 
 
-def get_all_hits_from_all_configs_no_duplicates(query, client, size):
+def get_hits_from_all_configs(query, client, size):
+    results = {}
+    for configuration_name, _ in get_run_configurations():
+        sub_results = []
+        res = querying.search(client=client, index=configuration_name, query_string=query, size=size)
+        for hit in res["hits"]["hits"]:
+            sub_results.append(hit)
+        results[configuration_name] = sub_results
+    return results
+
+
+def get_all_hits_from_all_configs_merged_as_set(query, client, size):
     """
     Performs given query on all indices. Indices names are obtained by calling get_run_configurations.
     The resulting hits from all indices are merged into one list that has no duplicate ids. This list is then returned.
@@ -95,15 +108,7 @@ def get_all_hits_from_all_configs_no_duplicates(query, client, size):
     :param size:
     :return:
     """
-    results = []
-    for configuration_name, _ in get_run_configurations():
-        sub_results = []
-        res = querying.search(client=client, index=configuration_name, query_string=query, size=size)
-        for hit in res["hits"]["hits"]:
-            sub_results.append(hit)
-        results.append(sub_results)
-    # check if any of the configurations got different hits than any other one
-    # print("All Configs Same results:", all(set_equal(sub_results1, sub_results2, lambda x, y: x["_id"] == y["_id"]) for sub_results1 in results for sub_results2 in results))
+    results = list(get_hits_from_all_configs(query, client, size).values())
     # flatten results
     results = [result for sub_results in results for result in sub_results]
     # remove duplicate ids
@@ -112,23 +117,6 @@ def get_all_hits_from_all_configs_no_duplicates(query, client, size):
     # assert that there are no duplicate ids
     assert all(this['_id'] != that['_id'] or that == this for this in results for that in results)
     return results
-
-
-def set_equal(l1: list, l2: list, lam) -> bool:
-    """
-    Return True iff every element of l1 is also contained in l2 and vice versa.
-    Basically, return True iff the set versions of those lists are equal. Useful for lists
-    with un-hashable type.
-    The equality comparison can be specified by a lambda
-    :param lam: lambda taking 2 arguments, for equality comparison
-    """
-    for x in l1:
-        if not any(lam(x, y) for y in l2):
-            return False
-    for y in l2:
-        if not any(lam(y, x) for x in l1):
-            return False
-    return True
 
 
 def create_results_markdown(client, size=20):
@@ -142,7 +130,7 @@ def create_results_markdown(client, size=20):
             for topic in tqdm(parse_topics(os.path.join(queries_dir, queries_file_name))):
                 results_file.write(f"#### Suchanfrage {topic['number']}: '{topic['query']}'\n")
                 results = {prettify_for_markdown(hit) for hit in
-                           get_all_hits_from_all_configs_no_duplicates(query=topic["query"], client=client, size=size)}
+                           get_all_hits_from_all_configs_merged_as_set(query=topic["query"], client=client, size=size)}
                 # shuffle the results to avoid ranking bias when presenting them to the users
                 results_shuffled = random.sample(list(results), len(results))
                 if len(results_shuffled) == 0:
