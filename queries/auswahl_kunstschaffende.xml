@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<topic number="1" type="single">
+    <query> politische Kunst </query>
+    <description>
+        Ich möchte wissen ob es politische Kunstwerke gibt 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="2" type="single">
+    <query> Plastik, Kunststoff, Gummi, PET  </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="3" type="single">
+    <query> Holz, Baumrinde, Parkett, Furnier, Intarsien </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="4" type="single">
+    <query> Metall, Stahl, Rost, Aluminium, Oxidation, Gold </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität  
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="5" type="single">
+    <query> Glas, Gläser, Flaschen, Scherben, Splitter </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität  
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="6" type="single">
+    <query> Stein, Marmor, Achat, Granit, Beton </query>
+    <description>
+        Speziell suche ich meistens nach dem Aussehen und der Materialität  
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="7" type="single">
+    <query> Textur </query>
+    <description>
+        Ich möchte wissen ob es in dem Datenbank Texturen gibt, die mich visuell ansprechen.
+    </description>
+	Muster, Struktur
+    <narrative> </narrative>
+</topic>
+
+<topic number="8" type="single">
+    <query>  Blumen </query>
+    <description>
+        Ich möchte wissen ob es in dem Datenbank Texturen/Hintergründe gibt, die mich visuell ansprechen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="9" type="single">
+    <query> Auge </query>
+    <description>
+        Kann die Suchmaschine nach einzelnen Bestandteilen eines Bildes suchen? Wie viele Bilder mit Augen sind in der Datenbank?
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="10" type="single">
+    <query> Bibliothek </query>
+    <description>
+        Gibt es hier Bilder auf dem die Einrichtung, Mobiliar, Layout eine Bibliothek zu sehen sind? 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="11" type="single">
+    <query> Luftperspektive </query>
+    <description>
+        suche Gemälde, Zeichungen, Fotos von Landschaften in "typischer" Luftperspektive bis zu Stadtfotos des 20. Jahrhunderts, die das Leben in (über)bevölkerten Städten inkl. Smog und anderen Begleiterscheinungen illustrieren können
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="12" type="single">
+    <query> Wasser und Eis </query>
+    <description>
+        ich möchte auf Formen und Nutzungen des Wassers verweisen (Aggregatzustände, Lebensmittel, Chemikalie (z.B.: Fotos wässern) etc.)
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="13" type="single">
+    <query> Natur </query>
+    <description>
+        Artefakte werden zum Verhältnis zur und Umgang mit Natur für möglichst unterschiedliche Bevölkerungsgruppen rund um die Welt gesucht
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="14" type="single">
+    <query> Koralle </query>
+    <description>
+        ich suche Artefakte (Schmuck- und Dekostücke, Gemälde, Postkarten usw.), die einen Überblick über die Nutzung von Korallen über die Jahrhunderte geben können
+    </description>
+    <narrative> </narrative>
+</topic>
