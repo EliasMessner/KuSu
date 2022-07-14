@@ -1,5 +1,6 @@
 import re
 from collections.abc import Iterable
+from typing import Union
 import validators
 
 
@@ -132,7 +133,7 @@ def parse_url(lido_entry):
     return [element for element in possible_urls if validators.url(element)]
 
 
-def find_values_by_key_list(d: dict | list, keys: list, is_text: bool, default: any, result=None):
+def find_values_by_key_list(d: Union[dict, list], keys: list, is_text: bool, default: any, result=None):
     """
     Searches dict for keys in given order, returns a list of all found values. If any key is not present,
     return default value. If is_text=True, performs nested search for '#text' at the end.
