@@ -33,7 +33,6 @@ def plot_plot(number,keys,values, quelle):
     plt.xlabel('Häufigkeitsverteilung in Bildern aus '+quelle, fontsize=8)
     plt.legend(loc="upper right", prop={'size': 8})    
     plt.xticks(x_axis, keys)
-    plt.savefig(quelle)
     
 ## first plot westmuensterland
 westmuensterland = '../images/westmuensterlandtext'
@@ -58,3 +57,4 @@ all_keys = all_counts.keys()
 all_values = all_counts.values()
 plot_plot(3, all_keys, all_values, " beiden Quellen")
 plt.subplots_adjust(hspace=0.8)
+plt.savefig("Häufigkeitsverteilungen")
