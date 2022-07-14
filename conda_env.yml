@@ -1,0 +1,13 @@
+name: InformationRetrieval
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - elasticsearch
+  - tqdm
+  - scipy
+  - numpy
+  - matplotlib
+  - validators
+  - flask
+prefix: /home/elias/miniconda3/envs/InformationRetrieval
