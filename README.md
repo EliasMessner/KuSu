@@ -70,8 +70,8 @@ finished creating the index, you are good to go.
 
 For a convenient user experience, you can use the KuSu Web Interface.
 
-To start the web interface, run the server.py script. You are prompted to enter the URL and password of a remote
-Elasticsearch cluster. If you want to connect to localhost:9200, enter "localhost" as URL and leave the password blank.
+To start the web interface, run the server.py script. You are prompted to enter the URL, port, username, and password of an
+Elasticsearch remote. If you want to connect to localhost:9200, enter "localhost" as URL and leave the password blank.
 
 When the connection to Elasticsearch is established, you can access the web interface by visiting localhost:5000 in your
 favorite web browser.
@@ -83,8 +83,8 @@ indices.
 
 In order to start up the CLI, run the main_controller.py file.
 
-You are prompted to enter the URL and password of a remote
-Elasticsearch cluster. If you want to connect to localhost:9200, enter "localhost" as URL and leave the password blank.
+You are prompted to enter the URL, port, username, and password of an
+Elasticsearch remote. If you want to connect to localhost:9200, enter "localhost" as URL and leave the password blank.
 
 When you see "Client connected." on the console, you can start indexing and searching.
 
