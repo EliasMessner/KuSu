@@ -12,15 +12,9 @@ def mainloop(command_function_mapping):
     command name, the following tokens (optional) are arguments for that command.
     The possible commands must be specified in the function_mapping parameter.
     """
-    print("Connecting to elasticsearch cluster...")
-    password = getpass()
-    client = es_helper.get_default_client(password)
-    if not client.ping():  # assert that the client is connected
-        print(f"{bcolors.WARNING}Client not connected. Please make sure you entered valid credentials.{bcolors.ENDC}")
-        quit()
-    print("Client connected.")
+    client = es_helper.prepare_client_dialog()
     while True:
-        input_tokens = input().lower().split()
+        input_tokens = input("> ").lower().split()
         cmd = input_tokens[0]
         if cmd in ["quit", "q"]:
             break

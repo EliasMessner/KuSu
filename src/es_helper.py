@@ -1,6 +1,8 @@
+from getpass import getpass
+
 from elasticsearch import Elasticsearch
 
-from constants import get_all_search_fields
+from constants import get_all_search_fields, bcolors
 
 
 def get_query_body(query_string: str) -> dict:
@@ -64,9 +66,31 @@ def search(client: Elasticsearch, index: str, query_string: str, size=20):
     return client.search(index=index, body=get_query_body(query_string), size=size)
 
 
-def get_default_client(url, password):
-    if url == "localhost":
-        return Elasticsearch([{"host": "localhost", "port": 9200}])
-    return Elasticsearch([url],
-                         http_auth=("elastic", password),
-                         port=9243)
+def prepare_client_dialog():
+    """
+    Performs a console dialog asking for URL, port, user and password, and attempts to connect to the specified ES
+    cluster with the given credentials.
+    If the connection fails, return False.
+    Otherwise, return the connected Elasticsearch client.
+    """
+    print("Please enter the credentials of an Elasticsearch cluster to connect to.")
+    credentials = prompt_for_credentials()
+    client = Elasticsearch([credentials["url"]],
+                           http_auth=(credentials["user"], credentials["password"]),
+                           port=credentials["port"])
+    if not client.ping():
+        print(f"{bcolors.WARNING}Client not connected. Please make sure you entered valid credentials.{bcolors.ENDC}")
+        return False
+    print("Client connected successfully.")
+    return client
+
+
+def prompt_for_credentials():
+    url = input("URL: ")
+    port = input("Port: ")
+    user = input("User: ")
+    password = getpass()
+    return {"url": url,
+            "port": port,
+            "user": user,
+            "password": password}

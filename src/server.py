@@ -1,7 +1,5 @@
-from getpass import getpass
+from flask import Flask, request, render_template
 
-from elasticsearch import Elasticsearch
-from flask import Flask, request, render_template, redirect
 import es_helper
 from constants import default_index_name
 from lido_handler import prettify
@@ -45,11 +43,6 @@ def form_post():
 
 
 if __name__ == '__main__':
-    url = input("URL: ")
-    password = getpass()
-    print("Establishing Connection...")
-    CLIENT = es_helper.get_default_client(url, password)
-    assert CLIENT.ping()
-    print("Done.")
+    CLIENT = es_helper.prepare_client_dialog()
     # if debug=True, user needs to enter credentials two times. Therefore, reset to False after debugging
     app.run(debug=False)

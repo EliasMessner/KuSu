@@ -1,48 +1,39 @@
 import os
+import random
 import re
 import xml.etree.ElementTree as ET
-from getpass import getpass
-
-from elasticsearch import Elasticsearch
 from pathlib import Path
-import random
+
 from tqdm import tqdm
 
 import es_helper
 from constants import queries_dir, run_files_dir, query_results_dir
-from lido_handler import prettify, get_title_and_img_string
 from create_all_indices import create_all_indices, get_run_configurations
+from lido_handler import prettify, get_title_and_img_string
 
 
 def main():
-    url = input("URL: ")
-    password = getpass()
-    print("Establishing Connection...")
-    client = es_helper.get_default_client(url, password)
-    assert client.ping()
+    client = es_helper.prepare_client_dialog()
+
+    # print("Creating Indices...")
+    # create_all_indices(client, overwrite_if_exists=False)
+    # print("Done.")
+
+    print("Creating unranked results files...")
+    create_results_files(client=client, ranked=False)
     print("Done.")
 
-    print("Creating Indices...")
-    create_all_indices(client, overwrite_if_exists=True)  # TODO set to False
+    print("Creating unranked results markdown files...")
+    create_results_markdown(client=client)
     print("Done.")
 
-    # TODO un-comment code
+    print("Creating ranked results files...")
+    create_results_files(client=client, ranked=True)
+    print("Done.")
 
-    # print("Creating unranked results files...")
-    # create_results_files(client=client, ranked=False)
-    # print("Done.")
-
-    # print("Creating unranked results markdown files...")
-    # create_results_markdown(client=client)
-    # print("Done.")
-
-    # print("Creating ranked results files...")
-    # create_results_files(client=client, ranked=True)
-    # print("Done.")
-
-    # print("Creating run files...")
-    # create_run_files(client)
-    # print("Done.")
+    print("Creating run files...")
+    create_run_files(client)
+    print("Done.")
 
 
 def create_results_files(client, ranked: bool, size=20):

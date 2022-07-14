@@ -11,12 +11,7 @@ def main():
     Creates the default index and gives explanatory console output. If an index with that name already exists,
     prompts the user if it should be overwritten.
     """
-    url = input("URL: ")
-    password = getpass()
-    print("Establishing Connection...")
-    client = es_helper.get_default_client(url, password)
-    assert client.ping()
-    print("Done.")
+    client = es_helper.prepare_client_dialog()
     if client.indices.exists(index=default_index_name):
         if not prompt_confirm(f"Index named {default_index_name} already exists. Should it be overwritten?"):
             quit()

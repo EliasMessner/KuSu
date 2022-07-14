@@ -2,20 +2,13 @@
 Program for determining queries useful for evaluation, by checking if a given query returns different results for any
 of the 8 settings.
 """
-from getpass import getpass
 
-from elasticsearch import Elasticsearch
-from evaluation import get_hits_from_all_configs
 import es_helper
+from evaluation import get_hits_from_all_configs
 
 
 def main():
-    url = input("URL: ")
-    password = getpass()
-    print("Establishing Connection...")
-    client = es_helper.get_default_client(url, password)
-    assert client.ping()
-    print("Done.")
+    client = es_helper.prepare_client_dialog()
     queries = ["test query", "Heinrich Reinhold"]
     for q in queries:
         results = get_hits_from_all_configs(query=q, client=client, size=20)

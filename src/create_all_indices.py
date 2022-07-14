@@ -2,21 +2,14 @@
 Wrapper for single function call.
 """
 from elasticsearch import Elasticsearch
-from getpass import getpass
 
 from indexing import index_documents
 from constants import docs_dir, boost_default, boost_2, get_settings
-from es_helper import get_default_client
+from es_helper import prepare_client_dialog
 
 
 def main():
-    url = input("URL: ")
-    password = getpass()
-    print("Establishing Connection...")
-    client = get_default_client(url, password)
-    assert client.ping()
-    print("Done.")
-
+    client = prepare_client_dialog()
     print("Creating Indices...")
     create_all_indices(client, overwrite_if_exists=True)
     print("Done.")
