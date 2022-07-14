@@ -7,9 +7,9 @@ import random
 from tqdm import tqdm
 
 import querying
-from constants import queries_dir, run_files_dir, boost_default, boost_2, get_settings, query_results_dir
+from constants import queries_dir, run_files_dir, query_results_dir
 from lido_handler import prettify, get_title_and_img_string
-from create_all_indices import create_all_indices
+from create_all_indices import create_all_indices, get_run_configurations
 
 
 def main():
@@ -199,30 +199,6 @@ def parse_topics(filepath):
             "narrative": child.find("narrative").text.strip()
         })
     return topics
-
-
-def get_run_configurations():
-    """
-    Returns a list of run configurations that are useful for evaluation.
-    Each element of the list is a tuple, the first element being a descriptive name of the run configuration (which is
-    also the name of the index that ought to use this configuration). The second element is the settings dict that
-    can be passed as body parameter when creating a new index with the configuration.
-    """
-    configurations = []  # [(name_of_configuration, body), ...]
-    for boost in [boost_default, boost_2]:
-        for analyzer in ["german_analyzer", "german_light_analyzer"]:
-            for similarity in ["BM25", "boolean"]:
-                if boost == boost_default:
-                    boost_name = "boost_default"
-                elif boost == boost_2:
-                    boost_name = "boost_2"
-                else:
-                    raise RuntimeError("Boost unknown.")
-                name = "-".join([boost_name, analyzer, similarity])
-                name = name.lower()
-                body = get_settings(boost=boost, similarity=similarity, analyzer=analyzer)
-                configurations.append((name, body))
-    return configurations
 
 
 if __name__ == "__main__":
