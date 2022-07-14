@@ -1,8 +1,9 @@
-from elasticsearch import Elasticsearch
+from getpass import getpass
 
-from indexing import index_documents
 from constants import default_index_name, docs_dir
+from indexing import index_documents
 from main_controller import prompt_confirm
+import es_helper
 
 
 def main():
@@ -10,7 +11,12 @@ def main():
     Creates the default index and gives explanatory console output. If an index with that name already exists,
     prompts the user if it should be overwritten.
     """
-    client = Elasticsearch([{"host": "localhost", "port": 9200}])
+    url = input("URL: ")
+    password = getpass()
+    print("Establishing Connection...")
+    client = es_helper.get_default_client(url, password)
+    assert client.ping()
+    print("Done.")
     if client.indices.exists(index=default_index_name):
         if not prompt_confirm(f"Index named {default_index_name} already exists. Should it be overwritten?"):
             quit()

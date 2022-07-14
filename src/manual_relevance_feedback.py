@@ -1,16 +1,19 @@
 import os
 import time
-
-from elasticsearch import Elasticsearch
+from getpass import getpass
 
 from constants import manual_relevance_feedbacks_dir, queries_dir
 from evaluation import get_all_hits_from_all_configs_merged_as_set, parse_topics
 from lido_handler import prettify
+import es_helper
 
 
 def main():
+    url = input("URL: ")
+    password = getpass()
     print("Establishing Connection...")
-    client = Elasticsearch([{"host": "localhost", "port": 9200}])
+    client = es_helper.get_default_client(url, password)
+    assert client.ping()
     print("Done.")
     time.sleep(3)  # sleep so that elasticsearch warnings can be output and not interrupt the following outputs
     for queries_filename in os.listdir(queries_dir):

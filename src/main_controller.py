@@ -1,9 +1,8 @@
 from pprint import pprint
-
-from elasticsearch import Elasticsearch
+from getpass import getpass
 
 from constants import docs_dir, bcolors, get_settings, boost_default, default_index_name
-import querying as querying
+import es_helper
 from indexing import index_documents
 
 
@@ -13,11 +12,11 @@ def mainloop(command_function_mapping):
     command name, the following tokens (optional) are arguments for that command.
     The possible commands must be specified in the function_mapping parameter.
     """
-    print("Connecting to default client at localhost:9200...")
-    client = Elasticsearch([{"host": "localhost", "port": 9200}])
+    print("Connecting to elasticsearch cluster...")
+    password = getpass()
+    client = es_helper.get_default_client(password)
     if not client.ping():  # assert that the client is connected
-        print(f"{bcolors.WARNING}Client not connected. Please make sure that ElasticSearch is running on your computer "
-              f"and connected to the default client at localhost:9200{bcolors.ENDC}")
+        print(f"{bcolors.WARNING}Client not connected. Please make sure you entered valid credentials.{bcolors.ENDC}")
         quit()
     print("Client connected.")
     while True:
@@ -97,7 +96,7 @@ def search(client, input_tokens):
     if not client.indices.exists(index):
         print(f"Index '{index}' does not exist.")
         return
-    res = querying.search(client, index, query_string)
+    res = es_helper.search(client, index, query_string)
     print(f"Hits: {len(res['hits']['hits'])}\n")
     pprint(res['hits']['hits'])
 
@@ -142,7 +141,10 @@ def delete_index(client, input_tokens):
 
 
 def list_indices(client, input_tokens):
-    print(client.indices.get_alias("*"))
+    for name, value in sorted(client.indices.get_alias("*").items(), key=lambda i: i[0]):
+        if name.startswith(("apm", ".")):
+            continue
+        print(name)
 
 
 def check_arg_count(fun, input_tokens):

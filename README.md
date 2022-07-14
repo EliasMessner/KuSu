@@ -34,7 +34,13 @@ Overall, the data consists of 18851 documents.
 
 # User Manual
 
-## Preparing the data
+
+
+## Preparing the data and index
+
+Skip this part if you already have access to an Elasticsearch cluster with the data indexed.
+
+### Downloading the data
 
 The data from Westmünsterland Museum is already present in the "../data" folder.
 The data sets from MKG and Deutsches Museum need to be downloaded, since they are too large to be shipped with this project.
@@ -43,37 +49,42 @@ To download and prepare the data sets, run the prepare_data.py script.
 
 The data is now ready to be indexed.
 
-## Running and using KuSu Search Engine
+### Creating the default index
 
-Before you start the search engine, make sure that elasticsearch is up and running on your computer by opening 
-localhost:9200 in your browser.
-
-## Web Interface
-
-For a convenient user experience, you can use the KuSu Web Interface.
-
-The web interface searches on the default index. The default index can be automatically created by running 
+By default, KuSu searches on the default index. The default index can be automatically created by running 
 create_default_index.py.
 
 The default index is the one with the optimal settings as determined in the course of our 
 research.
 
-Creating the default index can take up to 10 minutes, depending on your machine's performance. When the script has
-finished creating the index, you are good to start up the web interface.
+Creating the default index can take from 5 minutes to 1 hour, depending on your machine's performance. When the script has
+finished creating the index, you are good to go.
 
-To start the web interface, run the server.py script, and visit localhost:5000 in your favorite web browser.
+## Running and using KuSu Search Engine
 
-## Command Line Interface
+### Web Interface
+
+For a convenient user experience, you can use the KuSu Web Interface.
+
+To start the web interface, run the server.py script. You are prompted to enter the URL and password of a remote
+Elasticsearch cluster. If you want to connect to localhost:9200, enter "localhost" as URL and leave the password blank.
+
+When the connection to Elasticsearch is established, you can access the web interface by visiting localhost:5000 in your
+favorite web browser.
+
+### Command Line Interface
 
 If you are an advanced user, you can also use the KuSu Command Line Interface, which enables you to create your own 
 indices.
 
 In order to start up the CLI, run the main_controller.py file.
 
-The search engine will now try to establish a connection to the standard elasticsearch client at localhost:9200.
+You are prompted to enter the URL and password of a remote
+Elasticsearch cluster. If you want to connect to localhost:9200, enter "localhost" as URL and leave the password blank.
+
 When you see "Client connected." on the console, you can start indexing and searching.
 
-### Indexing Example
+#### Indexing Example
 
 to create a new index called my-index, enter
 > create_index my-index
@@ -104,7 +115,7 @@ To see all available commands, use
 
 > help
 
-### Searching Example
+#### Searching Example
 
 If you want to search in your index, use the search command as follows:
 

@@ -1,20 +1,25 @@
 import os
 import re
 import xml.etree.ElementTree as ET
+from getpass import getpass
+
 from elasticsearch import Elasticsearch
 from pathlib import Path
 import random
 from tqdm import tqdm
 
-import querying
+import es_helper
 from constants import queries_dir, run_files_dir, query_results_dir
 from lido_handler import prettify, get_title_and_img_string
 from create_all_indices import create_all_indices, get_run_configurations
 
 
 def main():
+    url = input("URL: ")
+    password = getpass()
     print("Establishing Connection...")
-    client = Elasticsearch([{"host": "localhost", "port": 9200}])
+    client = es_helper.get_default_client(url, password)
+    assert client.ping()
     print("Done.")
 
     print("Creating Indices...")
@@ -63,7 +68,7 @@ def write_results_ranked(client, results_file, queries_file_name, size):
         results_file.write(f"CONFIGURATION: {configuration_name}\n\n")
         for topic in parse_topics(os.path.join(queries_dir, queries_file_name)):
             results_file.write(f"\nQuery #{topic['number']} '{topic['query']}'\n\n")
-            res = querying.search(client=client, index=configuration_name, query_string=topic["query"], size=size)
+            res = es_helper.search(client=client, index=configuration_name, query_string=topic["query"], size=size)
             rank = 1
             for hit in res["hits"]["hits"]:
                 results_file.write(f"Rank: {rank}\n")
@@ -91,7 +96,7 @@ def get_hits_from_all_configs(query, client, size):
     results = {}
     for configuration_name, _ in get_run_configurations():
         sub_results = []
-        res = querying.search(client=client, index=configuration_name, query_string=query, size=size)
+        res = es_helper.search(client=client, index=configuration_name, query_string=query, size=size)
         for hit in res["hits"]["hits"]:
             sub_results.append(hit)
         results[configuration_name] = sub_results
@@ -162,7 +167,7 @@ def create_run_files(client):
                 for topic in topics:
                     # need to scroll through results because there are too many (ranking all 18k documents)
                     rank = 1
-                    for hits in scroll(client, index=configuration_name, body=querying.get_query_body(topic["query"]), scroll='30s', size=500):
+                    for hits in scroll(client, index=configuration_name, body=es_helper.get_query_body(topic["query"]), scroll='30s', size=500):
                         for hit in hits:
                             new_line = ' '.join([topic["number"], "Q0", hit["_id"], str(rank), str(hit["_score"]), configuration_name])
                             run_file.write(new_line + "\n")

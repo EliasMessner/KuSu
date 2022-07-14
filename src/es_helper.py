@@ -1,6 +1,6 @@
 from elasticsearch import Elasticsearch
 
-from src.constants import get_all_search_fields
+from constants import get_all_search_fields
 
 
 def get_query_body(query_string: str) -> dict:
@@ -62,3 +62,11 @@ def get_improved_query_body(query_string: str) -> dict:
 
 def search(client: Elasticsearch, index: str, query_string: str, size=20):
     return client.search(index=index, body=get_query_body(query_string), size=size)
+
+
+def get_default_client(url, password):
+    if url == "localhost":
+        return Elasticsearch([{"host": "localhost", "port": 9200}])
+    return Elasticsearch([url],
+                         http_auth=("elastic", password),
+                         port=9243)
