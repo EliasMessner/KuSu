@@ -30,10 +30,9 @@ def get_all_xml_filepaths(dir_path):
     :param dir_path: path to the directory
     :return: list of filepaths
     """
-    directory = os.fsencode(dir_path)
-    return [os.path.join(dir_path, os.fsdecode(file))
-            for file in os.listdir(directory)
-            if os.fsdecode(file).endswith(".xml")]
+    return [os.path.join(dir_path, file)
+            for file in os.listdir(dir_path)
+            if file.endswith(".xml")]
 
 
 def index_documents(client: Elasticsearch, index_name: str, docs_dir: str, overwrite=True, console_output=False) -> list[str]:
