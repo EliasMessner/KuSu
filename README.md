@@ -22,15 +22,19 @@ The images will be used for image analysis.
 Overall, the data consists of 18851 documents.
 
 ### Dependencies:
-* Elasticsearch 7.17.3
+* Elasticsearch 7.17.x
 
 ### Python Packages:
-* elasticsearch 7.13.3
-* xmltodict
+* python 3.10
+* elasticsearch 7.13.x
 * tqdm
-* webcolors
-* flask
+* scipy
+* numpy
+* matplotlib
 * validators
+* flask
+
+See conda_env.yml to import Anaconda environment.
 
 # User Manual
 

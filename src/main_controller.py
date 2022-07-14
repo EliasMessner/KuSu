@@ -1,8 +1,7 @@
 from pprint import pprint
-from getpass import getpass
 
-from constants import docs_dir, bcolors, get_settings, boost_default, default_index_name
 import es_helper
+from constants import docs_dir, bcolors, get_settings, boost_default, default_index_name
 from indexing import index_documents
 
 

@@ -1,5 +1,4 @@
 from getpass import getpass
-
 from elasticsearch import Elasticsearch
 
 from constants import get_all_search_fields, bcolors

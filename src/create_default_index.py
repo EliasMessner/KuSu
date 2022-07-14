@@ -1,9 +1,7 @@
-from getpass import getpass
-
+import es_helper
 from constants import default_index_name, docs_dir
 from indexing import index_documents
 from main_controller import prompt_confirm
-import es_helper
 
 
 def main():
