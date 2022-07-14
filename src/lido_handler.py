@@ -67,9 +67,8 @@ def remove_urls(iterable: list[str]):
 
 def all_values_to_string(result):
     for key, value in result.items():
-        if key in ["events", "img_url", "img_id", "colors", "filename"] or isinstance(value, str):
+        if key in ["events", "img_url", "img_id", "colors", "filename"] or not isinstance(value, list):
             continue
-        assert isinstance(value, Iterable)
         result[key] = ', '.join(flatten(value))
         result[key] = re.sub(r"\s+", " ", result[key])
     event_strings = []
@@ -241,7 +240,7 @@ def find_text_values(d: dict, default: any):
     return flatten(list(set(text_values)))
 
 
-def find_values_by_key_condition(d: dict | list, condition: callable(str), result=None):
+def find_values_by_key_condition(d: Union[dict, list], condition: callable(str), result=None):
     """
     Searches given dict for keys that fulfill a condition. The values associated with those keys are returned as a list
     :param d: the dict to be searched
