@@ -167,8 +167,12 @@ def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dic
 
 
 def get_all_search_fields():
-    return ["titles", "classification", "work_type", "inscriptions", "measurements", "events", "related_subjects",
-            "colors"]
+    return [
+        key
+        for key, value
+        in get_settings(boost=boost_default, similarity="boolean", analyzer="german_analyzer")["mappings"]["properties"].items()
+        if value.get("enabled", True)
+    ]
 
 
 boost_default = {}  # all values not specified will be set to 1 in get_settings
