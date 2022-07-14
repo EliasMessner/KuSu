@@ -15,16 +15,42 @@ def parse_lido_entry(lido_entry, filename):
     result["filename"] = filename
     result["id"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:lidoRecID'], is_text=True, default="")
     result["img_id"] = parse_img_id(lido_entry)
-    result["titles"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:titleWrap', 'lido:titleSet', 'lido:appellationValue'], is_text=True, default="")
-    result["classification"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:classificationWrap', 'lido:classification', 'lido:term'], is_text=True, default="")
-    result["work_type"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectClassificationWrap', 'lido:objectWorkTypeWrap', 'lido:objectWorkType', 'lido:term'], is_text=True, default="")
-    result["inscriptions"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:inscriptionsWrap', 'lido:inscriptions', 'lido:inscriptionDescription', 'lido:descriptiveNoteValue'], is_text=False, default="")
-    description = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:objectDescriptionWrap', 'lido:objectDescriptionSet', 'lido:descriptiveNoteValue'], is_text=True, default="")
+    result["titles"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata',
+                                                            'lido:objectIdentificationWrap', 'lido:titleWrap',
+                                                            'lido:titleSet', 'lido:appellationValue'], is_text=True,
+                                               default="")
+    result["classification"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata',
+                                                                    'lido:objectClassificationWrap',
+                                                                    'lido:classificationWrap', 'lido:classification',
+                                                                    'lido:term'], is_text=True, default="")
+    result["work_type"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata',
+                                                               'lido:objectClassificationWrap',
+                                                               'lido:objectWorkTypeWrap', 'lido:objectWorkType',
+                                                               'lido:term'], is_text=True, default="")
+    result["inscriptions"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata',
+                                                                  'lido:objectIdentificationWrap',
+                                                                  'lido:inscriptionsWrap', 'lido:inscriptions',
+                                                                  'lido:inscriptionDescription',
+                                                                  'lido:descriptiveNoteValue'], is_text=False,
+                                                     default="")
+    description = find_values_by_key_list(lido_entry,
+                                          ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap',
+                                           'lido:objectDescriptionWrap', 'lido:objectDescriptionSet',
+                                           'lido:descriptiveNoteValue'], is_text=True, default="")
     description = description[0] if isinstance(description, list) and len(description) else description
     result["inscriptions"] += "\n" + description
-    result["measurements"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:objectMeasurementsWrap', 'lido:objectMeasurementsSet', 'lido:displayObjectMeasurements'], is_text=True, default="")
+    result["measurements"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata',
+                                                                  'lido:objectIdentificationWrap',
+                                                                  'lido:objectMeasurementsWrap',
+                                                                  'lido:objectMeasurementsSet',
+                                                                  'lido:displayObjectMeasurements'], is_text=True,
+                                                     default="")
     result["events"] = parse_events(lido_entry)
-    result["related_subjects"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectRelationWrap', 'lido:subjectWrap', 'lido:subjectSet', 'lido:subject', 'lido:subjectConcept', 'lido:term'], is_text=True, default="")
+    result["related_subjects"] = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata',
+                                                                      'lido:objectRelationWrap', 'lido:subjectWrap',
+                                                                      'lido:subjectSet', 'lido:subject',
+                                                                      'lido:subjectConcept', 'lido:term'], is_text=True,
+                                                         default="")
     result["url"] = parse_url(lido_entry)
     result["img_url"] = parse_img_url(lido_entry)
     # remove urls
@@ -75,13 +101,17 @@ def parse_img_id(lido_entry):
     The img_id will be used as the filename for image retrieval
     """
     # img id for muenchen comes from resourceID
-    img_id = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap', 'lido:resourceSet', 'lido:resourceID'], is_text=True, default=[None])
+    img_id = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap',
+                                                  'lido:resourceSet', 'lido:resourceID'], is_text=True, default=[None])
     if len(img_id) > 0:
         img_id = img_id[0]
         if img_id is not None and img_id.startswith("PT_"):
             return img_id
     # img id for westmuensterland comes from workID
-    img_id = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap', 'lido:repositoryWrap', 'lido:repositorySet', 'lido:workID'], is_text=True, default=[None])
+    img_id = find_values_by_key_list(lido_entry,
+                                     ['lido:lido', 'lido:descriptiveMetadata', 'lido:objectIdentificationWrap',
+                                      'lido:repositoryWrap', 'lido:repositorySet', 'lido:workID'], is_text=True,
+                                     default=[None])
     if len(img_id) > 0:
         img_id = img_id[0]
         if img_id is not None and img_id.startswith("HM-"):
@@ -90,24 +120,32 @@ def parse_img_id(lido_entry):
 
 
 def parse_events(lido_entry):
-    event_data = find_values_by_key_list(lido_entry, ['lido:lido', 'lido:descriptiveMetadata', 'lido:eventWrap', 'lido:eventSet'], is_text=False, default=[])
+    event_data = find_values_by_key_list(lido_entry,
+                                         ['lido:lido', 'lido:descriptiveMetadata', 'lido:eventWrap', 'lido:eventSet'],
+                                         is_text=False, default=[])
     event_data = event_data if isinstance(event_data, list) else [event_data]
     resulting_events = []
     for event in event_data:
         new_event = {}
-        event_types = find_values_by_key_list(event, ['lido:event', 'lido:eventType', 'lido:term'], is_text=True, default=[])
+        event_types = find_values_by_key_list(event, ['lido:event', 'lido:eventType', 'lido:term'], is_text=True,
+                                              default=[])
         if len(event_types) > 0:
             new_event["types"] = event_types
         event_actors = find_values_by_key_list(event, ['lido:event', 'lido:eventActor'], is_text=True, default=[])
         if len(event_actors) > 0:
             new_event["actors"] = event_actors
-        earliest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:earliestDate'], is_text=True, default="")
-        latest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:latestDate'], is_text=True, default="")
+        earliest_date = find_values_by_key_list(event,
+                                                ['lido:event', 'lido:eventDate', 'lido:date', 'lido:earliestDate'],
+                                                is_text=True, default="")
+        latest_date = find_values_by_key_list(event, ['lido:event', 'lido:eventDate', 'lido:date', 'lido:latestDate'],
+                                              is_text=True, default="")
         earliest_date = earliest_date[0] if len(earliest_date) else ""
         latest_date = latest_date[0] if len(latest_date) else ""
         if earliest_date != "" or latest_date != "":
             new_event["date"] = [earliest_date, latest_date]
-        materials = find_values_by_key_list(event, ['lido:event', 'lido:eventMaterialsTech', 'lido:displayMaterialsTech'], is_text=False, default="")
+        materials = find_values_by_key_list(event,
+                                            ['lido:event', 'lido:eventMaterialsTech', 'lido:displayMaterialsTech'],
+                                            is_text=False, default="")
         if len(materials) > 0:
             new_event["materials"] = materials
         if len(new_event) > 0:
@@ -117,8 +155,9 @@ def parse_events(lido_entry):
 
 def parse_img_url(lido_entry):
     img_urls = find_values_by_key_list(lido_entry,
-                             ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap', 'lido:resourceSet',
-                              'lido:resourceRepresentation', 'lido:linkResource'], is_text=True, default=[''])
+                                       ['lido:lido', 'lido:administrativeMetadata', 'lido:resourceWrap',
+                                        'lido:resourceSet',
+                                        'lido:resourceRepresentation', 'lido:linkResource'], is_text=True, default=[''])
     img_urls = img_urls if isinstance(img_urls, list) else [img_urls]
     # we use the first element found, because on our data the same link is present several times for each lido.
     # Appending '' to the retrieved list, because if an empty list is returned we need to avoid index error
@@ -127,8 +166,9 @@ def parse_img_url(lido_entry):
 
 def parse_url(lido_entry):
     possible_urls = find_values_by_key_list(lido_entry,
-                            ['lido:lido', 'lido:administrativeMetadata', 'lido:recordWrap', 'lido:recordInfoSet'],
-                            is_text=True, default="")
+                                            ['lido:lido', 'lido:administrativeMetadata', 'lido:recordWrap',
+                                             'lido:recordInfoSet'],
+                                            is_text=True, default="")
     # remove all non-urls
     return [element for element in possible_urls if validators.url(element)]
 
