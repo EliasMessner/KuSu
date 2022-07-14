@@ -1,6 +1,6 @@
 from elasticsearch import Elasticsearch
 
-from constants import get_all_search_fields
+from src.constants import get_all_search_fields
 
 
 def get_query_body(query_string: str) -> dict:
@@ -25,21 +25,13 @@ def get_improved_query_body(query_string: str) -> dict:
     :param query_string:
     :return:
     """
-    return {
+    body = {
         "query": {
             "bool": {
                 "should": [
                     {
                         "multi_match": {
                             "query": query_string,
-                            "type": "best_fields",
-                            "fields": get_all_search_fields()
-                        }
-                    },
-                    {
-                        "multi_match": {
-                            "query": query_string,
-                            "operator": "and",
                             "fields": get_all_search_fields()
                         }
                     },
@@ -47,14 +39,25 @@ def get_improved_query_body(query_string: str) -> dict:
                         "multi_match": {
                             "query": query_string,
                             "fields": get_all_search_fields(),
-                            "type": "phrase",
-                            "boost": 2
+                            "operator": "and"
                         }
                     }
                 ]
             }
         }
     }
+    for search_field in get_all_search_fields():
+        body["query"]["bool"]["should"].append(
+            {
+                "match_phrase": {
+                    search_field: {
+                        "query": query_string,
+                        "boost": 2
+                    }
+                }
+            }
+        )
+    return body
 
 
 def search(client: Elasticsearch, index: str, query_string: str, size=20):
