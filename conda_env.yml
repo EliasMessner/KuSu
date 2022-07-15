@@ -10,4 +10,3 @@ dependencies:
   - matplotlib
   - validators
   - flask
-prefix: /home/elias/miniconda3/envs/InformationRetrieval
