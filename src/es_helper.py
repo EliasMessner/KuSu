@@ -79,6 +79,7 @@ def prepare_client_dialog():
                            port=credentials["port"])
     if not client.ping():
         print(f"{bcolors.WARNING}Client not connected. Please make sure you entered valid credentials.{bcolors.ENDC}")
+        print(f"Client Status: {str(client.info(pretty=True))}")
         return False
     print("Client connected successfully.")
     return client

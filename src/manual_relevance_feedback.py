@@ -11,17 +11,21 @@ def main():
     client = es_helper.prepare_client_dialog()
     time.sleep(3)  # sleep so that elasticsearch warnings can be output and not interrupt the following outputs
     for queries_filename in os.listdir(queries_dir):
+        if not queries_filename.endswith("xml"):
+            continue
         if queries_filename in ["auswahl_kunstgeschichte.xml", "auswahl_kunstschaffende.xml", "auswahl_laien.xml"]:
             continue
         name = queries_filename[8:-4]  # 'queries_test.xml' becomes 'test'
         rel_feedback_filename = "rel_feedback_" + name + ".txt"
         with open(os.path.join(manual_relevance_feedbacks_dir, rel_feedback_filename), 'w') as rel_feedback_file:
             topics = parse_topics(os.path.join(queries_dir, queries_filename))
-            for topic, i in zip(topics, range(2)):
+            for topic in topics:
                 print(f"\n\nQuery {topic['number']}/{len(topics)}: {topic['query']}\n###########")
                 hits = get_all_hits_from_all_configs_merged_as_set(topic["query"], client=client, size=20)
-                for hit in hits:
-                    print("\n")
+                if not len(hits):
+                    print("No Results.")
+                for i, hit in enumerate(hits):
+                    print(f"\nResult {i}/{len(hits)}:")
                     print(prettify(hit))
                     rel = get_rel_feedback()
                     new_line = f"{topic['number']} 0 {hit['_id']} {rel}\n"

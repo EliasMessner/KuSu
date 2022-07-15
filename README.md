@@ -33,12 +33,15 @@ Overall, the data consists of 18851 documents.
 * matplotlib
 * validators
 * flask
+* xmltodict
 
-See conda_env.yml to import Anaconda environment.
+To automatically create an Anaconda environment, use
+
+> conda create env -f conda_env.yml
 
 # User Manual
 
-
+First, make sure that the Elasticsearch (v 7.17.x) client is up and running on your computer.
 
 ## Preparing the data and index
 
