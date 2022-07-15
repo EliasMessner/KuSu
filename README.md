@@ -34,6 +34,7 @@ Overall, the data consists of 18851 documents.
 * validators
 * flask
 * xmltodict
+* jupyter
 
 To automatically create an Anaconda environment, use
 

@@ -11,3 +11,4 @@ dependencies:
   - validators
   - flask
   - xmltodict
+  - jupyter

@@ -1,7 +1,8 @@
 from pprint import pprint
 
 import es_helper
-from constants import docs_dir, bcolors, get_settings, boost_default, default_index_name
+from constants import docs_dir, bcolors, boost_default, default_index_name
+from src.es_helper import get_settings
 from indexing import index_documents
 
 
@@ -119,7 +120,7 @@ def create_index(client, input_tokens):
             client.indices.delete(index)
         else:
             return
-    body = get_settings(boost=boost_default, similarity="boolean", analyzer="german_analyzer")
+    body = get_settings(similarity="boolean", analyzer="german_analyzer")
     # TODO remove hardcoded parameters
     #  instead use optimal settings for body
     print(client.indices.create(index=index, body=body))

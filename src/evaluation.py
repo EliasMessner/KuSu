@@ -7,8 +7,9 @@ from tqdm import tqdm
 
 import es_helper
 from constants import queries_dir, run_files_dir, query_results_dir
-from create_all_indices import create_all_indices, get_run_configurations
+from create_all_indices import get_index_configurations
 from lido_handler import prettify, get_title_and_img_string
+from es_helper import get_query_modes
 
 
 def main():
@@ -54,7 +55,7 @@ def write_results_ranked(client, results_file, queries_file_name, size):
     """
     Separates the topic's search results for EACH configuration, and writes them to the results_file in ranked order.
     """
-    for configuration_name, _ in tqdm(get_run_configurations()):
+    for configuration_name, _ in tqdm(get_index_configurations()):
         results_file.write(f"CONFIGURATION: {configuration_name}\n\n")
         for topic in parse_topics(os.path.join(queries_dir, queries_file_name)):
             results_file.write(f"\nQuery #{topic['number']} '{topic['query']}'\n\n")
@@ -84,24 +85,26 @@ def write_results_unranked_as_set(client, results_file, queries_file_name, size)
 
 def get_hits_from_all_configs(query, client, size):
     results = {}
-    for configuration_name, _ in get_run_configurations():
-        sub_results = []
-        res = es_helper.search(client=client, index=configuration_name, query_string=query, size=size)
-        for hit in res["hits"]["hits"]:
-            sub_results.append(hit)
-        results[configuration_name] = sub_results
+    for configuration_name, _ in get_index_configurations():
+        for query_mode in get_query_modes():
+            sub_results = []
+            res = es_helper.search(client=client,
+                                   index=configuration_name,
+                                   query_string=query,
+                                   query_mode=query_mode,
+                                   size=size)
+            for hit in res["hits"]["hits"]:
+                sub_results.append(hit)
+            results[(configuration_name, query_mode)] = sub_results
     return results
 
 
 def get_all_hits_from_all_configs_merged_as_set(query, client, size):
     """
-    Performs given query on all indices. Indices names are obtained by calling get_run_configurations.
-    The resulting hits from all indices are merged into one list that has no duplicate ids. This list is then returned.
+    Performs given query on all indices and all query modes. Indices names are obtained by calling
+    get_index_configurations, query modes are obtained by calling get_query_modes.
+    The resulting hits from all settings are merged into one list that has no duplicate ids. This list is then returned.
     Note that a set of hits is not allowed because hits are dicts and dicts are not hashable.
-    :param query:
-    :param client:
-    :param size:
-    :return:
     """
     results = list(get_hits_from_all_configs(query, client, size).values())
     # flatten results
@@ -116,7 +119,7 @@ def get_all_hits_from_all_configs_merged_as_set(query, client, size):
 
 def create_results_markdown(client, size=20):
     """
-    Create human-readable markdown file for users to evaluate each search result w.r.t. relevance, by clicking a checkbox
+    Create human-readable markdown file for users to evaluate each search result wrt. relevance, by clicking a checkbox
     """
     Path(query_results_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
     for queries_file_name in os.listdir(queries_dir):
@@ -152,12 +155,12 @@ def create_run_files(client):
         # create one run file per query file
         with open(os.path.join(run_files_dir, queries_file_name.split('.')[0] + "_run_file" + ".txt"), 'w') as run_file:
             # iterate the configurations. configuration_name is also the name of the index that uses this config.
-            for configuration_name, _ in tqdm(get_run_configurations()):
+            for configuration_name, _ in tqdm(get_index_configurations()):
                 topics = parse_topics(os.path.join(queries_dir, queries_file_name))
                 for topic in topics:
                     # need to scroll through results because there are too many (ranking all 18k documents)
                     rank = 1
-                    for hits in scroll(client, index=configuration_name, body=es_helper.get_query_body(topic["query"]), scroll='30s', size=500):
+                    for hits in scroll(client, index=configuration_name, body=es_helper.get_query_body_only_disjunction(topic["query"]), scroll='30s', size=500):
                         for hit in hits:
                             new_line = ' '.join([topic["number"], "Q0", hit["_id"], str(rank), str(hit["_score"]), configuration_name])
                             run_file.write(new_line + "\n")

@@ -1,6 +1,5 @@
 import os
 
-
 urls = ["https://raw.githubusercontent.com/MKGHamburg/MKGCollectionOnlineLIDO_XML/master/mkg_lido-dC.web_0.xml",
         "https://raw.githubusercontent.com/MKGHamburg/MKGCollectionOnlineLIDO_XML/master/mkg_lido-dC.web_1.xml",
         "https://raw.githubusercontent.com/MKGHamburg/MKGCollectionOnlineLIDO_XML/master/mkg_lido-dC.web_2.xml"]
@@ -27,6 +26,11 @@ plt_xticks_rotation = 'vertical'
 
 default_index_name = 'boost_default-german_light_analyzer-boolean'
 
+# query modes
+only_disjunction = "only_disjunction"
+combined_operators = "combined_operators"
+
+
 # font colors in terminal output
 class bcolors:
     HEADER = '\033[95m'
@@ -38,144 +42,3 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-
-
-def get_settings(boost: dict[str, float], similarity: str, analyzer: str) -> dict:
-    """
-    Constructs a dict for elasticsearch settings
-    :param boost: dict with attribute names as keys and boost values as values. All absent keys will be 1.
-    :param similarity: a string specifying the similarity measure to be used, for example BM25.
-    :param analyzer: a string specifying the analyzer to be used.
-    """
-    assert analyzer in ["german_analyzer", "german_light_analyzer"]
-    return {
-        "settings": {
-            "analysis": {
-
-                "filter": {
-                    "german_stop": {
-                        "type": "stop",
-                        "stopwords": "_german_"
-                    },
-                    "german_stemmer": {
-                        "type": "stemmer",
-                        "language": "german"
-                    },
-                    "german_light_stemmer": {
-                        "type": "stemmer",
-                        "language": "light_german"
-                    }
-                    # TODO maybe also use german2, minimal_german stemmers https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stemmer-tokenfilter.html
-                },
-
-                "analyzer": {
-                    "german_analyzer": {
-                        "type": "custom",
-                        "tokenizer": "standard",
-                        "filter": [
-                            "lowercase",
-                            "german_stop",
-                            "german_normalization",
-                            "german_stemmer"
-                        ]
-                    },
-                    "german_light_analyzer": {
-                        "type": "custom",
-                        "tokenizer": "standard",
-                        "filter": [
-                            "lowercase",
-                            "german_stop",
-                            "german_normalization",
-                            "german_light_stemmer"
-                        ]
-                    }
-                }
-            }
-        },
-        "mappings": {
-            "properties": {
-                "id": {
-                    "enabled": False,
-                },
-                "img_id": {
-                    "enabled": False
-                },
-                "titles": {
-                    "type": "text",
-                    "similarity": similarity,
-                    "analyzer": analyzer,
-                    "boost": boost.get("titles", 1),
-                    "fields": {
-                        "keyword": {
-                            "type": "keyword",
-                            "ignore_above": 256
-                        }
-                    }
-                },
-                "classification": {
-                    "type": "text",
-                    "similarity": similarity,
-                    "analyzer": analyzer,
-                    "boost": boost.get("classification", 1)
-                },
-                "work_type": {
-                    "type": "text",
-                    "similarity": similarity,
-                    "analyzer": analyzer,
-                    "boost": boost.get("work_type", 1)
-                },
-                "inscriptions": {
-                    "type": "text",
-                    "similarity": similarity,
-                    "analyzer": analyzer,
-                    "boost": boost.get("inscriptions", 1)
-                },
-                "measurements": {
-                    "type": "text",
-                    "similarity": similarity,
-                    "analyzer": analyzer,
-                    "boost": boost.get("measurements", 1)
-                },
-                "events": {
-                    "type": "text",
-                    "similarity": similarity,
-                    "analyzer": analyzer,
-                    "boost": boost.get("events", 1)
-                },
-                "related_subjects": {
-                    "type": "text",
-                    "similarity": similarity,
-                    "analyzer": analyzer,
-                    "boost": boost.get("related_subjects", 1)
-                },
-                "colors": {
-                    "type": "text",
-                    "similarity": similarity,
-                    "analyzer": analyzer,
-                    "boost": boost.get("colors", 1)
-                },
-                "url": {
-                    "enabled": False
-                },
-                "img_url": {
-                    "enabled": False
-                }
-            }
-        }
-    }
-
-
-def get_all_search_fields():
-    return [
-        key
-        for key, value
-        in get_settings(boost=boost_default, similarity="boolean", analyzer="german_analyzer")["mappings"]["properties"].items()
-        if value.get("enabled", True)
-    ]
-
-
-boost_default = {}  # all values not specified will be set to 1 in get_settings
-boost_2 = {
-    "titles": 2,
-    "related_subjects": 0.5
-}

@@ -4,7 +4,8 @@ Wrapper for single function call.
 from elasticsearch import Elasticsearch
 
 from indexing import index_documents
-from constants import docs_dir, boost_default, boost_2, get_settings
+from constants import docs_dir, boost_default, boost_2
+from src.es_helper import get_settings
 from es_helper import prepare_client_dialog
 
 
@@ -23,7 +24,7 @@ def create_all_indices(client: Elasticsearch, overwrite_if_exists: bool):
     :param overwrite_if_exists: if True, overwrite an index if such an index name already exists. If False, omit
         existing index.
     """
-    for index_name, conf_body in get_run_configurations():
+    for index_name, conf_body in get_index_configurations():
         if client.indices.exists(index_name):
             if overwrite_if_exists:
                 client.indices.delete(index=index_name)
@@ -34,7 +35,7 @@ def create_all_indices(client: Elasticsearch, overwrite_if_exists: bool):
         index_documents(client=client, index_name=index_name, docs_dir=docs_dir)
 
 
-def get_run_configurations():
+def get_index_configurations():
     """
     Returns a list of run configurations that are useful for evaluation.
     Each element of the list is a tuple, the first element being a descriptive name of the run configuration (which is
@@ -42,19 +43,12 @@ def get_run_configurations():
     can be passed as body parameter when creating a new index with the configuration.
     """
     configurations = []  # [(name_of_configuration, body), ...]
-    for boost in [boost_default, boost_2]:
-        for analyzer in ["german_analyzer", "german_light_analyzer"]:
-            for similarity in ["BM25", "boolean"]:
-                if boost == boost_default:
-                    boost_name = "boost_default"
-                elif boost == boost_2:
-                    boost_name = "boost_2"
-                else:
-                    raise RuntimeError("Boost unknown.")
-                name = "-".join([boost_name, analyzer, similarity])
-                name = name.lower()
-                body = get_settings(boost=boost, similarity=similarity, analyzer=analyzer)
-                configurations.append((name, body))
+    for analyzer in ["german_analyzer", "german_light_analyzer"]:
+        for similarity in ["BM25", "boolean"]:
+            name = "-".join([boost_name, analyzer, similarity])
+            name = name.lower()
+            body = get_settings(similarity=similarity, analyzer=analyzer)
+            configurations.append((name, body))
     return configurations
 
 
