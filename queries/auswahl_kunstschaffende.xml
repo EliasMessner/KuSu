@@ -82,14 +82,6 @@
 </topic>
 
 <topic number="11" type="single">
-    <query> Luftperspektive </query>
-    <description>
-        suche Gemälde, Zeichungen, Fotos von Landschaften in "typischer" Luftperspektive bis zu Stadtfotos des 20. Jahrhunderts, die das Leben in (über)bevölkerten Städten inkl. Smog und anderen Begleiterscheinungen illustrieren können
-    </description>
-    <narrative> </narrative>
-</topic>
-
-<topic number="12" type="single">
     <query> Wasser und Eis </query>
     <description>
         ich möchte auf Formen und Nutzungen des Wassers verweisen (Aggregatzustände, Lebensmittel, Chemikalie (z.B.: Fotos wässern) etc.)
@@ -97,7 +89,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="13" type="single">
+<topic number="12" type="single">
     <query> Natur </query>
     <description>
         Artefakte werden zum Verhältnis zur und Umgang mit Natur für möglichst unterschiedliche Bevölkerungsgruppen rund um die Welt gesucht
@@ -105,7 +97,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="14" type="single">
+<topic number="13" type="single">
     <query> Koralle </query>
     <description>
         ich suche Artefakte (Schmuck- und Dekostücke, Gemälde, Postkarten usw.), die einen Überblick über die Nutzung von Korallen über die Jahrhunderte geben können
