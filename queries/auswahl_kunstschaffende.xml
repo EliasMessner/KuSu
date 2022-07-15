@@ -9,7 +9,7 @@
 </topic>
 
 <topic number="2" type="single">
-    <query> Plastik, Kunststoff, Gummi, PET  </query>
+    <query> Kunststoff </query>
     <description>
         Speziell suche ich meistens nach dem Aussehen und der Materialität
     </description>
@@ -17,7 +17,7 @@
 </topic>
 
 <topic number="3" type="single">
-    <query> Holz, Baumrinde, Parkett, Furnier, Intarsien </query>
+    <query> Holz </query>
     <description>
         Speziell suche ich meistens nach dem Aussehen und der Materialität 
     </description>
@@ -25,7 +25,7 @@
 </topic>
 
 <topic number="4" type="single">
-    <query> Metall, Stahl, Rost, Aluminium, Oxidation, Gold </query>
+    <query> Metall </query>
     <description>
         Speziell suche ich meistens nach dem Aussehen und der Materialität  
     </description>
@@ -33,7 +33,7 @@
 </topic>
 
 <topic number="5" type="single">
-    <query> Glas, Gläser, Flaschen, Scherben, Splitter </query>
+    <query> Gläser </query>
     <description>
         Speziell suche ich meistens nach dem Aussehen und der Materialität  
     </description>
@@ -41,7 +41,7 @@
 </topic>
 
 <topic number="6" type="single">
-    <query> Stein, Marmor, Achat, Granit, Beton </query>
+    <query> Marmor </query>
     <description>
         Speziell suche ich meistens nach dem Aussehen und der Materialität  
     </description>
