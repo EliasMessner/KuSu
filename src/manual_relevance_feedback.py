@@ -11,7 +11,7 @@ def main():
     client = es_helper.prepare_client_dialog()
     time.sleep(3)  # sleep so that elasticsearch warnings can be output and not interrupt the following outputs
     for queries_filename in os.listdir(queries_dir):
-        if queries_filename in ["queries_kunstgeschichte.xml", "queries_kunstschaffende.xml", "queries_laien.xml"]:
+        if queries_filename in ["auswahl_kunstgeschichte.xml", "auswahl_kunstschaffende.xml", "auswahl_laien.xml"]:
             continue
         name = queries_filename[8:-4]  # 'queries_test.xml' becomes 'test'
         rel_feedback_filename = "rel_feedback_" + name + ".txt"
