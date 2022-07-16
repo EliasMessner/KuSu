@@ -229,4 +229,4 @@ def get_settings(similarity: str, analyzer: str) -> dict:
 
 
 def get_query_modes():
-    pass
+    return [only_disjunction, combined_operators]
