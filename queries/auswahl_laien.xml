@@ -50,17 +50,17 @@
 </topic>
 
 <topic number="7" type="single">
-    <query> physikerin, wissenschaftlerin </query>
+    <query> Physik </query>
     <description>
-        würde mich einfach mal interessieren, wie sie in diesen daten vertreten sind 
+        Ich möchte Portraits von Wissenschaftler*innen aus der Physik.
     </description>
     <narrative> </narrative>
 </topic>
 
 <topic number="8" type="single">
-    <query> physikerin </query>
+    <query> blauer Himmel </query>
     <description>
-        würde mich einfach mal interessieren, wie sie in diesen daten vertreten sind 
+        Ich möchte Bilder mit blauem Himmel sehen.
     </description>
     <narrative> </narrative>
 </topic>
@@ -74,7 +74,7 @@
 </topic>
 
 <topic number="10" type="single">
-    <query> kirschblüten(motiv) </query>
+    <query> kirschblüte </query>
     <description>
         weil ich weiß dass es zeichungen aus japan gab und mich interessieren würde, wie häufig dieses motiv darin vorkommt
     </description>
