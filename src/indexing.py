@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 from constants import textfiles_muenchen, textfiles_westmuensterland
 from lido_handler import parse_lido_entry
-from src.es_helper import get_settings
+from es_helper import get_settings
 
 
 def xml_to_dict(filepath: str):

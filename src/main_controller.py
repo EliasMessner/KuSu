@@ -3,7 +3,7 @@ from pprint import pprint
 import es_helper
 from constants import docs_dir, bcolors, default_index_name
 from indexing import index_documents
-from src.es_helper import get_settings
+from es_helper import get_settings
 
 
 def mainloop(command_function_mapping):

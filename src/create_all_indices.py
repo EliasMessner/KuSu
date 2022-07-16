@@ -6,7 +6,7 @@ from elasticsearch import Elasticsearch
 from constants import docs_dir
 from es_helper import prepare_client_dialog
 from indexing import index_documents
-from src.indexing import get_index_configurations
+from indexing import get_index_configurations
 
 
 def main():
