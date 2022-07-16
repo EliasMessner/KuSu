@@ -33,16 +33,7 @@
     <narrative> </narrative>
 </topic>
 
-
 <topic number="5" type="single">
-    <query> Bild mit blauem Pferd </query>
-    <description>
-        Gibt es Bilder mit blauen Pferden 
-    </description>
-    <narrative> </narrative>
-</topic>
-
-<topic number="6" type="single">
     <query> griechisch Marmorstatue </query>
     <description>
         Gibt es griechische Statuen aus Marmor 
@@ -50,7 +41,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="8" type="single">
+<topic number="6" type="single">
     <query> Lampen mit Figuren </query>
     <description>
         Gibt es Lampen mit Figuren?
@@ -58,15 +49,23 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="9" type="single">
-    <query> physikerin, wissenschaftlerin </query>
+<topic number="7" type="single">
+    <query> Physik </query>
     <description>
-        würde mich einfach mal interessieren, wie sie in diesen daten vertreten sind 
+        Ich möchte Portraits von Wissenschaftler*innen aus der Physik.
     </description>
     <narrative> </narrative>
 </topic>
 
-<topic number="10" type="single">
+<topic number="8" type="single">
+    <query> blauer Himmel </query>
+    <description>
+        Ich möchte Bilder mit blauem Himmel sehen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="9" type="single">
     <query> Lampe Keramik</query>
     <description>
         Mich interessiert einfach ab wann die Leute Keramik für Lampen genutzt haben und in welchem Ausmaß 
@@ -74,8 +73,8 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="11" type="single">
-    <query> kirschblüten(motiv) </query>
+<topic number="10" type="single">
+    <query> kirschblüte </query>
     <description>
         weil ich weiß dass es zeichungen aus japan gab und mich interessieren würde, wie häufig dieses motiv darin vorkommt
     </description>

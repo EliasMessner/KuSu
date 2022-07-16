@@ -8,33 +8,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="2a" type="single">
-    <query> Vase AND (Athene OR Athena)  </query>
-    <description>
-        Ich möchte wissen, wie weit eine bestimmte Gottheit in der Antike auf Alltagsgegenständen abgebildet war, um deren Verehrung abschätzen zu können, Anfrage: "[Name der Gottheit] Vase"
-        Anmerkung: In der Query manuell "Athene" als Gottheit ergänzt
-    </description>
-    <narrative> </narrative>
-</topic>
-
-<topic number="2b" type="single">
-    <query> Vase Athene </query>
-    <description>
-        Ich möchte wissen, wie weit eine bestimmte Gottheit in der Antike auf Alltagsgegenständen abgebildet war, um deren Verehrung abschätzen zu können, Anfrage: "[Name der Gottheit] Vase"
-        Anmerkung: In der Query manuell "Athene" als Gottheit ergänzt
-    </description>
-    <narrative> </narrative>
-</topic>
-
-<topic number="3" type="single">
-    <query> Impressionismus</query>
-    <description>
-        Ich möchte wissen, ob es in den Museen, die ich hier durchsuchen kann impressionistische Bilder gibt.
-    </description>
-    <narrative> </narrative>
-</topic>
-
-<topic number="4" type="single">
+<topic number="2" type="single">
     <query> Japanische Kunst 19. Jahrhundert </query>
     <description>
         Ich möchte wissen welche Werke aus Japan und von japanischen Künstlern aus dem 19. Jahrhundert in dieser Sammlung zu finden sind.    
@@ -42,15 +16,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="5" type="single">
-    <query> Frauenportrait </query>
-    <description>
-        Ich würde gerne erfahren ob die Sammlung Frauenportraits egal aus welchem Zeitraum/Land beinhaltet.     
-    </description>
-    <narrative> </narrative>
-</topic>
-
-<topic number="6" type="single">
+<topic number="3" type="single">
     <query> Porzellan Asien </query>
     <description>
         Ich möchte wissen welche Art asiatischen Porzellans es in der Sammlung zu finden gibt.
@@ -58,7 +24,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="7" type="single">
+<topic number="4" type="single">
     <query> Familie </query>
     <description>
         Ich suche einen bestimmten Inhalt (Familiendarstellungen), und das Medium ist egal. 
@@ -66,15 +32,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="8" type="single">
-    <query> Schreinerhandwerk Mittelalter </query>
-    <description>
-        Ich interessiere mich für die Geschichte der Branche und möchte wissen, ob in irgendeiner Form (seien es mittelalterliche bildliche Darstellungen eines Schreiners, altes Werkzeug, ein mittelalterlicher Text, ...) etwas relevantes im Museum vorliegt.
-    </description>
-    <narrative> </narrative>
-</topic>
-
-<topic number="9" type="single">    
+<topic number="5" type="single">    
     <query> Visitenkarte </query>
     <description>
         Wenn ich nach bestimmten Medien suche, wäre es hilfreich, ALLE Objekte dieses Typs angezeigt zu bekommen, auch um bspw. zu erfahren, wie groß der Bestand eines Museums an bestimmten Datenträgern ist.
@@ -82,7 +40,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="10" type="single">
+<topic number="6" type="single">
     <query> Barock </query>
     <description>
         Wenn ich, etwa für eine Präsentation in einem Seminar oder für einen Vortrag, Beispiele zu Merkmalen einer bestimmten Epoche suche, würde ich den gängigen Epochenbegriff eingeben und dann die Ergebnisse filtern, um ein geeignetes Beispiel zu finden.
@@ -90,7 +48,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="11" type="single">
+<topic number="7" type="single">
     <query> Spielzeug </query>
     <description>
        Ich will wissen, ob Spielzeug in die Definition von Kunstgewerbe fällt (also ob es Suchergebnisse gibt).
@@ -98,7 +56,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="12" type="single">
+<topic number="8" type="single">
     <query> Buchdruck Muster </query>
     <description>
         Ich will wissen, ob die Verzierungen, die sich in vielen mittelalterlichen Büchern finden, separat katalogisiert sind 
@@ -106,7 +64,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="13" type="single">
+<topic number="9" type="single">
     <query> Tapetenmuster </query>
     <description>
          Ich will wissen, ob dieses Thema, das heute nur noch eine Randerscheinung darstellt, einmal groß und wichtig genug war um museal katalogisiert worden zu sein 
@@ -114,7 +72,7 @@
     <narrative> </narrative>
 </topic>
 
-<topic number="14" type="single">
+<topic number="10" type="single">
     <query> Ozeanien </query>
     <description>
          Ich will wissen, wie eurozentrisch die Museumssammlung ist
