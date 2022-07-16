@@ -35,6 +35,9 @@ Overall, the data consists of 18851 documents.
 * flask
 * xmltodict
 * jupyter
+* pip
+* webcolors
+* extcolors
 
 To automatically create an Anaconda environment, use
 

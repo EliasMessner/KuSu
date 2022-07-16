@@ -12,3 +12,6 @@ dependencies:
   - flask
   - xmltodict
   - jupyter
+  - pip
+  - webcolors
+  - extcolors

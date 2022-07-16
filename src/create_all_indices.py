@@ -3,10 +3,10 @@ Wrapper for single function call.
 """
 from elasticsearch import Elasticsearch
 
-from indexing import index_documents
-from constants import docs_dir, boost_default, boost_2
-from src.es_helper import get_settings
+from constants import docs_dir
 from es_helper import prepare_client_dialog
+from indexing import index_documents
+from src.indexing import get_index_configurations
 
 
 def main():
@@ -33,23 +33,6 @@ def create_all_indices(client: Elasticsearch, overwrite_if_exists: bool):
                 continue
         client.indices.create(index=index_name, body=conf_body)
         index_documents(client=client, index_name=index_name, docs_dir=docs_dir)
-
-
-def get_index_configurations():
-    """
-    Returns a list of run configurations that are useful for evaluation.
-    Each element of the list is a tuple, the first element being a descriptive name of the run configuration (which is
-    also the name of the index that ought to use this configuration). The second element is the settings dict that
-    can be passed as body parameter when creating a new index with the configuration.
-    """
-    configurations = []  # [(name_of_configuration, body), ...]
-    for analyzer in ["german_analyzer", "german_light_analyzer"]:
-        for similarity in ["BM25", "boolean"]:
-            name = "-".join([boost_name, analyzer, similarity])
-            name = name.lower()
-            body = get_settings(similarity=similarity, analyzer=analyzer)
-            configurations.append((name, body))
-    return configurations
 
 
 if __name__ == "__main__":

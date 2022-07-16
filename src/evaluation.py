@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 import es_helper
 from constants import queries_dir, run_files_dir, query_results_dir
-from create_all_indices import get_index_configurations
+from src.indexing import get_index_configurations
 from lido_handler import prettify, get_title_and_img_string
 from es_helper import get_query_modes
 

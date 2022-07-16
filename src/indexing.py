@@ -1,14 +1,14 @@
 import datetime
 import os
 import timeit
-from pprint import pprint
 
 import xmltodict
 from elasticsearch import Elasticsearch
 from tqdm import tqdm
 
-from lido_handler import parse_lido_entry
 from constants import textfiles_muenchen, textfiles_westmuensterland
+from lido_handler import parse_lido_entry
+from src.es_helper import get_settings
 
 
 def xml_to_dict(filepath: str):
@@ -83,3 +83,20 @@ def read_image_data_if_exists(img_id):
     with open(file_path, encoding="ISO-8859-1") as file:  # this encoding works for umlaut in 'grün'
         colors = file.read().strip()
     return colors
+
+
+def get_index_configurations():
+    """
+    Returns a list of run configurations that are useful for evaluation.
+    Each element of the list is a tuple, the first element being a descriptive name of the run configuration (which is
+    also the name of the index that ought to use this configuration). The second element is the settings dict that
+    can be passed as body parameter when creating a new index with the configuration.
+    """
+    configurations = []  # [(name_of_configuration, body), ...]
+    for analyzer in ["german_analyzer", "german_light_analyzer"]:
+        for similarity in ["BM25", "boolean"]:
+            name = "-".join(["boost_default", analyzer, similarity])
+            name = name.lower()
+            body = get_settings(similarity=similarity, analyzer=analyzer)
+            configurations.append((name, body))
+    return configurations

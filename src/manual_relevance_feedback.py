@@ -10,7 +10,7 @@ from lido_handler import prettify
 
 def main():
     client = es_helper.prepare_client_dialog()
-    time.sleep(3)  # sleep so that elasticsearch warnings can be output and not interrupt the following outputs
+    time.sleep(2)  # sleep so that elasticsearch warnings can be output and not interrupt the following outputs
     queries_filename = ask_queries_filename()
     name = queries_filename[8:-4]  # 'queries_test.xml' becomes 'test'
     rel_feedback_filename = "rel_feedback_" + name + ".txt"
