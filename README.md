@@ -38,6 +38,7 @@ Overall, the data consists of 18851 documents.
 * pip
 * webcolors
 * extcolors
+* trectools
 
 To automatically create an Anaconda environment, use
 

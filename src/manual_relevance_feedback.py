@@ -3,7 +3,7 @@ import time
 from pathlib import Path
 
 import es_helper
-from constants import manual_relevance_feedbacks_dir, queries_dir
+from constants import qrels_dir, queries_dir
 from evaluation import get_all_hits_from_all_configs_merged_as_set, parse_topics
 from lido_handler import prettify
 
@@ -13,9 +13,9 @@ def main():
     time.sleep(2)  # sleep so that elasticsearch warnings can be output and not interrupt the following outputs
     queries_filename = ask_queries_filename()
     name = queries_filename[8:-4]  # 'queries_test.xml' becomes 'test'
-    rel_feedback_filename = "rel_feedback_" + name + ".txt"
-    Path(manual_relevance_feedbacks_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
-    with open(os.path.join(manual_relevance_feedbacks_dir, rel_feedback_filename), 'w') as rel_feedback_file:
+    rel_feedback_filename = "qrels_" + name + ".txt"
+    Path(qrels_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
+    with open(os.path.join(qrels_dir, rel_feedback_filename), 'w') as rel_feedback_file:
         topics = parse_topics(os.path.join(queries_dir, queries_filename))
         for topic in topics:
             print(f"\n\nQuery {topic['number']}/{len(topics)}: {topic['query']}\n###########")

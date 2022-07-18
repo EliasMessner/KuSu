@@ -3,37 +3,116 @@ import random
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
+
+import pandas as pd
+from matplotlib import pyplot as plt
 from tqdm import tqdm
+from trectools import TrecQrel, procedures, TrecRes, TrecEval
 
 import es_helper
-from constants import queries_dir, run_files_dir, query_results_dir
+from constants import queries_dir, run_files_dir, query_results_dir, qrels_dir, plots_dir
 from indexing import get_index_configurations
 from lido_handler import prettify, get_title_and_img_string
 from es_helper import get_query_modes
 
 
 def main():
-    client = es_helper.prepare_client_dialog()
+    # client = es_helper.prepare_client_dialog()
 
     # print("Creating Indices...")
     # create_all_indices(client, overwrite_if_exists=False)
     # print("Done.")
 
-    print("Creating unranked results files...")
-    create_results_files(client=client, ranked=False)
-    print("Done.")
+    # print("Creating unranked results files...")
+    # create_results_files(client=client, ranked=False)
+    # print("Done.")
 
-    print("Creating unranked results markdown files...")
-    create_results_markdown(client=client)
-    print("Done.")
+    # print("Creating unranked results markdown files...")
+    # create_results_markdown(client=client)
+    # print("Done.")
 
-    print("Creating ranked results files...")
-    create_results_files(client=client, ranked=True)
-    print("Done.")
+    # print("Creating ranked results files...")
+    # create_results_files(client=client, ranked=True)
+    # print("Done.")
 
-    print("Creating run files...")
-    create_run_files(client)
-    print("Done.")
+    # print("Creating run files...")
+    # create_run_files(client)
+    # print("Done.")
+
+    # plot_precision_at_k(10)
+    # plot_ndcg_at_k(10)
+    # plot_precision_at_k(20)
+    # plot_ndcg_at_k(20)
+    t_tests_p10 = all_t_tests(metric="P_10")
+    for group_name, matrix in t_tests_p10.items():
+        # print(f"\nT-tests for {group_name}:")
+        # print(matrix)
+        # print("\n")
+        matrix.to_csv(os.path.join(plots_dir, f"{group_name}_ttests.csv"))
+
+    t_tests_p20 = all_t_tests(metric="P_20")
+    for group_name, matrix in t_tests_p20.items():
+        matrix.to_csv(os.path.join(plots_dir, f"{group_name}_ttests.csv"))
+
+
+def plot_precision_at_k(k: int, qrels_filenames: list[str] = None):
+    for qrels_filename in os.listdir(qrels_dir) if qrels_filenames is None else qrels_filenames:
+        group_name = get_group_name(qrels_filename)
+        qrels = TrecQrel(os.path.join(qrels_dir, qrels_filename))
+        runs = procedures.list_of_runs_from_path(os.path.join(run_files_dir, group_name))
+        results = procedures.evaluate_runs(runs, qrels, per_query=True)
+        p_at_k = procedures.extract_metric_from_results(results, f"P_{k}")
+        outfile = os.path.join(plots_dir, f"p_at_{k}_{group_name}.pdf")
+        fig = procedures.plot_system_rank(p_at_k, display_metric=f"P@{k}", outfile=outfile)
+        fig.savefig(outfile, bbox_inches='tight', dpi=600)
+
+
+def plot_ndcg_at_k(k: int, qrels_filenames: list[str] = None):
+    for qrels_filename in os.listdir(qrels_dir) if qrels_filenames is None else qrels_filenames:
+        group_name = get_group_name(qrels_filename)
+        qrels = TrecQrel(os.path.join(qrels_dir, qrels_filename))
+        runs = procedures.list_of_runs_from_path(os.path.join(run_files_dir, group_name))
+        results = []
+        for r in runs:
+            evaluator = TrecEval(r, qrels)
+            ndcg_k = evaluator.get_ndcg(depth=k)
+            result_run = [{"metric": f"NDCG_{k}", "query": "all", "value": ndcg_k}]
+            tres = TrecRes()
+            tres.data = pd.DataFrame(result_run)
+            tres.runid = r.get_runid()
+            results.append(tres)
+        ndcgk = procedures.extract_metric_from_results(results, f"NDCG_{k}")
+        # Note that error bars are not ploted. If you want error bars, you have to evaluate NDCG with per_query = True
+        outfile = os.path.join(plots_dir, f"ncdg_at_{k}_{group_name}.pdf")
+        fig = procedures.plot_system_rank(ndcgk, display_metric=f"NDCG@{k}", outfile=outfile)
+        fig.savefig(outfile, bbox_inches='tight', dpi=600)
+
+
+def all_t_tests(qrels_filenames: list[str] = None, metric="P_10"):
+    result_matrices = {}
+    for qrels_filename in os.listdir(qrels_dir) if qrels_filenames is None else qrels_filenames:
+        result_matrix = {}
+        group_name = get_group_name(qrels_filename)
+        qrels = TrecQrel(os.path.join(qrels_dir, qrels_filename))
+        runs = procedures.list_of_runs_from_path(os.path.join(run_files_dir, group_name))
+        for i, r1 in enumerate(runs, start=1):
+            print(f"Run {i} of {len(runs)}")
+            v1 = get_variant_name_from_run_file(r1.filename)
+            result_matrix[v1] = {}
+            for r2 in tqdm(runs):
+                v2 = get_variant_name_from_run_file(r2.filename)
+                if r1.filename == r2.filename:
+                    continue
+                result_r1 = r1.evaluate_run(qrels, per_query=True)
+                result_r2 = r2.evaluate_run(qrels, per_query=True)
+                p_value = result_r1.compare_with(result_r2, metric=metric)
+                result_matrix[v1][v2] = p_value[1]
+        result_matrices[group_name + "_" + metric] = pd.DataFrame(data=result_matrix)
+    return result_matrices
+
+
+def get_variant_name_from_run_file(run_file_name: str):
+    return "-".join(run_file_name.split("-")[1:]).split(".")[0]
 
 
 def create_results_files(client, ranked: bool, size=20):
@@ -44,7 +123,8 @@ def create_results_files(client, ranked: bool, size=20):
     for queries_file_name in os.listdir(queries_dir):
         # create one results file per query file
         filename_ending = "_ranked.txt" if ranked else ".txt"
-        with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results" + filename_ending), 'w') as results_file:
+        with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results" + filename_ending),
+                  'w') as results_file:
             if ranked:
                 write_results_ranked(client, results_file, queries_file_name, size)
             else:
@@ -55,8 +135,8 @@ def write_results_ranked(client, results_file, queries_file_name, size):
     """
     Separates the topic's search results for EACH configuration, and writes them to the results_file in ranked order.
     """
-    for configuration_name, _ in tqdm(get_index_configurations()):
-        results_file.write(f"CONFIGURATION: {configuration_name}\n\n")
+    for configuration_name, _, query_mode in tqdm(get_variants()):
+        results_file.write(f"VARIANT: {configuration_name + '-' + query_mode}\n\n")
         for topic in parse_topics(os.path.join(queries_dir, queries_file_name)):
             results_file.write(f"\nQuery #{topic['number']} '{topic['query']}'\n\n")
             res = es_helper.search(client=client, index=configuration_name, query_string=topic["query"], size=size)
@@ -85,17 +165,16 @@ def write_results_unranked_as_set(client, results_file, queries_file_name, size)
 
 def get_hits_from_all_configs(query, client, size):
     results = {}
-    for configuration_name, _ in get_index_configurations():
-        for query_mode in get_query_modes():
-            sub_results = []
-            res = es_helper.search(client=client,
-                                   index=configuration_name,
-                                   query_string=query,
-                                   query_mode=query_mode,
-                                   size=size)
-            for hit in res["hits"]["hits"]:
-                sub_results.append(hit)
-            results[(configuration_name, query_mode)] = sub_results
+    for configuration_name, _, query_mode in get_variants():
+        sub_results = []
+        res = es_helper.search(client=client,
+                               index=configuration_name,
+                               query_string=query,
+                               query_mode=query_mode,
+                               size=size)
+        for hit in res["hits"]["hits"]:
+            sub_results.append(hit)
+        results[(configuration_name, query_mode)] = sub_results
     return results
 
 
@@ -124,7 +203,8 @@ def create_results_markdown(client, size=20):
     Path(query_results_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
     for queries_file_name in os.listdir(queries_dir):
         # create one results file per query file
-        with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results.md"), 'w') as results_file:
+        with open(os.path.join(query_results_dir, queries_file_name.split('.')[0] + "_results.md"),
+                  'w') as results_file:
             for topic in tqdm(parse_topics(os.path.join(queries_dir, queries_file_name))):
                 results_file.write(f"#### Suchanfrage {topic['number']}: '{topic['query']}'\n")
                 results = {prettify_for_markdown(hit) for hit in
@@ -152,19 +232,42 @@ def create_run_files(client):
     """
     Path(queries_dir).mkdir(parents=True, exist_ok=True)  # create the directory if not exists
     for queries_file_name in os.listdir(queries_dir):
-        # create one run file per query file
-        with open(os.path.join(run_files_dir, queries_file_name.split('.')[0] + "_run_file" + ".txt"), 'w') as run_file:
+        if "auswahl" not in queries_file_name:
+            continue
+        topics = parse_topics(os.path.join(queries_dir, queries_file_name))
+        group_name = get_group_name(queries_file_name)
+        # for each user group: one file containing overall performance, one folder containing a run for each variant
+        Path(os.path.join(run_files_dir, group_name)).mkdir(parents=True, exist_ok=True)  # create dir if not exists
+        with open(os.path.join(run_files_dir, group_name + "_run_file.txt"), 'w') as group_run_file:
             # iterate the configurations. configuration_name is also the name of the index that uses this config.
-            for configuration_name, _ in tqdm(get_index_configurations()):
-                topics = parse_topics(os.path.join(queries_dir, queries_file_name))
-                for topic in topics:
-                    # need to scroll through results because there are too many (ranking all 18k documents)
-                    rank = 1
-                    for hits in scroll(client, index=configuration_name, body=es_helper.get_query_body_only_disjunction(topic["query"]), scroll='30s', size=500):
-                        for hit in hits:
-                            new_line = ' '.join([topic["number"], "Q0", hit["_id"], str(rank), str(hit["_score"]), configuration_name])
-                            run_file.write(new_line + "\n")
-                            rank += 1
+            for configuration_name, _, query_mode in tqdm(get_variants()):
+                variant_name = get_variant_name(configuration_name, query_mode)
+                # one file for each variant (-> one run for each variant)
+                with open(os.path.join(run_files_dir, group_name, f"{variant_name}.txt"), 'w') as variant_run_file:
+                    for topic in topics:
+                        # need to scroll through results because there are too many (ranking all 18k documents)
+                        body = es_helper.get_query_body(query_string=topic["query"], query_mode=query_mode)
+                        rank = 1
+                        for hits in scroll(client, index=configuration_name, body=body, scroll='30s', size=500):
+                            for hit in hits:
+                                new_line = ' '.join([topic["number"], "Q0", hit["_id"], str(rank), str(hit["_score"]),
+                                                     variant_name])
+                                group_run_file.write(new_line + "\n")
+                                variant_run_file.write(new_line + "\n")
+                                rank += 1
+
+
+def get_variant_name(configuration_name: str, query_mode: str):
+    if configuration_name.startswith("boost"):
+        return '-'.join(configuration_name.split("-")[1:] + [query_mode])
+    return configuration_name + '-' + query_mode
+
+
+def get_group_name(queries_file_name):
+    """
+    get name of user group, e.g. "auswahl_laien.xml" becomes "laien"
+    """
+    return queries_file_name.split(".")[0].split("_")[-1]
 
 
 def scroll(client, index, body, scroll, size, **kw):
@@ -197,6 +300,18 @@ def parse_topics(filepath):
             "narrative": child.find("narrative").text.strip()
         })
     return topics
+
+
+def get_variants():
+    """
+    Return all combinations of index configurations and query modes
+    :return: List of tuples containing (index_configuration_name, index_settings, query_mode)
+    """
+    result = []
+    for index_configuration, index_settings in get_index_configurations():
+        for query_mode in get_query_modes():
+            result.append((index_configuration, index_settings, query_mode))
+    return result
 
 
 if __name__ == "__main__":

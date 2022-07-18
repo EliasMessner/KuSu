@@ -4,6 +4,14 @@ from elasticsearch import Elasticsearch
 from constants import bcolors, only_disjunction, combined_operators
 
 
+def get_query_body(query_string, query_mode):
+    if query_mode == only_disjunction:
+        return get_query_body_only_disjunction(query_string)
+    if query_mode == combined_operators:
+        return get_query_body_combined_operators(query_string)
+    raise Exception(f"Unknown query mode {query_mode}")
+
+
 def get_query_body_only_disjunction(query_string: str) -> dict:
     """
     Converts given query string to basic query body for elasticsearch client
