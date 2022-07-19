@@ -74,25 +74,25 @@ finished creating the index, you are good to go.
 
 ## Running and using KuSu Search Engine
 
+Using either the KuSu Web Interface or the Command Line Interface, you are prompted to enter the URL, port, username, 
+and password of an Elasticsearch server. If you want to connect to localhost and don't have security features enabled, 
+leave the user and password blank.
+
 ### Web Interface
 
 For a convenient user experience, you can use the KuSu Web Interface.
 
-To start the web interface, run the server.py script. You are prompted to enter the URL, port, username, and password of an
-Elasticsearch remote. If you want to connect to localhost:9200, enter "localhost" as URL and leave the password blank.
+To start the web interface, run the server.py script.
 
 When the connection to Elasticsearch is established, you can access the web interface by visiting localhost:5000 in your
 favorite web browser.
 
 ### Command Line Interface
 
-If you are an advanced user, you can also use the KuSu Command Line Interface, which enables you to create your own 
+If you prefer, you can use the KuSu Command Line Interface, which also enables you to create and manage your own 
 indices.
 
 In order to start up the CLI, run the main_controller.py file.
-
-You are prompted to enter the URL, port, username, and password of an
-Elasticsearch remote. If you want to connect to localhost:9200, enter "localhost" as URL and leave the password blank.
 
 When you see "Client connected." on the console, you can start indexing and searching.
 

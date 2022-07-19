@@ -32,6 +32,12 @@ only_disjunction = "only_disjunction"
 combined_operators = "combined_operators"
 
 
+class FontSizes:
+    SMALL_SIZE = 8
+    MEDIUM_SIZE = 10
+    BIGGER_SIZE = 12
+
+
 # font colors in terminal output
 class bcolors:
     HEADER = '\033[95m'
