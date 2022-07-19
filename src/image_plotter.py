@@ -31,9 +31,9 @@ def plot_plot(number,keys,values, quelle):
     plt.bar(x_axis+0.2, [zipf.pmf(p, alpha) * total for p in range(1, len(keys) + 1)],width = width, label = r'erwartete Zipf-Verteilung für $\alpha = 2$')
     plt.ylabel('Häufigkeit in \%', fontsize=8)
     plt.xlabel('Häufigkeitsverteilung in Bildern aus '+quelle, fontsize=8)
-    plt.legend(loc="upper right", prop={'size': 8})    
+    plt.legend(loc="upper right", prop={'size': 8})
     plt.xticks(x_axis, keys)
-    
+
 ## first plot westmuensterland
 westmuensterland = '../images/westmuensterlandtext'
 westmuensterland_counts = count_occurences(westmuensterland)
@@ -57,4 +57,5 @@ all_keys = all_counts.keys()
 all_values = all_counts.values()
 plot_plot(3, all_keys, all_values, " beiden Quellen")
 plt.subplots_adjust(hspace=0.8)
-plt.savefig("Häufigkeitsverteilungen")
+with open('../images/haeufigkeiten.png','wb') as f:
+    plt.savefig(f, format='png', dpi=200)
