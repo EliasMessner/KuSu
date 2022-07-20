@@ -19,7 +19,7 @@ from es_helper import get_query_modes
 
 
 def main():
-    client = es_helper.prepare_client_dialog()
+    # client = es_helper.prepare_client_dialog()
 
     # print("Creating Indices...")
     # create_all_indices(client, overwrite_if_exists=False)
@@ -37,29 +37,57 @@ def main():
     # create_results_files(client=client, ranked=True)
     # print("Done.")
 
-    print("Creating run files...")
-    create_run_files(client)
-    print("Done.")
+    # print("Creating run files...")
+    # create_run_files(client)
+    # print("Done.")
 
-    # ks = [10, 20]
-    # for k in ks:
-    #     # precision at k
-    #     plot_results_for_all_groups(k, metric=get_precision_at_k,
-    #                                 display_metric=f"Precision at {k}",
-    #                                 filename=f"p_at_{k}.pdf")
-    #     # ndcg at k
-    #     plot_results_for_all_groups(k, metric=get_ndcg_k,
-    #                                 display_metric=f"nDCG at {k}",
-    #                                 filename=f"ndcg_at_{k}.pdf")
-    #     # t test wrt. precision at k, for each group
-    #     for group_name, matrix in get_t_test_matrix_for_each_group(metric=f"P_{k}").items():
-    #         matrix.to_csv(os.path.join(plots_dir, f"ttests_k{k}_{group_name}.csv"))
+    ks = [5, 10, 20]
+    plot_per_k_compare_groups(ks)
+    plot_per_group_compare_ks(ks)
+    t_tests_per_k(ks)
 
 
-def plot_results_for_all_groups(k: int, metric: Callable, display_metric: str, filename: str,
+def plot_per_group_compare_ks(ks: list[int]):
+    for qrels_filename in os.listdir(qrels_dir):
+        group_name = get_group_name(qrels_filename)
+        # precision at k
+        plot_results_for_all_ks(ks=ks, metric=get_precision_at_k,
+                                qrels_filename=qrels_filename,
+                                display_metric="Precision at k",
+                                out_filename=f"p_at_k_{group_name}.pdf")
+        # ndcg at k
+        plot_results_for_all_ks(ks=ks, metric=get_ndcg_k,
+                                qrels_filename=qrels_filename,
+                                display_metric="nDCG at k",
+                                out_filename=f"ndcg_at_k_{group_name}.pdf")
+
+
+def plot_per_k_compare_groups(ks: list[int]):
+    for k in ks:
+        # precision at k
+        plot_results_for_all_groups(k, metric=get_precision_at_k,
+                                    display_metric=f"Precision at {k}",
+                                    out_filename=f"p_at_{k}.pdf")
+        # ndcg at k
+        plot_results_for_all_groups(k, metric=get_ndcg_k,
+                                    display_metric=f"nDCG at {k}",
+                                    out_filename=f"ndcg_at_{k}.pdf")
+
+
+def t_tests_per_k(ks: list[int]):
+    for k in ks:
+        # t test wrt. precision at k, for each group
+        for group_name, matrix in get_t_test_matrix_for_each_group(metric=f"P_{k}").items():
+            matrix.to_csv(os.path.join(plots_dir, f"ttests_p_k{k}_{group_name}.csv"))
+        # t test wrt. ndcg at k, for each group
+        for group_name, matrix in get_t_test_matrix_for_each_group(metric=f"NDCG_{k}").items():
+            matrix.to_csv(os.path.join(plots_dir, f"ttests_ndcg_k{k}_{group_name}.csv"))
+
+
+def plot_results_for_all_groups(k: int, metric: Callable, display_metric: str, out_filename: str,
                                 qrels_filenames: list[str] = None):
     results, group_names = get_results_for_all_groups(k, metric, qrels_filenames)
-    outfile = os.path.join(plots_dir, filename)
+    outfile = os.path.join(plots_dir, out_filename)
     fig = plot_system_rank(results, group_names, display_metric)
     fig.savefig(outfile)
     print(f"Saved figure to {outfile}\n")
@@ -77,12 +105,28 @@ def get_results_for_all_groups(k: int, metric: Callable, qrels_filenames: list[s
     return results, group_names
 
 
+def plot_results_for_all_ks(ks: list[int], metric: Callable, qrels_filename: str, display_metric: str,
+                            out_filename: str):
+    results, k_strings = get_results_for_all_k(ks, metric, qrels_filename)
+    outfile = os.path.join(plots_dir, out_filename)
+    fig = plot_system_rank(results, k_strings, display_metric)
+    fig.savefig(outfile)
+    print(f"Saved figure to {outfile}\n")
+
+
+def get_results_for_all_k(ks: list[int], metric: Callable, qrels_filename: str):
+    results = []
+    for i, k in enumerate(ks, start=1):
+        print(f"Iteration {i} of {len(ks)}")
+        results.append(metric(k, qrels_filename))
+    return results, [str(k) for k in ks]
+
+
 def plot_system_rank(results, group_names, display_metric, offset_increment=0.2):
     plt.rc('font', size=FontSizes.SMALL_SIZE)
     plt.clf()
     size = len(results[0])
     offset = size * offset_increment / 2
-    # fig = plt.figure(111)
     for result, group_name in zip(results, group_names):
         # transform to df
         df = pd.DataFrame(result, columns=["name", "value", "ci"])
@@ -95,9 +139,9 @@ def plot_system_rank(results, group_names, display_metric, offset_increment=0.2)
         offset += offset_increment
         # plot data
         plt.errorbar(x=x, y=values, fmt='o', yerr=ci, label=group_name)
-        plt.xticks(ticks=range(1, size+1), labels=team_names, rotation='vertical')
+        plt.xticks(ticks=range(1, size + 1), labels=team_names, rotation='vertical')
     # Small adjustments for plotting
-    plt.legend(loc='lower right', bbox_to_anchor=(1, 1.025))
+    plt.legend(loc='lower right', bbox_to_anchor=(1, 1))
     fig = plt.gcf()
     fig.subplots_adjust(bottom=0.6)  # increase padding because we use long tick labels
     ax = fig.get_axes()[0]
@@ -157,12 +201,13 @@ def get_t_test_matrix(metric, qrels_filename):
     qrels = TrecQrel(os.path.join(qrels_dir, qrels_filename))
     runs = procedures.list_of_runs_from_path(os.path.join(run_files_dir, group_name))
     for r1 in tqdm(runs):
-        v1 = r1.filename.split(".")[0]  # variant name
+        v1 = r1.filename.split(".")[-2].split("/")[-1]  # variant name
         result_matrix[v1] = {}
         for r2 in runs:
+            v2 = r2.filename.split(".")[-2].split("/")[-1]
             if r1.filename == r2.filename:
+                result_matrix[v1][v2] = 0
                 continue
-            v2 = r2.filename.split(".")[0]
             result_r1 = r1.evaluate_run(qrels, per_query=True)
             result_r2 = r2.evaluate_run(qrels, per_query=True)
             p_value = result_r1.compare_with(result_r2, metric=metric)
@@ -321,7 +366,7 @@ def get_variant_name(configuration_name: str, query_mode: str):
     name = configuration_name + '-' + query_mode
     if name.startswith("boost"):
         name = '-'.join(name.split("-")[1:])
-    name.replace("operators", "op")
+    name = name.replace("operators", "op")
     return name
 
 
