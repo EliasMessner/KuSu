@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<topic number="1" type="single">
+    <query> Mode 1950 </query>
+    <description>
+        bezüglich der Mode/Textil Sammlung
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="2" type="single">
+    <query> Japanische Kunst 19. Jahrhundert </query>
+    <description>
+        Ich möchte wissen welche Werke aus Japan und von japanischen Künstlern aus dem 19. Jahrhundert in dieser Sammlung zu finden sind.    
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="3" type="single">
+    <query> Porzellan Asien </query>
+    <description>
+        Ich möchte wissen welche Art asiatischen Porzellans es in der Sammlung zu finden gibt.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="4" type="single">
+    <query> Familie </query>
+    <description>
+        Ich suche einen bestimmten Inhalt (Familiendarstellungen), und das Medium ist egal. 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="5" type="single">    
+    <query> Visitenkarte </query>
+    <description>
+        Wenn ich nach bestimmten Medien suche, wäre es hilfreich, ALLE Objekte dieses Typs angezeigt zu bekommen, auch um bspw. zu erfahren, wie groß der Bestand eines Museums an bestimmten Datenträgern ist.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="6" type="single">
+    <query> Barock </query>
+    <description>
+        Wenn ich, etwa für eine Präsentation in einem Seminar oder für einen Vortrag, Beispiele zu Merkmalen einer bestimmten Epoche suche, würde ich den gängigen Epochenbegriff eingeben und dann die Ergebnisse filtern, um ein geeignetes Beispiel zu finden.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="7" type="single">
+    <query> Spielzeug </query>
+    <description>
+       Ich will wissen, ob Spielzeug in die Definition von Kunstgewerbe fällt (also ob es Suchergebnisse gibt).
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="8" type="single">
+    <query> Buchdruck Muster </query>
+    <description>
+        Ich will wissen, ob die Verzierungen, die sich in vielen mittelalterlichen Büchern finden, separat katalogisiert sind 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="9" type="single">
+    <query> Tapetenmuster </query>
+    <description>
+         Ich will wissen, ob dieses Thema, das heute nur noch eine Randerscheinung darstellt, einmal groß und wichtig genug war um museal katalogisiert worden zu sein 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="10" type="single">
+    <query> Ozeanien </query>
+    <description>
+         Ich will wissen, wie eurozentrisch die Museumssammlung ist
+    </description>
+    <narrative> </narrative>
+</topic>

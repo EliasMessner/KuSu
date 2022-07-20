@@ -1,10 +1,9 @@
 from pprint import pprint
 
-from elasticsearch import Elasticsearch
-
-from constants import docs_dir, bcolors, get_settings, boost_default, default_index_name
-import querying as querying
+import es_helper
+from constants import docs_dir, bcolors, default_index_name
 from indexing import index_documents
+from es_helper import get_settings
 
 
 def mainloop(command_function_mapping):
@@ -13,15 +12,9 @@ def mainloop(command_function_mapping):
     command name, the following tokens (optional) are arguments for that command.
     The possible commands must be specified in the function_mapping parameter.
     """
-    print("Connecting to default client at localhost:9200...")
-    client = Elasticsearch([{"host": "localhost", "port": 9200}])
-    if not client.ping():  # assert that the client is connected
-        print(f"{bcolors.WARNING}Client not connected. Please make sure that ElasticSearch is running on your computer "
-              f"and connected to the default client at localhost:9200{bcolors.ENDC}")
-        quit()
-    print("Client connected.")
+    client = es_helper.prepare_client_dialog()
     while True:
-        input_tokens = input().lower().split()
+        input_tokens = input("> ").lower().split()
         cmd = input_tokens[0]
         if cmd in ["quit", "q"]:
             break
@@ -97,7 +90,7 @@ def search(client, input_tokens):
     if not client.indices.exists(index):
         print(f"Index '{index}' does not exist.")
         return
-    res = querying.search(client, index, query_string)
+    res = es_helper.search(client, index, query_string)
     print(f"Hits: {len(res['hits']['hits'])}\n")
     pprint(res['hits']['hits'])
 
@@ -127,7 +120,7 @@ def create_index(client, input_tokens):
             client.indices.delete(index)
         else:
             return
-    body = get_settings(boost=boost_default, similarity="boolean", analyzer="german_analyzer")
+    body = get_settings(similarity="boolean", analyzer="german_analyzer")
     # TODO remove hardcoded parameters
     #  instead use optimal settings for body
     print(client.indices.create(index=index, body=body))
@@ -142,7 +135,10 @@ def delete_index(client, input_tokens):
 
 
 def list_indices(client, input_tokens):
-    print(client.indices.get_alias("*"))
+    for name, value in sorted(client.indices.get_alias("*").items(), key=lambda i: i[0]):
+        if name.startswith(("apm", ".")):
+            continue
+        print(name)
 
 
 def check_arg_count(fun, input_tokens):

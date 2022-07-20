@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<topic number="1" type="single">
+    <query> Schwarzweiss Fotos 1. Weltkrieg </query>
+    <description>
+        Alle SW Fotos aus dem ersten WK 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="2" type="single">
+    <query> Napoleon </query>
+    <description>
+        Alle Kunstwerke und Bilder von Napoleon 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="3" type="single">
+    <query> Kunstwerke Deutschland </query>
+    <description>
+        Kunstwerke die in Deutschland produziert wurden 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="4" type="single">
+    <query> griechisch Marmorstatue </query>
+    <description>
+        Gibt es griechische Statuen aus Marmor 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="5" type="single">
+    <query> Lampen mit Figuren </query>
+    <description>
+        Gibt es Lampen mit Figuren?
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="6" type="single">
+    <query> Physik </query>
+    <description>
+        Ich möchte Portraits von Wissenschaftler*innen aus der Physik.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="7" type="single">
+    <query> blauer Himmel </query>
+    <description>
+        Ich möchte Bilder mit blauem Himmel sehen.
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="8" type="single">
+    <query> Lampe Keramik</query>
+    <description>
+        Mich interessiert einfach ab wann die Leute Keramik für Lampen genutzt haben und in welchem Ausmaß 
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<topic number="9" type="single">
+    <query> kirschblüte </query>
+    <description>
+        weil ich weiß dass es zeichungen aus japan gab und mich interessieren würde, wie häufig dieses motiv darin vorkommt
+    </description>
+    <narrative> </narrative>
+</topic>
+
+<!--topic number="10" type="single">
+    <query> brettspiel </query>
+    <description>
+        vlt gibt's ja daten zu sachen was die leute früher gespielt haben
+    </description>
+	spiel
+    <narrative> </narrative>
+</topic!-->

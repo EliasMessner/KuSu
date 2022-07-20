@@ -34,13 +34,19 @@ def main():
                + get_statistics_string(digiporta_filepaths)
     print(response)
 
-    plot(get_statistics(all_xml_filepaths))
-    plot(get_statistics(mkg_filepaths))
-    plot(get_statistics(westmuensterland_filepaths))
-    plot(get_statistics(digiporta_filepaths))
+    paths_list = [all_xml_filepaths, mkg_filepaths, westmuensterland_filepaths, digiporta_filepaths]
+    names = ["All", "MKG", "Westmünsterland", "München"]
+
+    data = [get_lengths(paths) for paths in paths_list]
+    fig, ax = plt.subplots()
+    ax.set_title("Distribution of Document Lengths")
+    ax.boxplot(data)
+    plt.xticks(ticks=range(1, len(names)+1), labels=names)
+    plt.show()
+    fig.savefig("../plots/distr_of_doc_lengths.pdf")
 
 
-def plot(data):
+def plot_bar(data):
     plt.bar(range(len(data)), list(data.values()), align='center')
     plt.xticks(range(len(data)), list(data.keys()))
     plt.show()
@@ -55,14 +61,19 @@ def get_statistics_string(xml_filepaths):
 
 
 def get_statistics(xml_filepaths):
-    lengths = []
-    for filepath in tqdm(xml_filepaths):
-        length = get_raw_length(filepath)
-        lengths.append(length)
+    lengths = get_lengths(xml_filepaths)
     return {"counted": len(lengths),
             "max": max(lengths),
             "min": min(lengths),
             "avg": sum(lengths) / len(lengths)}
+
+
+def get_lengths(xml_filepaths):
+    lengths = []
+    for filepath in tqdm(xml_filepaths):
+        length = len(remove_all_tags(filepath))
+        lengths.append(length)
+    return lengths
 
 
 def get_raw_length(xml_path):

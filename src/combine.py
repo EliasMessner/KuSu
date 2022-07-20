@@ -8,7 +8,7 @@
 # would only run at < 100 kiB/s, with it it processes the whole 197 MB in seconds.
 
 
-import sys, os
+import os
 from pathlib import Path
 
 from constants import data_dir

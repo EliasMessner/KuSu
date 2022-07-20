@@ -1,14 +1,14 @@
 import datetime
 import os
 import timeit
-from pprint import pprint
 
 import xmltodict
 from elasticsearch import Elasticsearch
 from tqdm import tqdm
 
-from lido_handler import parse_lido_entry
 from constants import textfiles_muenchen, textfiles_westmuensterland
+from lido_handler import parse_lido_entry
+from es_helper import get_settings
 
 
 def xml_to_dict(filepath: str):
@@ -20,7 +20,7 @@ def xml_to_dict(filepath: str):
     with open(filepath, 'r') as file:
         xml_data = file.read()
     lido_dict = xmltodict.parse(xml_data)
-    parsed_dict = parse_lido_entry(lido_dict)
+    parsed_dict = parse_lido_entry(lido_dict, os.path.basename(filepath))
     return parsed_dict
 
 
@@ -30,10 +30,9 @@ def get_all_xml_filepaths(dir_path):
     :param dir_path: path to the directory
     :return: list of filepaths
     """
-    directory = os.fsencode(dir_path)
-    return [os.path.join(dir_path, os.fsdecode(file))
-            for file in os.listdir(directory)
-            if os.fsdecode(file).endswith(".xml")]
+    return [os.path.join(dir_path, file)
+            for file in os.listdir(dir_path)
+            if file.endswith(".xml")]
 
 
 def index_documents(client: Elasticsearch, index_name: str, docs_dir: str, overwrite=True, console_output=False) -> list[str]:
@@ -56,7 +55,7 @@ def index_documents(client: Elasticsearch, index_name: str, docs_dir: str, overw
     for filepath in tqdm(xml_filepaths):  # tqdm is for progress bar in console
         data_dict = xml_to_dict(filepath)
         data_dict["colors"] = read_image_data_if_exists(data_dict["img_id"])
-        res = client.index(index=index_name, body=data_dict)
+        res = client.index(index=index_name, body=data_dict, id=data_dict['filename'])
         if console_output:
             print(res)
         responses.append(res)
@@ -84,3 +83,20 @@ def read_image_data_if_exists(img_id):
     with open(file_path, encoding="ISO-8859-1") as file:  # this encoding works for umlaut in 'grün'
         colors = file.read().strip()
     return colors
+
+
+def get_index_configurations():
+    """
+    Returns a list of run configurations that are useful for evaluation.
+    Each element of the list is a tuple, the first element being a descriptive name of the run configuration (which is
+    also the name of the index that ought to use this configuration). The second element is the settings dict that
+    can be passed as body parameter when creating a new index with the configuration.
+    """
+    configurations = []  # [(name_of_configuration, body), ...]
+    for analyzer in ["german_analyzer", "german_light_analyzer"]:
+        for similarity in ["BM25", "boolean"]:
+            name = "-".join(["boost_default", analyzer, similarity])
+            name = name.lower()
+            body = get_settings(similarity=similarity, analyzer=analyzer)
+            configurations.append((name, body))
+    return configurations

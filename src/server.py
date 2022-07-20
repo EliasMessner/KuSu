@@ -1,6 +1,6 @@
-from elasticsearch import Elasticsearch
-from flask import Flask, request, render_template, redirect
-import querying
+from flask import Flask, request, render_template
+
+import es_helper
 from constants import default_index_name
 from lido_handler import prettify
 
@@ -23,8 +23,7 @@ def form_post():
 
         # check if client connected
         results = []
-        client = prepare_client()
-        if client is None:
+        if CLIENT is None:
             query = "Client not connected. Please make sure that ElasticSearch is running on your computer"
             return render_template("index.html", query=query, results=results)
 
@@ -33,7 +32,7 @@ def form_post():
 
         # search the index
         # TODO check if default index exists, if not give bad response
-        res = querying.search(client=client, index=default_index_name, query_string=query)
+        res = es_helper.search(client=CLIENT, index=default_index_name, query_string=query)
         for hit in res['hits']['hits']:
             # results = [[title, author, url], [title, author, url], ...]
             results.append([hit['_source']['titles'],
@@ -43,12 +42,7 @@ def form_post():
     return render_template("index.html", query=query, results=results)      # this updates the HTML page with the results
 
 
-def prepare_client():
-    client = Elasticsearch([{"host": "localhost", "port": 9200}])
-    if not client.ping():  # assert that the client is connected
-        return None
-    return client
-
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    CLIENT = es_helper.prepare_client_dialog()
+    # if debug=True, user needs to enter credentials two times. Therefore, reset to False after debugging
+    app.run(debug=False)
